@@ -10,27 +10,51 @@ import PostsListPage from './pages/PostsListPage';
 import PostFormPage from './pages/PostFormPage';
 import ShowPostPage from './pages/ShowPostPage';
 import AboutUsPage from './pages/AboutUsPage';
+import Navbar from 'react-bootstrap/Navbar';
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import './App.css';
 
 
 function Navigation(props) {
   return (
-    <nav className="navbar navbar-expand-sm navbar-dark bg-dark shadow mb-3">
-      <Link className="navbar-brand" to="/">Micro Blog</Link>
-      <ul className="navbar-nav mr-auto">
-        <li className="nav-item">
-          <NavLink className="nav-link" exact to="/posts/new">
-            Reclaim
-          </NavLink>
-        </li>
-        <li className="nav-item">
-          <NavLink className="nav-link" exact to="/about-us">
-            About Us
-          </NavLink>
-        </li>
-      </ul>
-    </nav>
+    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+  <Container>
+  <Navbar.Brand href="#home">
+        <img
+          alt=""
+          src="https://cdn-icons-png.flaticon.com/512/1598/1598196.png"
+          width="30"
+          height= "30"
+          className="d-inline-block align-top"
+        />{' '}
+      ReClaim
+  </Navbar.Brand>
+  <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+  <Navbar.Collapse id="responsive-navbar-nav">
+    <Nav className= "me-auto">
+    </Nav>
+    <Nav>
+    <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
+        <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+        <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
+        <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+        <NavDropdown.Divider />
+        <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+      </NavDropdown>
+      <Nav.Link href="#features">Features</Nav.Link>
+      <Nav.Link href="#pricing">Pricing</Nav.Link>
+      <Nav.Link href="#deets">More deets</Nav.Link>
+      <Nav.Link eventKey={2} href="#memes">
+        Dank memes
+      </Nav.Link>
+    </Nav>
+  </Navbar.Collapse>
+  </Container>
+</Navbar>
   );
 }
 
