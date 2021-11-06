@@ -14,6 +14,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import './App.css';
@@ -35,9 +36,7 @@ function Navigation(props) {
   </Navbar.Brand>
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">
-    <Nav className= "me-auto">
-    </Nav>
-    <Nav>
+    <Nav className = "ms-auto" >
     <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
         <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
         <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
@@ -46,11 +45,8 @@ function Navigation(props) {
         <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
       </NavDropdown>
       <Nav.Link href="/about-us">About Us</Nav.Link>
-      <Nav.Link href="/environmentfacts">Environment Facts</Nav.Link>
-      <Nav.Link href="#deets">More deets</Nav.Link>
-      <Nav.Link eventKey={2} href="#memes">
-        Dank memes
-      </Nav.Link>
+      <Nav.Link className = "me-4" href="/environmentfacts">Environment Facts</Nav.Link>
+      <Button  href="/log-in" variant="success">Log in</Button>{' '}
     </Nav>
   </Navbar.Collapse>
   </Container>
