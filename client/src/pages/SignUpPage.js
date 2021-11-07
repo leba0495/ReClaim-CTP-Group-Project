@@ -3,32 +3,32 @@ import './SignUpPage.css';
 
 function SignUpPage(props) {
   return (
-      <div>
+      <div className="main-container">
       <div class="container">
           <div class="col-sm">
         <div id="firstline" class="mb-1">Welcome! Please sign up here!</div>
         <div class="mb-5">Already signed up? <a href="./about-us">Log In</a></div>
     <form class="mb-3 needs-validation" novalidate>
-    <div id="FirstNme" class="mb-3"> 
+    <div id="FirstName" class="mb-3"> 
     <label for="FirstName" class="form-label"> First Name*</label>
       <input type="text" class="form-control" id="FirstName" aria-describedby="firstName" required></input>
       <div class="valid-feedback">
       Looks good!
     </div>
     </div>
-    <div class="mb-3">
+    <div id="LastName" class="mb-3">
       <label for="LastName" class="form-label"> Last Name*</label>
       <input type="text" class="form-control" id="LastName" aria-describedby="lastName" required></input>
     </div>
-    <div class="mb-3">
+    <div id="InputEmail" class="mb-3">
       <label for="InputEmail" class="form-label">Email address*</label>
       <input type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp" required></input>
     </div>
-    <div class="mb-3">
+    <div id="InputPassword" class="mb-3">
       <label for="InputPassword" class="form-label">Password*</label>
       <input type="password" class="form-control" id="InputPassword" required></input>
     </div>
-    <div class="mb-3">
+    <div id="InputPhoneNumber" class="mb-3">
     <label for="InputPhoneNumber" class="form-label">Phone Number</label>
       <input type="telnumber" class="form-control" pattern="[+]{1}[0-9]{11,14}" id="InputPhoneNumber" placeholder="Must include +1 to number, do not add spaces or symbols" required></input>
     </div>

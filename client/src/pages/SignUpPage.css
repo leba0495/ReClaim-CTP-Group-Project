@@ -1,17 +1,22 @@
+.main-container {
+    background-color: lightgrey;
+}
+
 .container {
-    background-color: lightgreen;
-    border: 2px solid black;
+    background-color: rgb(190, 250, 190);
+    border: 2.5px solid black;
+    border-radius: 2%;
 }
 
 .body {
-    background-color: orange;
+    background-color: grey;
 }
 
-#FirstName {
-    color: orange;
-    text-align: left;
+#firstline {
+    font-family: fantasy;
+    font-size: 1.5em;
 }
 
-#signupbutton {
+#FirstName, #LastName, #InputEmail, #InputPassword, #InputPhoneNumber {
     text-align: left;
 }
