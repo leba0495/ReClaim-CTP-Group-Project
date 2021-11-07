@@ -16,7 +16,7 @@ import Nav from 'react-bootstrap/Nav';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import SignUpPage from './pages/SignUpPage';
 import './App.css';
 
 
@@ -46,6 +46,7 @@ function Navigation(props) {
       </NavDropdown>
       <Nav.Link href="/about-us">About Us</Nav.Link>
       <Nav.Link className = "me-4" href="/environmentfacts">Environment Facts</Nav.Link>
+      <Nav.Link href="/sign-up">Sign Up</Nav.Link>
       <Button  href="/log-in" variant="success">Log in</Button>{' '}
     </Nav>
   </Navbar.Collapse>
@@ -66,7 +67,9 @@ class App extends React.Component {
                 <Route path="/environment-facts" component={PostFormPage} />
                 <Route path="/posts/:id" component={ShowPostPage} />
                 <Route path="/about-us" component={AboutUsPage} />
+                <Route path="/sign-up" component={SignUpPage} />
                 <Route path="/" component={PostsListPage} />
+                
               </Switch>
             </div>
           </div>
