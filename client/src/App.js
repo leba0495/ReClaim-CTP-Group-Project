@@ -6,7 +6,7 @@ import {
   Link,
   NavLink
 } from 'react-router-dom';
-import PostsListPage from './pages/PostsListPage';
+import LandingPage from './pages/LandingPage';
 import PostFormPage from './pages/PostFormPage';
 import ShowPostPage from './pages/ShowPostPage';
 import AboutUsPage from './pages/AboutUsPage';
@@ -23,7 +23,7 @@ import './App.css';
 function Navigation(props) {
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-  <Container>
+  <Container> 
   <Navbar.Brand href="#home">
         <img
           alt=""
@@ -38,7 +38,7 @@ function Navigation(props) {
   <Navbar.Collapse id="responsive-navbar-nav">
     <Nav className = "ms-auto" >
     <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-        <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+        <NavDropdown.Item href="/home">Home</NavDropdown.Item>
         <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
         <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
         <NavDropdown.Divider />
@@ -59,14 +59,14 @@ class App extends React.Component {
   render() {
     return (
         <Router>
-          <Navigation />
+          <Navigation/>
           <div className="container-fluid text-center">
             <div className="row justify-content-center">
               <Switch>
                 <Route path="/environment-facts" component={PostFormPage} />
                 <Route path="/posts/:id" component={ShowPostPage} />
                 <Route path="/about-us" component={AboutUsPage} />
-                <Route path="/" component={PostsListPage} />
+                <Route path="/home" component={LandingPage} />
               </Switch>
             </div>
           </div>
