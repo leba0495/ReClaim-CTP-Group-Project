@@ -1,0 +1,17 @@
+.container {
+    background-color: lightgreen;
+    border: 2px solid black;
+}
+
+.body {
+    background-color: orange;
+}
+
+#FirstName {
+    color: orange;
+    text-align: left;
+}
+
+#signupbutton {
+    text-align: left;
+}

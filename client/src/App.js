@@ -10,6 +10,7 @@ import PostsListPage from './pages/PostsListPage';
 import PostFormPage from './pages/PostFormPage';
 import ShowPostPage from './pages/ShowPostPage';
 import AboutUsPage from './pages/AboutUsPage';
+import SignUpPage from './pages/SignUpPage';
 
 import './App.css';
 
@@ -29,6 +30,11 @@ function Navigation(props) {
             About Us
           </NavLink>
         </li>
+        <li className="nav-item">
+          <NavLink className="nav-link" exact to="/sign-up">
+            Sign Up
+          </NavLink>
+        </li>
       </ul>
     </nav>
   );
@@ -46,6 +52,7 @@ class App extends React.Component {
                 <Route path="/posts/new" component={PostFormPage} />
                 <Route path="/posts/:id" component={ShowPostPage} />
                 <Route path="/about-us" component={AboutUsPage} />
+                <Route path="/sign-up" component={SignUpPage} />
                 <Route path="/" component={PostsListPage} />
               </Switch>
             </div>
