@@ -10,6 +10,7 @@ import PostsListPage from './pages/PostsListPage';
 import PostFormPage from './pages/PostFormPage';
 import ShowPostPage from './pages/ShowPostPage';
 import AboutUsPage from './pages/AboutUsPage';
+import LogInFormPage from './pages/LogInFormPage';
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
@@ -17,7 +18,8 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import './App.css';
+import './styles.css/App.css';
+
 
 
 function Navigation(props) {
@@ -46,7 +48,7 @@ function Navigation(props) {
       </NavDropdown>
       <Nav.Link href="/about-us">About Us</Nav.Link>
       <Nav.Link className = "me-4" href="/environmentfacts">Environment Facts</Nav.Link>
-      <Button  href="/log-in" variant="success">Log in</Button>{' '}
+      <Button  href="/log-in" variant="success">Log in</Button>
     </Nav>
   </Navbar.Collapse>
   </Container>
@@ -66,6 +68,7 @@ class App extends React.Component {
                 <Route path="/environment-facts" component={PostFormPage} />
                 <Route path="/posts/:id" component={ShowPostPage} />
                 <Route path="/about-us" component={AboutUsPage} />
+                <Route path="/log-in" component={LogInFormPage}/>
                 <Route path="/" component={PostsListPage} />
               </Switch>
             </div>
