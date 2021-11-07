@@ -13,12 +13,60 @@ import '../styles.css/LogInPage.css'
 //     );
 
 // }
+function Square(){
+    return(
+        <div >
+            <div className="square1">
+        </div>
+        <div className="square2">
+        </div>
+        </div>
+        
+    );
+}
 
 class LogInFormPage extends React.Component {
 
     render(){
         return(
-            <div>Hellooooo</div>
+            <div className="login-container">
+                <Square />
+                <div className="form-box">
+                    <h2>Log In</h2>
+                    <form>
+                        <div className="text-input">
+                            <input
+                                type="text"
+                                id="username"
+                                name="username"
+                                placeholder="username"
+                                className="text-input"
+                            >
+                            </input>
+                        </div>
+                        <div className="text-input">
+                            <input
+                                type="text"
+                                id="password"
+                                name="password"
+                                placeholder="password"
+                                className="text-input"
+                            >
+                            </input>
+                        </div>
+                        <div>
+                            <input
+                            type="submit"
+                            value="Log In"
+                            className="login-btn"
+                            >
+                            </input>
+                        </div>
+                    </form>
+                    <p>Don't have an account?</p>
+                    <a href="/" className="signup-link">Sign Up</a>
+                </div>
+            </div>
         );
     }
 }
