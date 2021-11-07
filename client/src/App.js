@@ -10,7 +10,6 @@ import PostsListPage from './pages/PostsListPage';
 import PostFormPage from './pages/PostFormPage';
 import ShowPostPage from './pages/ShowPostPage';
 import AboutUsPage from './pages/AboutUsPage';
-import SignUpPage from './pages/SignUpPage';
 
 import './App.css';
 
@@ -28,11 +27,6 @@ function Navigation(props) {
         <li className="nav-item">
           <NavLink className="nav-link" exact to="/about-us">
             About Us
-          </NavLink>
-        </li>
-        <li className="nav-item">
-          <NavLink className="nav-link" exact to="/sign-up">
-            Sign Up
           </NavLink>
         </li>
       </ul>
