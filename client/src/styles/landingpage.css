@@ -1,0 +1,15 @@
+.header {
+background-color: #F7F7F7;
+
+}
+.intro {
+  margin: 50px ;
+}
+
+.intro .introText {
+
+    padding-top: 50px;
+    text-align: justify;
+    padding-bottom: 30px;
+
+}

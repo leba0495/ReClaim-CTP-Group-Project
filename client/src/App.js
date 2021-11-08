@@ -10,19 +10,15 @@ import LandingPage from './pages/LandingPage';
 import PostFormPage from './pages/PostFormPage';
 import ShowPostPage from './pages/ShowPostPage';
 import AboutUsPage from './pages/AboutUsPage';
-import Navbar from 'react-bootstrap/Navbar';
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import Button from 'react-bootstrap/Button';
+import {Navbar, Container, Nav, NavDropdown, Button} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
 import './App.css';
 
 
 function Navigation(props) {
   return (
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+    // Extra small (xs) · Small (sm) · Medium (md) · Large (lg) · Extra large (xl) · Extra extra large (xxl)
+    <Navbar collapseOnSelect expand="md" bg="dark" variant="dark">
   <Container> 
   <Navbar.Brand href="#home">
         <img
