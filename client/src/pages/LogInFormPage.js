@@ -32,14 +32,14 @@ class LogInFormPage extends React.Component {
             <div className="login-container">
                 <Square />
                 <div className="form-box">
-                    <h2>Log In</h2>
+                    <h2>Log in</h2>
                     <form>
                         <div className="text-input">
                             <input
                                 type="text"
                                 id="username"
                                 name="username"
-                                placeholder="username"
+                                placeholder="Username or Email"
                                 className="text-input"
                             >
                             </input>
@@ -49,7 +49,7 @@ class LogInFormPage extends React.Component {
                                 type="text"
                                 id="password"
                                 name="password"
-                                placeholder="password"
+                                placeholder="Password"
                                 className="text-input"
                             >
                             </input>
@@ -57,7 +57,7 @@ class LogInFormPage extends React.Component {
                         <div>
                             <input
                             type="submit"
-                            value="Log In"
+                            value="Log in"
                             className="login-btn"
                             >
                             </input>
