@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles.css/LogInPage.css'
+import '../styles/LogInPage.css'
 
 // function LogInFormPage(props){
 //     // React State
@@ -13,22 +13,21 @@ import '../styles.css/LogInPage.css'
 //     );
 
 // }
-function Square(){
-    return(
+function Square() {
+    return (
         <div >
             <div className="square1">
+            </div>
+            <div className="square2">
+            </div>
         </div>
-        <div className="square2">
-        </div>
-        </div>
-        
+
     );
 }
 
 class LogInFormPage extends React.Component {
-
-    render(){
-        return(
+    render() {
+        return (
             <div className="login-container">
                 <Square />
                 <div className="form-box">
@@ -56,9 +55,9 @@ class LogInFormPage extends React.Component {
                         </div>
                         <div>
                             <input
-                            type="submit"
-                            value="Log in"
-                            className="login-btn"
+                                type="submit"
+                                value="Log in"
+                                className="login-btn"
                             >
                             </input>
                         </div>

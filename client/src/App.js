@@ -18,7 +18,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import './styles.css/App.css';
+import './styles/App.css';
 
 
 
