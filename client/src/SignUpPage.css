@@ -1,0 +1,22 @@
+.main-container {
+    background-color: lightgrey;
+}
+
+.signup {
+    background-color: lightgreen;
+    border: 2.5px solid black;
+    border-radius: 2%;
+}
+
+.body {
+    background-color: grey;
+}
+
+#firstline {
+    font-family: fantasy;
+    font-size: 1.5em;
+}
+
+#FirstName, #LastName, #InputEmail, #InputPassword, #InputPhoneNumber {
+    text-align: left;
+}
