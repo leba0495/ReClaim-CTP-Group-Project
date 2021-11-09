@@ -18,7 +18,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import SignUpPage from './pages/SignUpPage';
-import './App.css';
+import './styles/App.css';
 
 
 function Navigation(props) {
