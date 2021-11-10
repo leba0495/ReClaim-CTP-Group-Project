@@ -31,7 +31,7 @@ class LogInFormPage extends React.Component {
             <div className="login-container">
                 <Square />
                 <div className="form-box">
-                    <h2>Log in</h2>
+                    <h2 className="logIn">Log in</h2>
                     <form>
                         <div className="text-input">
                             <input
@@ -62,8 +62,8 @@ class LogInFormPage extends React.Component {
                             </input>
                         </div>
                     </form>
-                    <p>Don't have an account?</p>
-                    <a href="/" className="signup-link">Sign Up</a>
+                    <p className="texts">Don't have an account?</p>
+                    <a href="/" className="texts">Sign Up</a>
                 </div>
             </div>
         );
