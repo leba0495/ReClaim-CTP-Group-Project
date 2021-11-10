@@ -10,9 +10,16 @@ import LandingPage from './pages/LandingPage';
 import PostFormPage from './pages/PostFormPage';
 import ShowPostPage from './pages/ShowPostPage';
 import AboutUsPage from './pages/AboutUsPage';
-import {Navbar, Container, Nav, NavDropdown, Button} from 'react-bootstrap';
+import LogInFormPage from './pages/LogInFormPage';
+import Navbar from 'react-bootstrap/Navbar';
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
+import SignUpPage from './pages/SignUpPage';
+import './styles/App.css';
+// import {Navbar, Container, Nav, NavDropdown, Button} from 'react-bootstrap';
 
 
 function Navigation(props) {
@@ -42,7 +49,8 @@ function Navigation(props) {
       </NavDropdown>
       <Nav.Link href="/about-us">About Us</Nav.Link>
       <Nav.Link className = "me-4" href="/environmentfacts">Environment Facts</Nav.Link>
-      <Button  href="/log-in" variant="success">Log in</Button>
+      <Nav.Link href="/sign-up">Sign Up</Nav.Link>
+      <Button  href="/log-in" variant="success">Log in</Button>{' '}
     </Nav>
   </Navbar.Collapse>
   </Container>
@@ -62,6 +70,8 @@ class App extends React.Component {
                 <Route path="/environment-facts" component={PostFormPage} />
                 <Route path="/posts/:id" component={ShowPostPage} />
                 <Route path="/about-us" component={AboutUsPage} />
+                <Route path="/log-in" component={LogInFormPage}/>
+                <Route path="/sign-up" component={SignUpPage} />
                 <Route path="/home" component={LandingPage} />
               </Switch>
             </div>
