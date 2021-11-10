@@ -1,6 +1,6 @@
 .header {
-background-color: #F7F7F7;
 
+  background-color: #F7F7F7;
 }
 .intro {
   margin: 50px ;
@@ -13,3 +13,25 @@ background-color: #F7F7F7;
     padding-bottom: 30px;
 
 }
+
+.joinUsButton {
+ margin: 20px 20px 0 0;
+}
+
+.headerimg {
+  margin-top: 50px;
+}
+
+.howIcon  {
+  margin-left: 10px;
+}
+
+.howItWorks {
+padding-top: 40px;
+background-color: white;
+}
+
+.howItExplain {
+  padding-top: 30px;
+  background-color: white;
+  }

@@ -42,7 +42,7 @@ function Navigation(props) {
       </NavDropdown>
       <Nav.Link href="/about-us">About Us</Nav.Link>
       <Nav.Link className = "me-4" href="/environmentfacts">Environment Facts</Nav.Link>
-      <Button  href="/log-in" variant="success">Log in</Button>{' '}
+      <Button  href="/log-in" variant="success">Log in</Button>
     </Nav>
   </Navbar.Collapse>
   </Container>
