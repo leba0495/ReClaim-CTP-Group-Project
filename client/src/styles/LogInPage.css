@@ -9,15 +9,13 @@
     
 }
 
-h2 {
+.logIn {
     padding-bottom: 20px;
 }
-p {
+.texts {
     font-size: 24px;
 }
-a {
-    font-size: 24px;
-}
+
 .text-input{
     border-radius: 22px;
     margin-bottom: 35px;
