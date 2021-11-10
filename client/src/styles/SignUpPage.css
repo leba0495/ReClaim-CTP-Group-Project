@@ -1,11 +1,12 @@
-.main-container {
-    background-color: lightgrey;
-}
+/*.main-container {
+    background-color: red;
+}*/
 
 .signup {
     background-color: lightgreen;
     border: 2.5px solid black;
     border-radius: 2%;
+    width: 70%;
 }
 
 .body {
@@ -13,7 +14,6 @@
 }
 
 #firstline {
-    font-family: fantasy;
     font-size: 1.5em;
 }
 

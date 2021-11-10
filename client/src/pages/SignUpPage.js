@@ -1,9 +1,8 @@
 import React from 'react';
-import '../SignUpPage.css';
+import '../styles/SignUpPage.css';
 
 function SignUpPage(props) {
   return (
-      <div className="main-container">
       <div class="container signup">
           <div class="col-sm">
         <div id="firstline" class="mb-1">Welcome! Please sign up here!</div>
@@ -40,7 +39,7 @@ function SignUpPage(props) {
   </form>
   </div>
   </div>
-  </div>
+
   );
 }
 
