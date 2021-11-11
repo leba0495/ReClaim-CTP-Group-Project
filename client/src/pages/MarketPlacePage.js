@@ -1,10 +1,12 @@
 import React from "react";
 import '../styles/MarketPlacePage.css'
 
-class Market extends React.Component() {
+class Market extends React.Component {
     render(){
         return (
-            <h1>Hello</h1>
+            <div className="market-main">
+                <h1>Hello</h1>
+            </div>
         );
     }
 }

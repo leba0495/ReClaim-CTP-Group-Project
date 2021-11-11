@@ -52,7 +52,7 @@ function Navigation(props) {
         <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
       </NavDropdown>
       <Nav.Link href="/about-us">About Us</Nav.Link>
-      <Nav.Link className = "me-4" href="/environmentfacts">Environment Facts</Nav.Link>
+      <Nav.Link className = "me-4" href="#environmental-facts">Environment Facts</Nav.Link>
       <Nav.Link href="/sign-up">Sign Up</Nav.Link>
       <Button  href="/log-in" variant="success">Log in</Button>{' '}
     </Nav>
@@ -76,8 +76,8 @@ class App extends React.Component {
                 <Route path="/about-us" component={AboutUsPage} />
                 <Route path="/log-in" component={LogInFormPage}/>
                 <Route path="/sign-up" component={SignUpPage} />
-                <Route parth="/market-place" component={MarketPlace}/>
                 <Route path="/home" component={LandingPage} />
+                <Route parth="/market-place" component={MarketPlace}/>
               </Switch>
             </div>
           </div>
