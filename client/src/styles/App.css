@@ -21,6 +21,10 @@
   color: #09d3ac;
 }
 */
-Nav {
-  position: sticky;
+.navBar {
+
+}
+
+.logInButton {
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
