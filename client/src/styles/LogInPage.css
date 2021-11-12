@@ -2,7 +2,7 @@
 .form-box{
     background-color: #C9C9C9;
     width: 35%;
-    height: 525px;
+    height: 70%;
     padding: 50px;
     margin: 100px auto;
     border-radius: 20px;
@@ -47,24 +47,24 @@
 /* Squares */
 .square1 {
     position: absolute;
-    width: 750px;
-    height: 750px;
+    width: 60%;
+    height: 80%;
     left: -300px;
-    top: -150px;
+    top: -180px;
     background: #6FEF74B8;
-    border-radius: 160px;
+    border-radius: 100px;
     transform: rotate(-45deg);
     z-index: -2;
 }
 
 .square2{
     position: absolute;
-    width: 750px;
-    height: 750px;
-    right: -200px;
-    top: 450px;
+    width: 60%;
+    height: 80%;
+    right: -360px;
+    top: 300px;
     background: #02C616;
-    border-radius: 160px;
+    border-radius: 100px;
     transform: rotate(-45deg);
     z-index: -2;
 }
