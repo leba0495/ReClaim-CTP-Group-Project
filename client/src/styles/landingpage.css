@@ -4,6 +4,7 @@
 }
 .intro {
   margin: 50px ;
+  padding-bottom: 80px;
 }
 
 .intro .introText {
@@ -43,6 +44,22 @@ background-color: white;
   background-color: white;
 }
 .badges {
+  margin-bottom: 20px;
   font-size: 18px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.20), 0px 4px 4px rgba(0, 0, 0, 0.20);
+}
+
+.howTexts {
+  font-size: 15px;
+}
+
+.howItWorkImgs{
+ margin-right: 10px;
+}
+
+.recycleFacts {
+
+  background: linear-gradient(180deg, rgba(150, 213, 39, 0.72) 60.42%, rgba(255, 255, 255, 0.9) 99.48%);
+
+
 }

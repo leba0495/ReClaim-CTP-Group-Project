@@ -6,7 +6,6 @@ import {
   Link,
   NavLink
 } from 'react-router-dom';
-/* Pages Imports */
 import LandingPage from './pages/LandingPage';
 import PostFormPage from './pages/PostFormPage';
 import ShowPostPage from './pages/ShowPostPage';
@@ -18,8 +17,10 @@ import MarketPlacePage from './pages/MarketPlacePage';
 /* Components Imports */
 import {Navbar, Container, Nav, NavDropdown, Button, Image} from 'react-bootstrap';
 import './styles/App.css';
-
 import Logo from './images/icon.png'
+import './styles/App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function Navigation(props) {
   return (
