@@ -11,37 +11,28 @@ import PostFormPage from './pages/PostFormPage';
 import ShowPostPage from './pages/ShowPostPage';
 import AboutUsPage from './pages/AboutUsPage';
 import LogInFormPage from './pages/LogInFormPage';
-import Navbar from 'react-bootstrap/Navbar';
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import SignUpPage from './pages/SignUpPage';
 import './styles/App.css';
-// import {Navbar, Container, Nav, NavDropdown, Button} from 'react-bootstrap';
+import {Navbar, Container, Nav, NavDropdown, Button, Image} from 'react-bootstrap';
+import Logo from './images/icon.png'
 
 
 function Navigation(props) {
   return (
     // Extra small (xs) · Small (sm) · Medium (md) · Large (lg) · Extra large (xl) · Extra extra large (xxl)
-    <Navbar collapseOnSelect expand="md" bg="dark" variant="dark">
+    <Navbar fixed = "top" collapseOnSelect expand="md" bg="dark" variant="dark">
   <Container> 
   <Navbar.Brand href="#home">
-        <img
-          alt=""
-          src="https://cdn-icons-png.flaticon.com/512/1598/1598196.png"
-          width="30"
-          height= "30"
-          className="d-inline-block align-top"
-        />{' '}
+        <Image src = {Logo} width="30"
+          height= "30" className="d-inline-block align-top"/>
       ReClaim
   </Navbar.Brand>
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">
     <Nav className = "ms-auto" >
     <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-        <NavDropdown.Item href="/home">Home</NavDropdown.Item>
+        <NavDropdown.Item href="/">Home</NavDropdown.Item>
         <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
         <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
         <NavDropdown.Divider />
@@ -72,7 +63,7 @@ class App extends React.Component {
                 <Route path="/about-us" component={AboutUsPage} />
                 <Route path="/log-in" component={LogInFormPage}/>
                 <Route path="/sign-up" component={SignUpPage} />
-                <Route path="/home" component={LandingPage} />
+                <Route path="/" component={LandingPage} />
               </Switch>
             </div>
           </div>

@@ -1,7 +1,9 @@
 import React from 'react';
-import {Container, Row, Col, Image, Button} from 'react-bootstrap';
+import {Container, Row, Col, Image, Button, Badge} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/landingpage.css'
+import HeaderImage from '../images/headerimg.jpg'
+import HowItWorkImg from '../images/howitwork.png'
 
 class LandingPage extends React.Component {
 
@@ -18,13 +20,12 @@ class LandingPage extends React.Component {
            She margaret law thoughts proposal formerly. Speaking ladyship yet scarcely and mistaken end exertion dwelling. All decisively dispatched instrument particular way one devonshire.
            Applauded she sportsman explained for out objection. <p> <Button  className = "joinUsButton" href="/sign-up" variant="success">Join us Today !</Button> </p></Col>
           <Col>
-            <Image className = "headerimg" src= "https://www.budgetdumpster.com/blog/wp-content/uploads/2017/11/volunteer-recycling-bottles.jpg" 
-            style={{ maxWidth: '25rem'}} rounded/>
+            <Image className = "headerimg" src= {HeaderImage} style={{ maxWidth: '25rem'}}/>
           </Col>
       </Row>
       <Row className = "howItWorks">
         <Col><strong>How it Works</strong>
-        <Image className = "howIcon" src = "https://cdn-icons.flaticon.com/png/512/3658/premium/3658345.png?token=exp=1636501224~hmac=430550e2b0bbcde0ddd14bf3e7c7bfb4"
+        <Image className = "howIcon" src = {HowItWorkImg}
         width = "50px" height = "50px"/>
         </Col>
       </Row>
@@ -32,13 +33,17 @@ class LandingPage extends React.Component {
        For every breakpoint, you can specify the amount of columns that will fit next to each other.  */}
       <Row className="align-items-center howItExplain">
           <Col>
-            <b>Posting</b>
+          <Badge className = "badges"pill bg="info">
+          <strong>Posting</strong>
+          </Badge>
             <p>details</p>
             <p>details</p>
             <p>details</p>
           </Col>
           <Col>
-          <b>Collecting</b>
+          <Badge className = "badges" pill bg="warning">
+          <strong>Collecting</strong>
+          </Badge>
           <p>details</p>
           <p>details</p>
           <p>details</p>
