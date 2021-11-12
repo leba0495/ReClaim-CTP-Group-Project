@@ -21,7 +21,7 @@ import Logo from './images/icon.png'
 function Navigation(props) {
   return (
     // Extra small (xs) · Small (sm) · Medium (md) · Large (lg) · Extra large (xl) · Extra extra large (xxl)
-    <Navbar fixed = "top" collapseOnSelect expand="md" bg="dark" variant="dark">
+    <Navbar fixed ="top" collapseOnSelect expand="md" bg="dark" variant="dark">
   <Container> 
   <Navbar.Brand href="#home">
         <Image src = {Logo} width="30"
@@ -41,7 +41,7 @@ function Navigation(props) {
       <Nav.Link href="/about-us">About Us</Nav.Link>
       <Nav.Link className = "me-4" href="/environmentfacts">Environment Facts</Nav.Link>
       <Nav.Link href="/sign-up">Sign Up</Nav.Link>
-      <Button  href="/log-in" variant="success">Log in</Button>{' '}
+      <Button className = "logInButton" href="/log-in" variant="success">Log in</Button>{' '}
     </Nav>
   </Navbar.Collapse>
   </Container>

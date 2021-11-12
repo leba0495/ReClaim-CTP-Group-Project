@@ -7,7 +7,7 @@ function SignUpPage(props) {
       <div class="container signup">
           <div class="col-sm">
         <div id="firstline" class="mb-1">Welcome! Please sign up here!</div>
-        <div class="mb-5">Already signed up? <a href="./about-us">Log In</a></div>
+        <div class="mb-5">Already signed up? <a href="./log-in">Log In</a></div>
     <form class="mb-3 needs-validation" novalidate>
     <div id="FirstName" class="mb-3"> 
     <label for="FirstName" class="form-label"> First Name*</label>

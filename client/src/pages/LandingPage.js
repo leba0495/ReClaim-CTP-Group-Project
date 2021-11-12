@@ -15,10 +15,8 @@ class LandingPage extends React.Component {
       <Container className = "header" fluid = "md">
         <Row className = "intro">
           {/* lg={true} indicates the breakpoint of the column, in this case break at screen large. */}
-          <Col className = "introText" lg={true}>An do on frankness so cordially immediate recommend contained. Imprudence insensible be literature unsatiable do.
-           Of or imprudence solicitude affronting in mr possession. Compass journey he request on suppose limited of or. 
-           She margaret law thoughts proposal formerly. Speaking ladyship yet scarcely and mistaken end exertion dwelling. All decisively dispatched instrument particular way one devonshire.
-           Applauded she sportsman explained for out objection. <p> <Button  className = "joinUsButton" href="/sign-up" variant="success">Join us Today !</Button> </p></Col>
+          <Col className = "introText" lg={true}>ReClaim makes recycling easy. 
+          So easy that you forget about it. With a platform so easy to use, you might not even realize you’re helping to save the world. <p> <Button  className = "joinUsButton" href="/sign-up" variant="success">Join us Today !</Button> </p></Col>
           <Col>
             <Image className = "headerimg" src= {HeaderImage} style={{ maxWidth: '25rem'}}/>
           </Col>
@@ -26,7 +24,7 @@ class LandingPage extends React.Component {
       <Row className = "howItWorks">
         <Col><strong>How it Works</strong>
         <Image className = "howIcon" src = {HowItWorkImg}
-        width = "50px" height = "50px"/>
+        width = "40px" height = "40px"/>
         </Col>
       </Row>
       {/*<Row xs={1} md={1}  lg = {1}>  you specify column widths across 5 breakpoint sizes (xs, sm, md, lg, xl and xxl).
