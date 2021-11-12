@@ -1,7 +1,7 @@
 import React from "react";
 import '../styles/MarketPlacePage.css'
 
-class Market extends React.Component {
+class MarketPlacePage extends React.Component {
     render(){
         return (
             <div className="market-main">
@@ -11,4 +11,4 @@ class Market extends React.Component {
     }
 }
 
-export default Market;
+export default MarketPlacePage;
