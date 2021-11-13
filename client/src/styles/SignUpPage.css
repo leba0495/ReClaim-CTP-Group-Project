@@ -1,16 +1,12 @@
-
-
-.main-container {
-    background-color: lightgrey;
-    padding-top: 100px;
-    padding-bottom: 50px;
-}
+/*.main-container {
+    background-color: red;
+}*/
 
 .signup {
     background-color: lightgreen;
     border: 2.5px solid black;
     border-radius: 2%;
-    width: 50%;
+    width: 70%;
 }
 
 .body {
@@ -18,7 +14,6 @@
 }
 
 #firstline {
-    font-family: fantasy;
     font-size: 1.5em;
 }
 
