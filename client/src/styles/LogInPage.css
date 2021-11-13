@@ -52,7 +52,7 @@
     left: -300px;
     top: -180px;
     background: #6FEF74B8;
-    border-radius: 100px;
+    border-radius: 80px;
     transform: rotate(-45deg);
     z-index: -2;
 }
@@ -64,7 +64,7 @@
     right: -360px;
     top: 300px;
     background: #02C616;
-    border-radius: 100px;
+    border-radius: 80px;
     transform: rotate(-45deg);
     z-index: -2;
 }
