@@ -51,7 +51,7 @@ class LogInFormPage extends React.Component {
                         </div>
                     </form>
                     <p className="texts">Don't have an account?</p>
-                    <a href="/" className="texts">Sign Up</a>
+                    <a href="./sign-up" className="texts">Sign Up</a>
                 </div>
             </div>
         );

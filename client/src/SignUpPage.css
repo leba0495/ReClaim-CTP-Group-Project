@@ -3,12 +3,14 @@
 .main-container {
     background-color: lightgrey;
     padding-top: 100px;
+    padding-bottom: 50px;
 }
 
 .signup {
     background-color: lightgreen;
     border: 2.5px solid black;
     border-radius: 2%;
+    width: 50%;
 }
 
 .body {
