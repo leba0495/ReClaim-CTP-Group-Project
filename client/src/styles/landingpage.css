@@ -10,7 +10,7 @@
 .intro .introText {
 
     padding-top: 50px;
-    text-align: justify;
+    text-align: left;
     padding-bottom: 30px;
     font-size: 20px;
     letter-spacing: 0.01em;
@@ -71,7 +71,7 @@ background-color: white;
 .factTextsR{
   padding-right: 120px;
   margin-top: 20px;
-  text-align: justify;
+  text-align: left;
   letter-spacing: 0.01em;
   background-color: #F7F7F7;
   border-radius: 15px;
@@ -83,7 +83,7 @@ background-color: white;
 .factTextsL{
   margin-top: 20px;
   padding-left: 60px;
-  text-align: justify;
+  text-align: left;
   letter-spacing: 0.01em;
   background-color: #F7F7F7;
   border-radius: 15px;
@@ -101,11 +101,53 @@ background-color: white;
   margin-top: 15px;
 }
 
-.ourGoalSection {
+.goalSection {
  background-color:white;
 
 }
 
+.roundedTexts{
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: white;
+}
+
+.roundedTexts p {
+  border-radius: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: #60B7FF;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-size: 15px;
+}
+
+.goalSection{
+  background-color: white;
+}
+
+.aimText {
+  padding-top: 20px;
+  padding-bottom: 35px;
+  text-align: left;
+}
+
+
 .aboutUsSection{
   background-color: #F7F7F7;
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+
+
+.aboutUs {
+
+  margin-top: 30px;
+}
+.aboutUsText {
+
+  background: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  text-align: left;
+
 }

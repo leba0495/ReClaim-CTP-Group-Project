@@ -17,6 +17,9 @@ import TvImg from '../images/watch-tv.png'
 import EarthImg from '../images/earth.png'
 import PlanetImg from '../images/planet.png'
 import EcoLight from '../images/eco-light.png'
+import Programmer1 from '../images/programmer.png'
+import Programmer2 from '../images/teacher.png'
+import Programmer3 from '../images/businessman.png'
 
 
 
@@ -170,38 +173,36 @@ class LandingPage extends React.Component {
     </Row>
 
   {/* Our Goal Section */}
-  <div className = "ourGoalSection">
-    <Row>
+
+    <Row className = "goalSection">
     <Col><strong>Our Goal</strong>
         <Image className = "sectionIcons" src = {EcoLight}
         width = "40px" height = "px"/>
         </Col>
     </Row>
-    <Row>
-      <Col>
+    <Row className = "goalSection justify-content-md-center">
+      <Col className = "aimText"  lg = {10}>
       Our goal is to connect everyday people who are passionate about recycling but may be strapped for time with those who have the time and want to recycle more!
        We even want people who aren’t that passionate about recycling to give us a try.
        </Col>
     </Row>
-    <Row>
-      <Col>
-      3,000+ ACTIVE USERS
+    <Row className = "roundedTexts justify-content-md-center">
+      <Col xs = {4} md = {3} lg = {2}>
+       <p> 3,000+ ACTIVE USERS </p>
       </Col>
-      <Col>
-      30,000+ TONS RECYCLED
+      <Col xs = {4} md = {3} lg = {2}>
+      <p>30,000+ TONS RECYCLED </p> 
       </Col>
-      <Col>
-      1 DEDICATED TEAM
+      <Col xs = {4} md = {3} lg = {2}>
+      <p> 1 DEDICATED TEAM</p> 
       </Col>
     </Row> 
-     <Row>
-       <Col>
+     <Row className = "goalSection justify-content-md-center">
+       <Col className = "aimText" lg = {10}>
        We understand sometimes people feel like they put in a lot of effort but do not see the reward. 
        We want to change that by providing both those who recycle their eligible waste and those who take it with more incentives to do so.
        </Col>
      </Row>
-    </div>
-
 
       {/* About us */}
   <div className = "aboutUsSection">
@@ -212,17 +213,20 @@ class LandingPage extends React.Component {
     </Row>
     <Row>
       <Col>
-      IMG 1
+      <Image className = "factImgL" src = {Programmer1}
+          width = "95px" height = "95px"/>
       </Col>
       <Col>
-      IMG 2
+      <Image className = "factImgL" src = {Programmer2}
+          width = "95px" height = "95px"/>
       </Col>
       <Col>
-      IMG 3
+      <Image className = "factImgL" src = {Programmer3}
+          width = "95px" height = "95px"/>
       </Col>
     </Row> 
-     <Row>
-       <Col>
+     <Row className = "aboutUs justify-content-md-center" >
+       <Col lg = {7} className = "aboutUsText">
        In 2021, our founders, Daniel Li, Kessler Lock, and Luis Brito believed there had to be a better way to improve the outdated,
         expensive and inefficient process of commercial recycling and waste management - And from this belief, ReClaim was born.
        </Col>
