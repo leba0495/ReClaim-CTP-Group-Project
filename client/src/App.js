@@ -13,7 +13,7 @@ import ShowPostPage from './pages/ShowPostPage';
 import AboutUsPage from './pages/AboutUsPage';
 import LogInFormPage from './pages/LogInFormPage';
 import SignUpPage from './pages/SignUpPage';
-
+import Footer from './components/Footer'
 import {Navbar, Container, Nav, NavDropdown, Button, Image} from 'react-bootstrap';
 
 import Logo from './images/icon.png'
@@ -63,14 +63,14 @@ class App extends React.Component {
               <Switch>
                 <Route path="/environment-facts" component={PostFormPage} />
                 <Route path="/posts/:id" component={ShowPostPage} />
-                <Route path="/about-us" component={AboutUsPage} />
                 <Route path="/log-in" component={LogInFormPage}/>
                 <Route path="/sign-up" component={SignUpPage} />
                 <Route path="/" component={LandingPage} />
               </Switch>
             </div>
+            <Footer/>
           </div>
-        </Router>
+      </Router>
     );
   }
 }

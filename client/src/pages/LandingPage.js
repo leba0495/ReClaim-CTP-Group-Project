@@ -205,23 +205,23 @@ class LandingPage extends React.Component {
      </Row>
 
       {/* About us */}
-  <div className = "aboutUsSection">
+  <div className = "aboutUsSection"> 
     <Row>
       <Col>
       <strong>About Us</strong>
       </Col>
     </Row>
-    <Row>
-      <Col>
-      <Image className = "factImgL" src = {Programmer1}
+    <Row className = "aboutUsImg justify-content-md-center">
+      <Col xs = {4} lg = {3}>
+      <Image src = {Programmer1}
           width = "95px" height = "95px"/>
       </Col>
-      <Col>
-      <Image className = "factImgL" src = {Programmer2}
+      <Col xs = {4} lg = {3}>
+      <Image src = {Programmer2}
           width = "95px" height = "95px"/>
       </Col>
-      <Col>
-      <Image className = "factImgL" src = {Programmer3}
+      <Col xs = {4}  lg = {3}>
+      <Image src = {Programmer3}
           width = "95px" height = "95px"/>
       </Col>
     </Row> 
@@ -233,16 +233,7 @@ class LandingPage extends React.Component {
      </Row>
     </div>
 
-
-
-
-
-
-
-
-
-
-      </Container>
+</Container>
     );
   }
 }
