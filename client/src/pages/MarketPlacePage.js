@@ -1,8 +1,10 @@
 import React from "react";
-import {Card, Image, Row, Col} from 'react-bootstrap';
+import {Card, Image, Button} from 'react-bootstrap';
 import MarketImage from '../images/market.png';
 import '../styles/MarketPlacePage.css';
 import BinImage from '../images/bin-recyclable.png';
+import SearchBar from "../components/SearchBar";
+import Batch from '../components/Batch';
 
 const POSTS = [
     {title: "Wine Bottles",
@@ -40,42 +42,24 @@ function MarketDecoration(){
         </div>
     );
 }
-function SearchBar(props){
-    return (
-        <div className="bar-main">
-            <input 
-            type="text"
-            placeholder="Look up a city..."
-            className="search-input"
-            >
-            </input>
-            <button className="search-btn">Search</button>
-        </div>
-    ); 
-}
-
-function CardElement(props){
-    return (
-        <Card className=" card g-0 shadow-sm">
-            <Card.Img className="card-img-top p-2" variant="left" src={props.batch.image} />
-            <Card.Body>
-                <Card.Title >{props.batch.title}</Card.Title>
-                <p>Description:</p>
-                <Card.Text>{ props.batch.description }</Card.Text>
-            </Card.Body>
-        </Card>
-        
-    );
-}
-
 
 class MarketPlacePage extends React.Component {
+    state = {
+        batches: [],
+        loading: true,
+    }
+
+    // Loads when the component is rendered so using the fake posts I passed Batch components into the Market's batches state
+    componentDidMount(){
+        this.setState({ batches: POSTS.map((b, ii) => <Batch {...b} key={ii} />)});
+    }
+
     render(){
         return (
             <div className="market-main">
                 <MarketDecoration />
                 <SearchBar/>
-                <CardElement  batch={POSTS[0]}/>
+                {this.state.batches}
             </div>
         );
     }
