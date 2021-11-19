@@ -3,6 +3,7 @@ import {Container, Row, Col, Image, Tooltip, OverlayTrigger, Button} from 'react
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/footer.css'
 import FooterImg from '../images/icon.png';
+import FooterImg2 from '../images/recycling.png';
 
 function Footer(props) {
 
@@ -16,19 +17,19 @@ function Footer(props) {
     <Container className="footer">
       <Row>
           <Col>
-          1 of 3
+          <Image src = {FooterImg2} width = "80px" height = "80px"/>
           </Col>
           <Col>
           2 of 3
-          <Col>s</Col>
-          <Col>s</Col>
-          <Col>s</Col>
+            <Col>s</Col>
+            <Col>s</Col>
+            <Col>s</Col>
           </Col>
           <Col>
           3 of 3
-          <Col>s</Col>
-          <Col>s</Col>
-          <Col>s</Col>
+            <Col>s</Col>
+            <Col>s</Col>
+            <Col>s</Col>
           </Col>
           <Col>
           <OverlayTrigger placement="top" delay={{ show: 250, hide: 400 }} 
