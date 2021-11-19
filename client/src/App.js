@@ -5,7 +5,9 @@ import {
   Route, 
   Link,
   NavLink
+  
 } from 'react-router-dom';
+import Footer from './components/Footer'
 
 import LandingPage from './pages/LandingPage';
 import PostFormPage from './pages/PostFormPage';
@@ -13,7 +15,6 @@ import ShowPostPage from './pages/ShowPostPage';
 import AboutUsPage from './pages/AboutUsPage';
 import LogInFormPage from './pages/LogInFormPage';
 import SignUpPage from './pages/SignUpPage';
-import Footer from './components/Footer'
 import {Navbar, Container, Nav, NavDropdown, Button, Image} from 'react-bootstrap';
 
 import Logo from './images/icon.png'
@@ -68,7 +69,6 @@ class App extends React.Component {
                 <Route path="/" component={LandingPage} />
               </Switch>
             </div>
-            <Footer/>
           </div>
       </Router>
     );

@@ -69,7 +69,6 @@ background-color: white;
 }
 
 .factTextsR{
-  padding-right: 120px;
   margin-top: 20px;
   text-align: left;
   letter-spacing: 0.01em;
@@ -81,20 +80,19 @@ background-color: white;
 }
 
 .factTextsL{
-  margin-top: 20px;
-  padding-left: 60px;
+  margin-top: 30px;
   text-align: left;
   letter-spacing: 0.01em;
   background-color: #F7F7F7;
   border-radius: 15px;
   border-color: black;
   border-style: groove;
-  margin-left: 60px;
+  margin-left: 75px;
 }
 
 .factImgL {
  margin-right: 10px;
- margin-left: 10px;
+ margin-left: 8px;
 }
 
 .factImgR{
