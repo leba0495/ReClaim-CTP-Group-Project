@@ -25,6 +25,7 @@
 }
 .search-btn {
     color: white;
+    margin-bottom: 100px;
     width: 8%;
     padding: 10px;
     height: 42px;
@@ -33,15 +34,7 @@
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 15px;
 }
-
-.card{
-    width: 50%;
-    margin: 50px;
-    flex-direction: row;
-    border: 1px solid #070707;
-    border-radius: 20px;
-    margin-left: 300px;
-}
+ 
 
 .btn-style {
     color: white;

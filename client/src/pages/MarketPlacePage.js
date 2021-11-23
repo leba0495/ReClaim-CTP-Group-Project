@@ -1,5 +1,5 @@
 import React from "react";
-import {Card, Image, Button} from 'react-bootstrap';
+import {Card, Image, Button, CardGroup} from 'react-bootstrap';
 import MarketImage from '../images/market.png';
 import '../styles/MarketPlacePage.css';
 import BinImage from '../images/bin-recyclable.png';
@@ -8,29 +8,34 @@ import Batch from '../components/Batch';
 
 const POSTS = [
     {title: "Wine Bottles",
-    address: "Bronx, NY",
+    location: "Bronx, NY",
     description: "I have a bin with 15+ wine bottles that could go to a nice home. They can be recycled and made into nice decorative bottles.",
     image: BinImage,
+    isClaimed: true,
+    },
+    {title: "Plastic Bottles",
+    location: "Bronx, NY",
+    description: "I have a bin with 15+ wine bottles that could go to a nice home. They can be recycled and made into nice decorative bottles.",
+    image: BinImage,
+    isClaimed: false,
+    },
+    {title: "Some Cans",
+    location: "Bronx, NY",
+    description: "I have a bin with 15+ wine bottles that could go to a nice home. They can be recycled and made into nice decorative bottles.",
+    image: BinImage,
+    isClaimed: true,
     },
     {title: "Wine Bottles",
-    address: "Bronx, NY",
+    location: "Bronx, NY",
     description: "I have a bin with 15+ wine bottles that could go to a nice home. They can be recycled and made into nice decorative bottles.",
     image: BinImage,
+    isClaimed: false,
     },
     {title: "Wine Bottles",
-    address: "Bronx, NY",
+    location: "Bronx, NY",
     description: "I have a bin with 15+ wine bottles that could go to a nice home. They can be recycled and made into nice decorative bottles.",
     image: BinImage,
-    },
-    {title: "Wine Bottles",
-    address: "Bronx, NY",
-    description: "I have a bin with 15+ wine bottles that could go to a nice home. They can be recycled and made into nice decorative bottles.",
-    image: BinImage,
-    },
-    {title: "Wine Bottles",
-    address: "Bronx, NY",
-    description: "I have a bin with 15+ wine bottles that could go to a nice home. They can be recycled and made into nice decorative bottles.",
-    image: BinImage,
+    isClaimed: false,
     },
 ];
 
@@ -45,21 +50,27 @@ function MarketDecoration(){
 
 class MarketPlacePage extends React.Component {
     state = {
-        batches: [],
+        batches: POSTS,
         loading: true,
     }
 
     // Loads when the component is rendered so using the fake posts I passed Batch components into the Market's batches state
     componentDidMount(){
-        this.setState({ batches: POSTS.map((b, ii) => <Batch {...b} key={ii} />)});
     }
 
     render(){
+        const batchRecord = this.state.batches.map((batch, ii) => {
+            return ( 
+                <Batch title={batch.title} location={batch.location} description={batch.description} image={batch.image} claimStatus={batch.isClaimed} key={ii} />)
+            
+        })
         return (
             <div className="market-main">
                 <MarketDecoration />
                 <SearchBar/>
-                {this.state.batches}
+                
+                { batchRecord }
+                
             </div>
         );
     }
