@@ -16,25 +16,27 @@ function Footer(props) {
   return (
     <Container className="footer">
       <Row>
-          <Col>
-          <Image src = {FooterImg2} width = "80px" height = "80px"/>
+          <Col xs = {1}>
+          <Image className ="footer2img element-to-hide" src = {FooterImg2} width = "80px" height = "80px"/>
+            <p className="footer2Text"> Look deep into nature, and then you will understand everything better.    
+             - Albert Einstein </p> 
           </Col>
-          <Col>
-          2 of 3
-            <Col>s</Col>
-            <Col>s</Col>
-            <Col>s</Col>
+          <Col xs = {4}  className = "links">
+            <Col><a   href="/">CONTACT</a></Col>
+            <Col><a  href="/">OUR STORY</a></Col>
+            <Col><a   href="/">FIND US</a></Col>
+            <Col><a   href="/">FAQ</a></Col>
           </Col>
-          <Col>
-          3 of 3
-            <Col>s</Col>
-            <Col>s</Col>
-            <Col>s</Col>
+          <Col xs = {3} className = "links">
+            <Col ><a  href="/sign-up">SIGN UP</a></Col>
+            <Col><a  href="/">INFO</a></Col>
+            <Col><a  href="/">FACEBOOK</a></Col>
+            <Col><a   href="/">INSTAGRAM</a></Col>
           </Col>
           <Col>
           <OverlayTrigger placement="top" delay={{ show: 250, hide: 400 }} 
           overlay ={renderTooltip}>      
-              <Image src = {FooterImg} width = "100px" height = "100px"/>
+              <Image src = {FooterImg} width = "80px" height = "80px"/>
           </OverlayTrigger>
           </Col>
       </Row>

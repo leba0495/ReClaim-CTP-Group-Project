@@ -45,7 +45,7 @@ class LandingPage extends React.Component {
             </p>
           </Col>
           <Col xs ={4} md = {5}>
-            <Image className = "headerimg" src= {HeaderImage} style={{ maxWidth: '23rem'}}/>
+            <Image className = "headerimg" src= {HeaderImage} style = {{maxWidth: "23rem"}}/>
           </Col>
       </Row>
       <Image className = "introArrow" src = {DownArrowImg}
