@@ -1,6 +1,5 @@
 import React from 'react';
-import '../SignUpPage.css';
-import Footer from '../components/Footer'
+import '../SignUpPage.css'
 
 function SignUpPage(props) {
   return (

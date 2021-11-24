@@ -41,8 +41,8 @@ function Navigation(props) {
         <NavDropdown.Divider />
         <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
       </NavDropdown>
-      <Nav.Link href="/about-us">About Us</Nav.Link>
-      <Nav.Link className = "me-4" href="/environmentfacts">Environment Facts</Nav.Link>
+      <Nav.Link href="#about-us">About Us</Nav.Link>
+      <Nav.Link className = "me-4" href="#environmentFacts">Environment Facts</Nav.Link>
       <Nav.Link href="/sign-up">Sign Up</Nav.Link>
       <Button className = "logInButton" href="/log-in" variant="success">Log in</Button>{' '}
     </Nav>

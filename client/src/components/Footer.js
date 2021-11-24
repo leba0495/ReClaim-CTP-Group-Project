@@ -21,19 +21,19 @@ function Footer(props) {
             <p className="footer2Text"> Look deep into nature, and then you will understand everything better.    
              - Albert Einstein </p> 
           </Col>
-          <Col xs = {4}  className = "links">
+          <Col className = "links">
             <Col><a   href="/">CONTACT</a></Col>
             <Col><a  href="/">OUR STORY</a></Col>
             <Col><a   href="/">FIND US</a></Col>
             <Col><a   href="/">FAQ</a></Col>
           </Col>
-          <Col xs = {3} className = "links">
+          <Col className = "links">
             <Col ><a  href="/sign-up">SIGN UP</a></Col>
             <Col><a  href="/">INFO</a></Col>
             <Col><a  href="/">FACEBOOK</a></Col>
             <Col><a   href="/">INSTAGRAM</a></Col>
           </Col>
-          <Col>
+          <Col xs ={3}md ={2}lg = {2}>
           <OverlayTrigger placement="top" delay={{ show: 250, hide: 400 }} 
           overlay ={renderTooltip}>      
               <Image src = {FooterImg} width = "80px" height = "80px"/>

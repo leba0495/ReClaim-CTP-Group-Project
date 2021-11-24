@@ -52,10 +52,10 @@ class LandingPage extends React.Component {
         width = "40px" height = "30px"/>
 
     {/* How it works section */}
-      <Row className = "howItWorks">
+      <Row id ="how-it-work"className = "howItWorks">
         <Col><strong>How it Works</strong>
         <Image className = "sectionIcons" src = {HowItWorkImg}
-        width = "40px" height = "px"/>
+        width = "40px" height = "40px"/>
         </Col>
       </Row>
       {/*<Row xs={1} md={1}  lg = {1}>  you specify column widths across 5 breakpoint sizes (xs, sm, md, lg, xl and xxl).
@@ -130,9 +130,10 @@ class LandingPage extends React.Component {
       </Row>
 
  {/* Top Recycle Facts section */}
-    <Row className = "recycleFacts justify-content-md-center">
+ 
+    <Row id = "environmentFacts" className = "recycleFacts justify-content-md-center">
       <Col>
-      <strong>Top Recycling Facts</strong>
+      <strong id = "environmentFacts">Top Recycling Facts</strong>
       <Image className = "sectionIcons " src = {FactImg}
         width = "40px" height = "35px"/> 
       </Col>
@@ -206,7 +207,7 @@ class LandingPage extends React.Component {
      </Row>
 
       {/* About us */}
-  <div className = "aboutUsSection"> 
+  <div className = "aboutUsSection" id = "about-us"> 
     <Row>
       <Col>
       <strong>About Us</strong>
