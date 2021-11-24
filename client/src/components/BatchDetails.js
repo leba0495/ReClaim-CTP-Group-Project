@@ -5,11 +5,11 @@ import BinImage from '../images/bin-recyclable.png';
 function BatchDetails(props){
 
     return(
-        <Card className="g-0 shadow-sm" style={{ width: '80%' }}> 
+        <Card className="g-0 p-2 shadow-sm batch-details sticky-top scroll " style={{ width: '80%' }}> 
             <Row>
                 <Col>
                     <Card.Img className="card-img-top p-2" style={{width: "60%"}} variant="top" src={BinImage} />
-                    </Col>
+                </Col>
                 <Card.Body>
                     <Card.Title >{props.title}</Card.Title>
                     <Card.Subtitle>{props.location}</Card.Subtitle>

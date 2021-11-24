@@ -49,58 +49,46 @@ import BatchDetails from './BatchDetails';
 //     );
 // }
 
-
 class Batch extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            objectId: '',
-            title: this.props.title,
-            location: this.props.location,
-            description: this.props.description,
-            image: this.props.image,
-            isClaimed: this.props.claimStatus,
-            showComponent: false,
+
         };
         // This binding is necessary to make `this` work in the callback
-        this.displayDetails = this.displayDetails.bind(this);
+        // this.displayDetails = this.displayDetails.bind(this);
     }
 
-    displayDetails() {
-        this.setState( prevState => ({
-            showComponent: !prevState.showComponent, })
-        );
+    displayDetails = () => {
+        // Pass the id of the batch we want to display more details from
+        this.props.handleDetails(this.props.objectID);
     }
+
+    // handleClaim = () => {
+    //     // In order to claim and unclaim a certain batch, What happens after clicking the button? 
+    //     // Need to let market place know so it can update data base?
+        
+    // }
 
     render(){
         return (
-            <Container fluid>
-                <Row >
-                    <Col> 
-                        <Card className=" g-0 shadow-sm m-3">
-                            <Row>
-                                <Col m="4">
-                                    <Card.Img className="card-img-top p-2" variant="left" src={this.state.image} />
-                                </Col>
-                                <Col m="8">
-                                    <Card.Body>
-                                        <Card.Title> {this.state.title } </Card.Title>
-                                        <Card.Subtitle>{this.state.location}</Card.Subtitle>
-                                        <p>Description:</p>
-                                        <Card.Text> { this.state.description } </Card.Text>
-                                        <Button className="btn-style" > { this.state.isClaimed ? <span>Claim</span> : <span>Claimed</span>}</Button>
-                                        <Button className="btn-style" onClick={ this.displayDetails }>Details</Button>
-                                    </Card.Body>
-                                </Col>
-                            </Row>
-                        </Card>
+            <Card className="g-0 shadow-sm m-3">
+                <Row>
+                    <Col m="3">
+                        <Card.Img className="card-img-top p-2" variant="left" src={this.props.image} />
                     </Col>
-                    <Col>
-                        {this.state.showComponent ? <BatchDetails title={this.state.title} location={this.state.location} description={this.state.description} image={this.state.image} status={this.state.isClaimed}
-                        ></BatchDetails> : null}
+                    <Col m="9">
+                        <Card.Body>
+                            <Card.Title> {this.props.title } </Card.Title>
+                            <Card.Subtitle>{this.props.location}</Card.Subtitle>
+                            <p>Description:</p>
+                            <Card.Text> { this.props.description } </Card.Text>
+                            <Button className="btn-style" onClick={this.props.handleClaimStatus}> { this.props.isClaimed ? <span>Claim</span> : <span>Claimed</span>}</Button>
+                            <Button className="btn-style" onClick={ this.displayDetails }>Details</Button>
+                        </Card.Body>
                     </Col>
                 </Row>
-            </Container>  
+            </Card>
         );
     }
 }
