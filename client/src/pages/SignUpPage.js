@@ -4,7 +4,6 @@ import Footer from '../components/Footer'
 
 function SignUpPage(props) {
   return (
-      <div className="main-container">
       <div class="container signup">
           <div class="col-sm">
         <div id="firstline" class="mb-1">Welcome! Please sign up here!</div>
@@ -39,7 +38,6 @@ function SignUpPage(props) {
   </div>
     <button id="signupbutton" type="submit" class="btn btn-primary">Sign me up!</button>
   </form>
-  </div>
   </div>
   </div>
   );
