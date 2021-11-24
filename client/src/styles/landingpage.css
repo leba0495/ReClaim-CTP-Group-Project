@@ -3,26 +3,38 @@
   background-color: #F7F7F7;
 }
 .intro {
-  margin: 50px ;
+  margin: 55px ;
+  padding-bottom: 80px;
 }
 
 .intro .introText {
 
     padding-top: 50px;
-    text-align: justify;
+    text-align: left;
     padding-bottom: 30px;
-
+    font-size: 20px;
+    letter-spacing: 0.01em;
 }
 
 .joinUsButton {
  margin: 20px 20px 0 0;
+ background: #07B128;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 20px;
 }
 
 .headerimg {
   margin-top: 50px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+border-radius: 20px;
 }
 
-.howIcon  {
+.introArrow {
+ margin-bottom: 15px;
+}
+
+
+.sectionIcons  {
   margin-left: 10px;
 }
 
@@ -34,4 +46,118 @@ background-color: white;
 .howItExplain {
   padding-top: 30px;
   background-color: white;
+  padding-bottom: 80px;
+}
+.badges {
+  margin-bottom: 20px;
+  font-size: 18px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.20), 0px 4px 4px rgba(0, 0, 0, 0.20);
+}
+
+.howTexts {
+  font-size: 15px;
+}
+
+.howItWorkImgs{
+ margin-right: 10px;
+}
+
+.recycleFacts {
+  padding-top: 30px;
+  background: linear-gradient(180deg, rgba(7, 177, 40, 0.72) 60.42%, rgba(255, 255, 255, 0.9) 99.48%);
+  padding-bottom: 100px;
+}
+
+.factTextsR{
+  margin-top: 20px;
+  text-align: left;
+  letter-spacing: 0.01em;
+  background-color: #F7F7F7;
+  border-radius: 15px;
+  border-color: black;
+  border-style: groove;
+  margin-right: 30px;
+}
+
+.factTextsL{
+  margin-top: 30px;
+  text-align: left;
+  letter-spacing: 0.01em;
+  background-color: #F7F7F7;
+  border-radius: 15px;
+  border-color: black;
+  border-style: groove;
+  margin-left: 75px;
+}
+
+.factImgL {
+ margin-right: 10px;
+ margin-left: 8px;
+}
+
+.factImgR{
+  margin-top: 15px;
+}
+
+.goalSection {
+ background-color:white;
+
+}
+
+.roundedTexts{
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: white;
+}
+
+.roundedTexts p {
+  border-radius: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: #60B7FF;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-size: 15px;
+}
+
+.goalSection{
+  background-color: white;
+}
+
+.aimText {
+  padding-top: 20px;
+  padding-bottom: 35px;
+  text-align: left;
+}
+
+
+.aboutUsSection{
+  background-color: #F7F7F7;
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+
+
+.aboutUs {
+
+  margin-top: 30px;
+}
+.aboutUsText {
+
+  background: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  text-align: left;
+
+}
+
+.aboutUsImg{
+  margin-top: 20px;
+}
+
+
+
+@media (max-width: 450px) {
+  .headerimg {
+   display: none;
+  }
 }
