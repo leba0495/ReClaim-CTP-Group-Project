@@ -85,7 +85,7 @@ module.exports = (sequelize, DataTypes) => {
     modelName: 'User'
   });
 
-  console.log(User === sequelize.models.User);
+  // console.log(User === sequelize.models.User);
 
   //User.associate = (models) => {
     // associations can be defined here
