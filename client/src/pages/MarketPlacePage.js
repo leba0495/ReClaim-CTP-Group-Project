@@ -70,10 +70,18 @@ class MarketPlacePage extends React.Component {
         }
 
     }
+
     // Loads when the component is rendered so using the fake posts I passed Batch components into the Market's batches state
     componentDidMount(){
         // load data from database
     }
+
+    // This function might help reduce redundancy for the different times we need to find an object but I can't pass the object from this function into the component
+    // getObject = () => {
+    //     const object = this.state.batches.find(b => b.objectID === this.state.currBatch );
+    //     return object
+        
+    // }
 
     // Arrow functions make it so you don't need the "bind" method 
     handleDetails = currentBatch => {
@@ -83,10 +91,14 @@ class MarketPlacePage extends React.Component {
     }
 
     // Passing this as props to Batch may do the trick just need to find the batch and update the status. This should also update the text inside the button?
-    updateClaimStatus = (batchToUpdate) => {
+    updateClaimStatus = (batchID) => {
         // Update the status of the current batch
-        batchToUpdate = this.state.currBatch;
-        console.log(!batchToUpdate)
+        const batchToUpdate = this.state.batches.find(b => b.objectID === batchID);
+        // In here we need to find the object and then update the claim status
+        batchToUpdate.isClaimed = !batchToUpdate.isClaimed;
+        console.log(batchToUpdate)
+        // Now the button doesn't update the text after clicking?
+
     }
 
     render(){

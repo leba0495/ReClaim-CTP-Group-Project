@@ -3,6 +3,7 @@ const morgan = require('morgan');
 const path = require('path');
 const db = require('./models');
 const app = express();
+require('dotenv').config();
 const PORT = process.env.PORT;
 
 

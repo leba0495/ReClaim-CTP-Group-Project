@@ -17,7 +17,7 @@ function BatchDetails(props){
                     <Card.Text>
                     {props.description}
                     </Card.Text>
-                    <Button className="btn-style" > { props.status ? <span>Claim</span> : <span>Claimed</span>}</Button>
+                    <Button className="btn-style" > { props.isClaimed ? <span>Claimed</span> : <span>Claim</span>}</Button>
                 </Card.Body>
             </Row>
             <Row>

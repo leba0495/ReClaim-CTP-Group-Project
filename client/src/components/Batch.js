@@ -53,7 +53,8 @@ class Batch extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-
+            claimStatus: null,
+            buttonText: this.props.isClaimed ? "Claimed" : "Claim",
         };
         // This binding is necessary to make `this` work in the callback
         // this.displayDetails = this.displayDetails.bind(this);
@@ -64,13 +65,16 @@ class Batch extends React.Component {
         this.props.handleDetails(this.props.objectID);
     }
 
-    // handleClaim = () => {
-    //     // In order to claim and unclaim a certain batch, What happens after clicking the button? 
-    //     // Need to let market place know so it can update data base?
+    handleClaim = () => {
+        // Needed to do another function to avoid confusion between the batch that is being claimed and the batch that is getting details displayed
+        this.props.handleClaimStatus(this.props.objectID);
+        this.setState({claimStatus: !this.props.isClaimed, buttonText: this.state.claimStatus ? "Claimed" : "Claim"});
+        console.log(this.state.claimStatus);
         
-    // }
+    }
 
     render(){
+        const { buttonText } = this.state;
         return (
             <Card className="g-0 shadow-sm m-3">
                 <Row>
@@ -83,7 +87,8 @@ class Batch extends React.Component {
                             <Card.Subtitle>{this.props.location}</Card.Subtitle>
                             <p>Description:</p>
                             <Card.Text> { this.props.description } </Card.Text>
-                            <Button className="btn-style" onClick={this.props.handleClaimStatus}> { this.props.isClaimed ? <span>Claim</span> : <span>Claimed</span>}</Button>
+                            {/* <Button className="btn-style" type="submit" onClick={this.handleClaim}> { this.props.isClaimed ? <span>Claimed</span> : <span>Claim</span>}</Button> */}
+                            <Button className="btn-style" type="submit" onClick={this.handleClaim}> {buttonText}</Button>
                             <Button className="btn-style" onClick={ this.displayDetails }>Details</Button>
                         </Card.Body>
                     </Col>
