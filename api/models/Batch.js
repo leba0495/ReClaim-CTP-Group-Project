@@ -3,96 +3,91 @@ const { Model } = require('sequelize');
 
 
 module.exports = (sequelize, DataTypes) => {
-  class User extends Model {}
+  class Batch extends Model {}
 
-  User.init({
-    id: {
+  Batch.init({
+    objectId: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true,
     },
-    firstName: {
+    author: {
       type: DataTypes.STRING,
       validate: {
         len: [3, 250],
         notEmpty: true,
       },
+      unique: true,
+    },
+    activeClaimant: {
+        type: DataTypes.STRING,
+          validate: {
+            len: [3, 250],
+            notEmpty: true,
+      },
+      unique: true,
+    },
+    image: {
+        type: DataTypes.JSON,
+          validate: {
+            notEmpty: false,
+      },
       unique: false,
     },
-    lastName: {
+    description: {
         type: DataTypes.STRING,
           validate: {
             len: [3, 250],
             notEmpty: true,
       },
-      unique: true,
+      unique: false,
     },
-    password: {
-        type: DataTypes.STRING,
-          validate: {
-            len: [8, 20],
-            notEmpty: true,
-      },
-      unique: true,
-    },
-    phoneNumber: {
-        type: DataTypes.INTEGER,
-          validate: {
-            len: [10],
-            notEmpty: true,
-      },
-      unique: true,
-    },
-    email: {
+    batchLocation: {
         type: DataTypes.STRING,
           validate: {
             len: [3, 250],
             notEmpty: true,
       },
-      unique: true,
+      unique: false,
     },
-    streetAddress: {
+    batchLocationNotes: {
         type: DataTypes.STRING,
           validate: {
             len: [3, 250],
             notEmpty: true,
       },
-      unique: true,
+      unique: false,
     },
-    city: {
-        type: DataTypes.STRING,
+    isSorted: {
+        type: DataTypes.BOOLEAN,
           validate: {
             len: [3, 250],
             notEmpty: true,
       },
-      unique: true,
+      unique: false,
     },
-    zipCode: {
-        type: DataTypes.INTEGER,
+    isClaimed: {
+        type: DataTypes.BOOLEAN,
           validate: {
-            len: [5],
+            len: [3, 250],
             notEmpty: true,
       },
-      unique: true,
-    },
-    updatedAt: {
-        type: DataTypes.DATE,
-        allowNull: false,
+      unique: false,
     },
     }, {
     sequelize,
-    modelName: 'User'
+    modelName: 'Batch'
   });
 
-  console.log(User === sequelize.models.User);
+  console.log(Batch === sequelize.models.Batch);
 
-  //User.associate = (models) => {
+  //Batch.associate = (models) => {
     // associations can be defined here
 
 
-   // models.User.belongsToMany(models.blank, {through: ''});
+   // models.Batch.belongsToOne(models.blank, {through: ''});
   //};
 
-  return User;
+  return Batch;
 };
