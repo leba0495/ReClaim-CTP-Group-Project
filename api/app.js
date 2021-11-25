@@ -3,6 +3,7 @@ const morgan = require('morgan');
 const path = require('path');
 const db = require('./models');
 const app = express();
+require('dotenv').config();
 const PORT = process.env.PORT;
 
 
@@ -35,5 +36,6 @@ db.sequelize.sync({ force: false });
 if(PORT) {
   app.listen(PORT, () => console.log(`Listening on ${PORT}`));
 } else {
+  console.log(process.env.PORT)
   console.log("===== ERROR ====\nCREATE A .env FILE!\n===== /ERROR ====")
 }
