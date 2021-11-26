@@ -58,7 +58,7 @@ module.exports = (sequelize, DataTypes) => {
             len: [3, 250],
             notEmpty: true,
       },
-      unique: true,
+      unique: false,
     },
     city: {
         type: DataTypes.STRING,
