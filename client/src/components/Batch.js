@@ -1,8 +1,8 @@
 import React from 'react';
-import {Card, Image, Button, Row, Col, Container} from 'react-bootstrap';
+import {Card, Row, Col, Container} from 'react-bootstrap';
 // import BinImage from '../images/bin-recyclable.png';
 import { Link } from 'react-router-dom';
-import BatchDetails from './BatchDetails';
+import "../styles/Batch.css"
 
 // ** From The Project Starter ** 
 
@@ -39,8 +39,8 @@ import BatchDetails from './BatchDetails';
 //                     <Card.Title> { props.title } </Card.Title>
 //                     <p>Description:</p>
 //                     <Card.Text> { props.description } </Card.Text>
-//                     <Button className="btn-style">Claim</Button>
-//                     <Button className="btn-style" onClick={ displayDetails }>Details</Button>
+//                     <button className="btn-style">Claim</button>
+//                     <button className="btn-style" onClick={ displayDetails }>Details</button>
 //                 </Card.Body>
 //             </Col>
 //         </Row>
@@ -53,8 +53,6 @@ class Batch extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            claimStatus: null,
-            buttonText: this.props.isClaimed ? "Claimed" : "Claim",
         };
         // This binding is necessary to make `this` work in the callback
         // this.displayDetails = this.displayDetails.bind(this);
@@ -66,17 +64,13 @@ class Batch extends React.Component {
     }
 
     handleClaim = () => {
-        // Needed to do another function to avoid confusion between the batch that is being claimed and the batch that is getting details displayed
-        this.props.handleClaimStatus(this.props.objectID);
-        this.setState({claimStatus: !this.props.isClaimed, buttonText: this.state.claimStatus ? "Claimed" : "Claim"});
-        console.log(this.state.claimStatus);
-        
+        this.props.handleClaimStatus(this.props.objectID);  
     }
 
     render(){
-        const { buttonText } = this.state;
+
         return (
-            <Card className="g-0 shadow-sm m-3">
+            <Card className={`g-0 shadow-sm m-3 ${this.props.isClaimed ? 'card-status' : '' }` }>
                 <Row>
                     <Col m="3">
                         <Card.Img className="card-img-top p-2" variant="left" src={this.props.image} />
@@ -87,9 +81,9 @@ class Batch extends React.Component {
                             <Card.Subtitle>{this.props.location}</Card.Subtitle>
                             <p>Description:</p>
                             <Card.Text> { this.props.description } </Card.Text>
-                            {/* <Button className="btn-style" type="submit" onClick={this.handleClaim}> { this.props.isClaimed ? <span>Claimed</span> : <span>Claim</span>}</Button> */}
-                            <Button className="btn-style" type="submit" onClick={this.handleClaim}> {buttonText}</Button>
-                            <Button className="btn-style" onClick={ this.displayDetails }>Details</Button>
+                            <button className={`btn-style ${this.props.isClaimed ? 'btn-status' : '' }`} type="submit" onClick={this.handleClaim}> { this.props.isClaimed ? <span>Unclaim</span> : <span>Claim</span>}</button>
+
+                            <button className="btn-style details-btn" onClick={ this.displayDetails }>Details</button>
                         </Card.Body>
                     </Col>
                 </Row>

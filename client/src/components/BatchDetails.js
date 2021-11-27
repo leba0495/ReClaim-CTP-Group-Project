@@ -1,14 +1,15 @@
 import React from "react";
-import {Card, Button, Row, Col} from 'react-bootstrap';
+import {Card, Row, Col} from 'react-bootstrap';
 import BinImage from '../images/bin-recyclable.png';
+import "../styles/Batch.css"
 
 function BatchDetails(props){
 
     return(
-        <Card className="g-0 p-2 shadow-sm batch-details sticky-top scroll " style={{ width: '80%' }}> 
+        <Card className={`g-0 p-2 shadow-sm batch-details sticky-top scroll ${props.isClaimed ? 'card-status' : '' }`}> 
             <Row>
                 <Col>
-                    <Card.Img className="card-img-top p-2" style={{width: "60%"}} variant="top" src={BinImage} />
+                    <Card.Img className="card-img-top p-2" style={{width: "60%"}} variant="top" src={props.image} />
                 </Col>
                 <Card.Body>
                     <Card.Title >{props.title}</Card.Title>
@@ -17,7 +18,7 @@ function BatchDetails(props){
                     <Card.Text>
                     {props.description}
                     </Card.Text>
-                    <Button className="btn-style" > { props.isClaimed ? <span>Claimed</span> : <span>Claim</span>}</Button>
+                    <button className={`btn-style ${props.isClaimed ? 'btn-status' : '' }`} > { props.isClaimed ? <span>Unclaim</span> : <span>Claim</span>}</button>
                 </Card.Body>
             </Row>
             <Row>

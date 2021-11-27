@@ -9,7 +9,7 @@ function SearchBar(props){
             className="search-input"
             >
             </input>
-            <Button className="search-btn">Search</Button>
+            <button className="search-btn btn">Search</button>
         </>
     ); 
 }

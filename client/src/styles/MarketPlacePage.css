@@ -35,9 +35,15 @@
     border: 0;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 15px;
+    
+}
+
+.search-btn:hover {
+    color: white;
 }
 
 /* Batch rows */
+
 
 .details-col {
     margin-top: 16px;
@@ -46,3 +52,6 @@
     max-height: 650px;
     overflow-y: auto;
 }
+
+
+

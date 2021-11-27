@@ -76,27 +76,22 @@ class MarketPlacePage extends React.Component {
         // load data from database
     }
 
-    // This function might help reduce redundancy for the different times we need to find an object but I can't pass the object from this function into the component
-    // getObject = () => {
-    //     const object = this.state.batches.find(b => b.objectID === this.state.currBatch );
-    //     return object
-        
-    // }
-
     // Arrow functions make it so you don't need the "bind" method 
-    handleDetails = currentBatch => {
+    handleDetails = (currentBatch) => {
         // The Batch component gives the objectId of the current batch
         this.setState({ currBatch: currentBatch, showComponent: true});
 
     }
 
-    // Passing this as props to Batch may do the trick just need to find the batch and update the status. This should also update the text inside the button?
     updateClaimStatus = (batchID) => {
         // Update the status of the current batch
-        const batchToUpdate = this.state.batches.find(b => b.objectID === batchID);
-        // In here we need to find the object and then update the claim status
-        batchToUpdate.isClaimed = !batchToUpdate.isClaimed;
-        console.log(batchToUpdate)
+        const batches = this.state.batches;
+        const indexOfBatch = batches.findIndex(b => b.objectID === batchID);
+    
+        batches[indexOfBatch].isClaimed = !batches[indexOfBatch].isClaimed ;
+
+        this.setState({batches}); //the state will know that this is referring to the batches
+        console.log(batches[indexOfBatch]);
         // Now the button doesn't update the text after clicking?
 
     }
