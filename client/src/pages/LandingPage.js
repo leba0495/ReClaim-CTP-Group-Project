@@ -21,6 +21,7 @@ import Programmer1 from '../images/programmer.png'
 import Programmer2 from '../images/teacher.png'
 import Programmer3 from '../images/businessman.png'
 import Footer from '../components/Footer'
+import HomeNav from '../components/HomeNav'
 
 
 
@@ -32,6 +33,7 @@ class LandingPage extends React.Component {
       //Extra small (xs) · Small (sm) · Medium (md) · Large (lg) · Extra large (xl) · Extra extra large (xxl)
       //fluid = "md" indicate the container is fluid and indicate the breakpoint is at medium screen
       <Container className = "header" fluid = "md">
+        <HomeNav/>
       {/* Intro section */}
         <Row className = "intro">
           {/* lg={true} indicates the breakpoint of the column, in this case break at screen large. */}

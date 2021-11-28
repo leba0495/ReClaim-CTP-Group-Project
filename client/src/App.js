@@ -16,7 +16,6 @@ import LogInFormPage from './pages/LogInFormPage';
 import SignUpPage from './pages/SignUpPage';
 import {Navbar, Container, Nav, NavDropdown, Button, Image} from 'react-bootstrap';
 
-import Logo from './images/icon.png'
 import './styles/App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import HomeNav from './components/HomeNav'
@@ -26,7 +25,6 @@ class App extends React.Component {
   render() {
     return (
         <Router>
-          <HomeNav/>
           <div className="container-fluid text-center">
             <div className="row justify-content-center">
               <Switch>
