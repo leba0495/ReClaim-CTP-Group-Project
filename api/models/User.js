@@ -26,12 +26,11 @@ module.exports = (sequelize, DataTypes) => {
             len: [3, 250],
             notEmpty: true,
       },
-      unique: true,
     },
     password: {
         type: DataTypes.STRING,
           validate: {
-            len: [8, 20],
+            len: [7, 20],
             notEmpty: true,
       },
       unique: true,
@@ -66,7 +65,6 @@ module.exports = (sequelize, DataTypes) => {
             len: [3, 250],
             notEmpty: true,
       },
-      unique: true,
     },
     zipCode: {
         type: DataTypes.INTEGER,
@@ -74,7 +72,6 @@ module.exports = (sequelize, DataTypes) => {
             len: [5],
             notEmpty: true,
       },
-      unique: true,
     },
     updatedAt: {
         type: DataTypes.DATE,
