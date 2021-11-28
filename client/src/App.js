@@ -5,7 +5,10 @@ import {
   Route, 
   Link,
   NavLink
+  
 } from 'react-router-dom';
+import Footer from './components/Footer'
+
 import LandingPage from './pages/LandingPage';
 import PostFormPage from './pages/PostFormPage';
 // import ShowPostPage from './pages/ShowPostPage';
@@ -25,7 +28,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function Navigation(props) {
   return (
     // Extra small (xs) · Small (sm) · Medium (md) · Large (lg) · Extra large (xl) · Extra extra large (xxl)
-    <Navbar fixed ="top" collapseOnSelect expand="md" bg="dark" variant="dark">
+    <Navbar className = "navBar" fixed ="top" collapseOnSelect expand="md" bg="dark" variant="dark">
   <Container> 
   <Navbar.Brand href="#home">
         <Image src = {Logo} width="30"
@@ -72,7 +75,7 @@ class App extends React.Component {
               </Switch>
             </div>
           </div>
-        </Router>
+      </Router>
     );
   }
 }
