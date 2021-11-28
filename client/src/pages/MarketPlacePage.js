@@ -74,6 +74,8 @@ class MarketPlacePage extends React.Component {
     // Loads when the component is rendered so using the fake posts I passed Batch components into the Market's batches state
     componentDidMount(){
         // load data from database
+        fetch("api/")
+        .then(response => this.setState({batches: response.data}));
     }
 
     // Arrow functions make it so you don't need the "bind" method 
