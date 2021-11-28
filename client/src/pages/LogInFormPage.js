@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/LogInPage.css'
+import HomeNav from '../components/HomeNav'
 
 // function LogInFormPage(props){
 //     // React State
@@ -29,6 +30,7 @@ class LogInFormPage extends React.Component {
     render() {
         return (
             <div className="login-container">
+            <HomeNav/>
                 <Square />
                 <div className="form-box">
                     <h2 className="logIn">Log in</h2>
