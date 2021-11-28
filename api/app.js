@@ -15,8 +15,7 @@ const logFormat = process.env.NODE_ENV==='production' ? 'combined' : 'dev';
 app.use(morgan(logFormat));
 
 // this mounts controllers/index.js at the route `/api`
-//COMMENTING SINCE CONTROLLERS FOLDER IS EMPTY
-//app.use('/api', require('./controllers')); 
+app.use('/api', require('./controllers')); 
 
 // for production use, we serve the static react build folder
 if(process.env.NODE_ENV==='production') {
@@ -36,5 +35,6 @@ db.sequelize.sync({ force: false });
 if(PORT) {
   app.listen(PORT, () => console.log(`Listening on ${PORT}`));
 } else {
+  console.log(process.env.PORT)
   console.log("===== ERROR ====\nCREATE A .env FILE!\n===== /ERROR ====")
 }
