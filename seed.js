@@ -1,6 +1,6 @@
-const db = require('./models');
+const db = require('./api/models');
 const { User, Batch } = db;
-
+ 
 const USER = [
   {id: 1, firstName: 'Luis', lastName: 'Brito', password: 'JohnJay', phoneNumber: 1234567890, email: 'luis@johnjaymail.com', streetAddress: '123 Francis Street', city: 'New York', zipCode: '10018', updatedAt: new Date()},
   {id: 2, firstName: 'Kessler', lastName: 'Lock', password: 'Queens', phoneNumber: 1234567891, email: 'kessler@queensmail.com', streetAddress: '456  Adams Street', city: 'New York', zipCode: '10019', updatedAt: new Date()},
@@ -50,3 +50,4 @@ const seed = () => {
 }
 
 module.exports = seed;
+

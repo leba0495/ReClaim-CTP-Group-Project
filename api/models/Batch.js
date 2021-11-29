@@ -18,7 +18,6 @@ module.exports = (sequelize, DataTypes) => {
         len: [3, 250],
         notEmpty: true,
       },
-      unique: true,
     },
     activeClaimant: {
         type: DataTypes.STRING,
@@ -26,14 +25,12 @@ module.exports = (sequelize, DataTypes) => {
             len: [3, 250],
             notEmpty: true,
       },
-      unique: true,
     },
     image: {
         type: DataTypes.JSON,
           validate: {
             notEmpty: false,
       },
-      unique: false,
     },
     description: {
         type: DataTypes.STRING,
@@ -41,7 +38,6 @@ module.exports = (sequelize, DataTypes) => {
             len: [3, 250],
             notEmpty: true,
       },
-      unique: false,
     },
     batchLocation: {
         type: DataTypes.STRING,
@@ -49,7 +45,7 @@ module.exports = (sequelize, DataTypes) => {
             len: [3, 250],
             notEmpty: true,
       },
-      unique: false,
+
     },
     batchLocationNotes: {
         type: DataTypes.STRING,
@@ -57,7 +53,6 @@ module.exports = (sequelize, DataTypes) => {
             len: [3, 250],
             notEmpty: true,
       },
-      unique: false,
     },
     isSorted: {
         type: DataTypes.BOOLEAN,
@@ -65,7 +60,6 @@ module.exports = (sequelize, DataTypes) => {
             len: [3, 250],
             notEmpty: true,
       },
-      unique: false,
     },
     isClaimed: {
         type: DataTypes.BOOLEAN,
@@ -73,7 +67,6 @@ module.exports = (sequelize, DataTypes) => {
             len: [3, 250],
             notEmpty: true,
       },
-      unique: false,
     },
     }, {
     sequelize,
