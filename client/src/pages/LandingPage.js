@@ -124,7 +124,7 @@ class LandingPage extends React.Component {
             <b>Pick Up</b></h5> 
             <Col>
               <p className ="howTexts">
-              <i><strong>Step 3. </strong></i>
+              <i  id = "environmentFacts"><strong>Step 3. </strong></i>
               Confirm location and collect your goods!
               </p>
             </Col>
@@ -133,7 +133,7 @@ class LandingPage extends React.Component {
 
  {/* Top Recycle Facts section */}
  
-    <Row id = "environmentFacts" className = "recycleFacts justify-content-md-center">
+    <Row className = "recycleFacts justify-content-md-center">
       <Col>
       <strong id = "environmentFacts">Top Recycling Facts</strong>
       <Image className = "sectionIcons " src = {FactImg}
@@ -171,7 +171,7 @@ class LandingPage extends React.Component {
           When U.S. recycling levels reach 75% it will be the environmental
            and CO2 equivalent of removing 55 million cars from U.S. roads each year.
             </Col>
-          <Col xs = {2}lg = {2}><Image className = "factImgR" src = {PlanetImg}
+          <Col xs = {2}lg = {2}><Image id ="our-goal" className = "factImgR" src = {PlanetImg}
           width = "95px" height = "95px"/> </Col>
         </Row>
     </Row>

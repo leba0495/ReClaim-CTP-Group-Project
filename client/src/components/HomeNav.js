@@ -7,7 +7,7 @@ import Logo from '../images/icon.png'
 function HomeNav(props) {
     return (
       // Extra small (xs) · Small (sm) · Medium (md) · Large (lg) · Extra large (xl) · Extra extra large (xxl)
-      <Navbar className = "navBar" fixed ="top" collapseOnSelect expand="md" bg="dark" variant="dark">
+      <Navbar className = "navBar" fixed ="top" collapseOnSelect expand="lg" bg="dark" variant="dark">
     <Container> 
     <Navbar.Brand href="#home">
           <Image src = {Logo} width="30"
@@ -24,6 +24,7 @@ function HomeNav(props) {
           <NavDropdown.Divider />
           <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
         </NavDropdown>
+        <Nav.Link href="#our-goal">Our Goal</Nav.Link>
         <Nav.Link href="#about-us">About Us</Nav.Link>
         <Nav.Link className = "me-4" href="#environmentFacts">Environment Facts</Nav.Link>
         <Nav.Link href="/sign-up">Sign Up</Nav.Link>
