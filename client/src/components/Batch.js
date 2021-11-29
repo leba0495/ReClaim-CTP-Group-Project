@@ -60,11 +60,11 @@ class Batch extends React.Component {
 
     displayDetails = () => {
         // Pass the id of the batch we want to display more details from
-        this.props.handleDetails(this.props.objectID);
+        this.props.handleDetails(this.props.objectId);
     }
 
     handleClaim = () => {
-        this.props.handleClaimStatus(this.props.objectID);  
+        this.props.handleClaimStatus(this.props.objectId);  
     }
 
     render(){
@@ -77,10 +77,10 @@ class Batch extends React.Component {
                     </Col>
                     <Col m="9">
                         <Card.Body>
-                            <Card.Title> {this.props.title } </Card.Title>
+                            <Card.Title> {this.props.description } </Card.Title>
                             <Card.Subtitle>{this.props.location}</Card.Subtitle>
                             <p>Description:</p>
-                            <Card.Text> { this.props.description } </Card.Text>
+                            <Card.Text> { this.props.bac } </Card.Text>
                             <button className={`btn-style ${this.props.isClaimed ? 'btn-status' : '' }`} type="submit" onClick={this.handleClaim}> { this.props.isClaimed ? <span>Unclaim</span> : <span>Claim</span>}</button>
 
                             <button className="btn-style details-btn" onClick={ this.displayDetails }>Details</button>

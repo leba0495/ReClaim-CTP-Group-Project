@@ -6,6 +6,7 @@ import BinImage from '../images/bin-recyclable.png';
 import SearchBar from "../components/SearchBar";
 import Batch from '../components/Batch';
 import BatchDetails from "../components/BatchDetails";
+import axios from 'axios';
 
 const POSTS = [
     {
@@ -74,8 +75,10 @@ class MarketPlacePage extends React.Component {
     // Loads when the component is rendered so using the fake posts I passed Batch components into the Market's batches state
     componentDidMount(){
         // load data from database
-        fetch("api/")
-        .then(response => this.setState({batches: response.data}));
+        axios.get("/api/")
+        .then(response => {console.log(response.data);
+             this.setState({batches: response.data})});
+        // axios.get('api/')
     }
 
     // Arrow functions make it so you don't need the "bind" method 
@@ -88,7 +91,7 @@ class MarketPlacePage extends React.Component {
     updateClaimStatus = (batchID) => {
         // Update the status of the current batch
         const batches = this.state.batches;
-        const indexOfBatch = batches.findIndex(b => b.objectID === batchID);
+        const indexOfBatch = batches.findIndex(b => b.objectId === batchID);
     
         batches[indexOfBatch].isClaimed = !batches[indexOfBatch].isClaimed ;
 
@@ -124,7 +127,7 @@ class MarketPlacePage extends React.Component {
                         { batchRecord }
                     </Col>
                     <Col className="details-col" >
-                        {this.state.showComponent ? <BatchDetails  { ...this.state.batches.find(b => b.objectID === this.state.currBatch )}></BatchDetails> : null}
+                        {this.state.showComponent ? <BatchDetails  { ...this.state.batches.find(b => b.objectId === this.state.currBatch )}></BatchDetails> : null}
                     </Col>
                 </Row>
                 </Container>
