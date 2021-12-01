@@ -50,11 +50,11 @@ class LandingPage extends React.Component {
             <Image className = "headerimg" src= {HeaderImage} style = {{maxWidth: "23rem"}}/>
           </Col>
       </Row>
-      <Image className = "introArrow" src = {DownArrowImg}
+      <Image id ="how-it-work" className = "introArrow" src = {DownArrowImg}
         width = "40px" height = "30px"/>
 
     {/* How it works section */}
-      <Row id ="how-it-work"className = "howItWorks">
+      <Row className = "howItWorks">
         <Col><strong>How it Works</strong>
         <Image className = "sectionIcons" src = {HowItWorkImg}
         width = "40px" height = "40px"/>

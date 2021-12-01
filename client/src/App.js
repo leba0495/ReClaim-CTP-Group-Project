@@ -11,14 +11,11 @@ import {
 import LandingPage from './pages/LandingPage';
 import PostFormPage from './pages/PostFormPage';
 import ShowPostPage from './pages/ShowPostPage';
-import AboutUsPage from './pages/AboutUsPage';
 import LogInFormPage from './pages/LogInFormPage';
 import SignUpPage from './pages/SignUpPage';
-import {Navbar, Container, Nav, NavDropdown, Button, Image} from 'react-bootstrap';
 
 import './styles/App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import HomeNav from './components/HomeNav'
 
 
 class App extends React.Component {
