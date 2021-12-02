@@ -10,7 +10,7 @@ function MarketNav(props) {
       // Extra small (xs) · Small (sm) · Medium (md) · Large (lg) · Extra large (xl) · Extra extra large (xxl)
     <Navbar className = "marketNavBar" fixed ="top" collapseOnSelect expand="lg" bg="dark" variant="dark">
     <Container> 
-    <Navbar.Brand className = "reclaimIcon"href="/">
+    <Navbar.Brand className = "reclaimIcon"href="/market-place">
           <Image src = {Logo} width="30"
             height= "30" className="d-inline-block align-top"/>
         ReClaim
@@ -33,8 +33,8 @@ function MarketNav(props) {
       </Nav>
       <Dropdown align="end" >
       <Dropdown.Toggle id="profile">
-          <Image src = {User} width="45"
-            height= "45"/> </Dropdown.Toggle>
+          <Image src = {User} width="42"
+            height= "42"/> </Dropdown.Toggle>
           <Dropdown.Menu>
           <Dropdown.ItemText>User_Name</Dropdown.ItemText>
           <Dropdown.Divider />
