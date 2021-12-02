@@ -9,7 +9,7 @@ function MarketNav(props) {
       // Extra small (xs) · Small (sm) · Medium (md) · Large (lg) · Extra large (xl) · Extra extra large (xxl)
       <Navbar className = "navBar" fixed ="top" collapseOnSelect expand="lg" bg="dark" variant="dark">
     <Container> 
-    <Navbar.Brand href="#home">
+    <Navbar.Brand href="/">
           <Image src = {Logo} width="30"
             height= "30" className="d-inline-block align-top"/>
         ReClaim
@@ -17,7 +17,7 @@ function MarketNav(props) {
     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
     <Navbar.Collapse id="responsive-navbar-nav">
       <Nav className = "ms-auto" >
-        <Nav.Link href="#about-us">MarketFeed</Nav.Link>
+        <Nav.Link href="/market-place">MarketFeed</Nav.Link>
         <Nav.Link href="#our-goal">Liked Batches</Nav.Link>
         <Nav.Link href="/sign-up">Claimed Batches</Nav.Link>
       </Nav>

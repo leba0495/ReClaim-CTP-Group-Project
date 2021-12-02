@@ -1,0 +1,21 @@
+/* Batch Style Conditions */
+.card-status {
+    background-color: #d7fcde;
+}
+
+.btn-status {
+    background: #4A4B4B;
+}
+.btn-status:hover {
+    background-color: red;
+}
+
+.details-btn,
+    .details-btn:hover {
+    background: #0d6efd;
+}
+
+/* Batch Details */
+.batch-details {
+    width: 80%;
+}

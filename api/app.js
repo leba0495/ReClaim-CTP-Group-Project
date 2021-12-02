@@ -3,6 +3,7 @@ const morgan = require('morgan');
 const path = require('path');
 const db = require('./models');
 const app = express();
+require('dotenv').config();
 const PORT = process.env.PORT;
 
 
@@ -14,8 +15,7 @@ const logFormat = process.env.NODE_ENV==='production' ? 'combined' : 'dev';
 app.use(morgan(logFormat));
 
 // this mounts controllers/index.js at the route `/api`
-//COMMENTING SINCE CONTROLLERS FOLDER IS EMPTY
-//app.use('/api', require('./controllers')); 
+app.use('/api', require('./controllers')); 
 
 // for production use, we serve the static react build folder
 if(process.env.NODE_ENV==='production') {
@@ -29,11 +29,12 @@ if(process.env.NODE_ENV==='production') {
 
 // update DB tables based on model updates. Does not handle renaming tables/columns
 // NOTE: toggling this to true drops all tables (including data)
-db.sequelize.sync({ force: false });
+db.sequelize.sync({ force: true });
 
 // start up the server
 if(PORT) {
   app.listen(PORT, () => console.log(`Listening on ${PORT}`));
 } else {
+  console.log(process.env.PORT)
   console.log("===== ERROR ====\nCREATE A .env FILE!\n===== /ERROR ====")
 }

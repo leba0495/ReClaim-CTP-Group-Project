@@ -2,18 +2,6 @@ import React from 'react';
 import '../styles/LogInPage.css'
 import HomeNav from '../components/HomeNav'
 
-// function LogInFormPage(props){
-//     // React State
-//     return (
-//         <div>
-//             <div> hello</div>
-//             <h1>Form goes here</h1>
-//             <h1>Form goes here</h1>
-//             <h1>Form goes here</h1>
-//         </div>
-//     );
-
-// }
 function Square() {
     return (
         <div >
