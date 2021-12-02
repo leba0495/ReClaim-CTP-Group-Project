@@ -9,7 +9,6 @@ import {
 } from 'react-router-dom';
 
 import LandingPage from './pages/LandingPage';
-import PostFormPage from './pages/PostFormPage';
 import LogInFormPage from './pages/LogInFormPage';
 import SignUpPage from './pages/SignUpPage';
 import MarketPlacePage from './pages/MarketPlacePage'
