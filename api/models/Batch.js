@@ -7,7 +7,7 @@ module.exports = (sequelize, DataTypes) => {
 
   Batch.init({
     image: {
-        type: DataTypes.JSON,
+        type: DataTypes.STRING,
     },
     title:{
       type: DataTypes.STRING,

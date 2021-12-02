@@ -91,7 +91,7 @@ class MarketPlacePage extends React.Component {
     updateClaimStatus = (batchID) => {
         // Update the status of the current batch
         const batches = this.state.batches;
-        const indexOfBatch = batches.findIndex(b => b.objectId === batchID);
+        const indexOfBatch = batches.findIndex(b => b.id === batchID);
     
         batches[indexOfBatch].isClaimed = !batches[indexOfBatch].isClaimed ;
 
@@ -127,7 +127,7 @@ class MarketPlacePage extends React.Component {
                         { batchRecord }
                     </Col>
                     <Col className="details-col" >
-                        {this.state.showComponent ? <BatchDetails  { ...this.state.batches.find(b => b.objectId === this.state.currBatch )}></BatchDetails> : null}
+                        {this.state.showComponent ? <BatchDetails  { ...this.state.batches.find(b => b.id === this.state.currBatch )}></BatchDetails> : null}
                     </Col>
                 </Row>
                 </Container>

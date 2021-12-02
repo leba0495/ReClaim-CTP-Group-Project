@@ -39,11 +39,14 @@
 }
 
 .search-btn:hover {
+    position: relative;
     color: white;
 }
 
 /* Batch rows */
-
+.batch-row {
+    top: -50px;
+}
 
 .details-col {
     margin-top: 16px;

@@ -23,10 +23,10 @@ function BatchDetails(props){
             </Row>
             <Row>
                 <h4>INFORMATION FOR PICK-UP</h4>
-                <h5>Location: </h5> 
-                <p> ** An actual address** </p>
-                <h5>Instructions:</h5> 
-                <p> ** If any provided**</p>
+                <h5>Location:</h5> 
+                    <p> {props.address}</p>
+                <h5>Instructions: </h5> 
+                    <p> {props.locationNotes}</p>
             </Row>
         </Card>
     );
