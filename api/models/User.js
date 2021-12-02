@@ -6,19 +6,12 @@ module.exports = (sequelize, DataTypes) => {
   class User extends Model {}
 
   User.init({
-    id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      primaryKey: true,
-      autoIncrement: true,
-    },
     firstName: {
       type: DataTypes.STRING,
       validate: {
         len: [3, 250],
         notEmpty: true,
       },
-      unique: false,
     },
     lastName: {
         type: DataTypes.STRING,
@@ -53,29 +46,12 @@ module.exports = (sequelize, DataTypes) => {
     },
     streetAddress: {
         type: DataTypes.STRING,
-          validate: {
-            len: [3, 250],
-            notEmpty: true,
-      },
-      unique: true,
     },
     city: {
         type: DataTypes.STRING,
-          validate: {
-            len: [3, 250],
-            notEmpty: true,
-      },
     },
     zipCode: {
         type: DataTypes.INTEGER,
-          validate: {
-            len: [5],
-            notEmpty: true,
-      },
-    },
-    updatedAt: {
-        type: DataTypes.DATE,
-        allowNull: false,
     },
     }, {
     sequelize,
@@ -84,12 +60,16 @@ module.exports = (sequelize, DataTypes) => {
 
   // console.log(User === sequelize.models.User);
 
-  //User.associate = (models) => {
-    // associations can be defined here
+  User.associate = (models) => {
 
+    //associations can be defined here
+    models.User.hasMany(models.Batch, {as: 'Author', foreignKey: 'authorId'});
+    models.User.hasMany(models.Batch, {as: 'Claimant', foreignKey: 'claimantId'});
+    //through AuthorBatch
 
-   // models.User.belongsToMany(models.blank, {through: ''});
-  //};
+    //through ClaimantBatch
+
+  };
 
   return User;
 };

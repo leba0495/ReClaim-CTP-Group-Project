@@ -4,7 +4,6 @@ const User = require("../models/User");
 
 let USER = [
   {
-    id: 1,
     firstName: 'Luis', 
     lastName: 'Brito', 
     password: 'JohnJay', 
@@ -17,7 +16,6 @@ let USER = [
     createdAt: new Date()
   },
   {
-    id: 2, 
     firstName: 'Kessler', 
     lastName: 'Lock', 
     password: 'Queens', 
@@ -30,7 +28,6 @@ let USER = [
     createdAt: new Date(),
   },
   {
-    id: 3, 
     firstName: 'Daniel', 
     lastName: 'Li', 
     password: 'Baruch', 
@@ -55,8 +52,7 @@ module.exports = {
      * }], {});
     */
     console.log(JSON.stringify(USER));
-     await queryInterface.bulkInsert('Users', USER
-    );
+     await queryInterface.bulkInsert('Users', USER);
   },
 
   down: async (queryInterface, Sequelize) => {

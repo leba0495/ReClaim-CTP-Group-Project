@@ -1,12 +1,18 @@
 'use strict';
 
 const BATCH = [
-  {objectId: 1, author: "Luis", activeClaimant: "Luis", image: null, description: 'wine bottles', batchLocation: "Time Square", batchLocationNotes: "Find Woody", isSorted: true, isClaimed: true, createdAt: new Date(), updatedAt: new Date(),
+  {image: null, title: 'Wine Bottles', description: 'This is a bag of 20 bottles.....', location: "Time Square", address: '123 Main St', locationNotes: "Find Woody", isSorted: true, isClaimed: false, updatedAt: new Date(), createdAt: new Date(), authorId: 1,
   },
-  {objectId: 2, author: "Luis", activeClaimant: "Luis", image: null, description: 'aluminum cans', batchLocation: "Herald Square", batchLocationNotes: "Left on first wooden bench next to clock pillar!", isSorted: true, isClaimed: true, createdAt: new Date(), updatedAt: new Date()},
-  {objectId: 3, author: "Kessler", activeClaimant: "Kessler", image: null, description: 'mason jars', batchLocation: "Battery Park", batchLocationNotes: "Male wearing red hat will hand you purple colored bag of mason jars", isSorted: true, isClaimed: true, createdAt: new Date(), updatedAt: new Date()},
-  {objectId: 4, author: "Kessler", activeClaimant: "Kessler", image: null, description: 'mixed plastic containers', batchLocation: "Central Park", batchLocationNotes: "Will leave white bag with red strings outside gate of The Loeb Boathouse", isSorted: false, isClaimed: true, createdAt: new Date(), updatedAt: new Date()},
-  {objectId: 5, author: "Daniel", activeClaimant: "Daniel", image: null, description: 'bundle of dry wood', batchLocation: "1420 Samuels Street", batchLocationNotes: "Corner next to mailbox", isSorted: false, isClaimed: true, createdAt: new Date(), updatedAt: new Date()},
+  {image: null, title: 'Aluminum Cans', description: 'aluminum cans and other stuff that I didnt need anymore', location: "Herald Square", address: '123 John Edwards St', locationNotes: "Left on first wooden bench next to clock pillar!", isSorted: false, isClaimed: true, updatedAt: new Date(), createdAt: new Date(),
+},
+  {image: null, title: 'Aluminum Cans', description: 'some description......', location: "Unnion Square", address: '109 Queens St', locationNotes: "some notes......", isSorted: true, isClaimed: false, updatedAt: new Date(), createdAt: new Date(),
+},
+  {image: null, title: 'Plastic', description: '', location: "The Bronx", address: '345 John jay St', locationNotes: "some notes......", isSorted: true, isClaimed: true, updatedAt: new Date(), createdAt: new Date(),
+},
+  {image: null, title: 'A title', description: 'aluminum cans and other stuff that I didnt need anymore', location: "Brooklyn", address: '456 Randome st', locationNotes: "some notes......", isSorted: true, isClaimed: true, updatedAt: new Date(), createdAt: new Date(),
+},
+  {image: null, title: 'Title 234', description: 'some description......', location: "Unnion Square", address: '109 Queens St', locationNotes: "some notes......", isSorted: true, isClaimed: true, updatedAt: new Date(), createdAt: new Date(),
+}
 ];
 
 module.exports = {
@@ -20,8 +26,7 @@ module.exports = {
      *   isBetaMember: false
      * }], {});
     */
-     await queryInterface.bulkInsert('Batches', BATCH
-     );
+     await queryInterface.bulkInsert('Batches', BATCH);
   },
 
   down: async (queryInterface, Sequelize) => {
