@@ -9,33 +9,29 @@ opacity: 0.85;
 .links a{
     text-decoration: none;
     color: white;
-    text-align: left;
     font-size: 15px;
 }
+
 .footer2Img{
     position: absolute;
 }
 .footer2Text{
 position: absolute;
-width: 185px;
+width: 260px;
 top: 10px;
 left: 30px;
-font-size: 13px;
+font-size: 15px;
 font-style: italic;
 text-align: left;
 opacity: 0.9;
 
 }
-@media (max-width: 1000px) {
-    .footer2Text{
-        width: 150px;
-    }
-}
+
 
 @media (max-width: 850px) {
     .footer2Text{
-        width: 120px;
-        font-size: 11px;
+        width: 150px;
+        font-size: 14px;
     }
 }
 

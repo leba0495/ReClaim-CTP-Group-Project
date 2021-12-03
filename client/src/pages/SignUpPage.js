@@ -1,10 +1,11 @@
 import React from 'react';
-import '../SignUpPage.css';
-import Footer from '../components/Footer'
+import '../SignUpPage.css'
+import HomeNav from '../components/HomeNav'
 
 function SignUpPage(props) {
   return (
       <div class="container signup">
+          <HomeNav/>
           <div class="col-sm">
         <div id="firstline" class="mb-1">Welcome! Please sign up here!</div>
         <div class="mb-5">Already signed up? <a href="./log-in">Log In</a></div>

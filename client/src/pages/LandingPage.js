@@ -21,6 +21,7 @@ import Programmer1 from '../images/programmer.png'
 import Programmer2 from '../images/teacher.png'
 import Programmer3 from '../images/businessman.png'
 import Footer from '../components/Footer'
+import HomeNav from '../components/HomeNav'
 
 
 
@@ -32,6 +33,7 @@ class LandingPage extends React.Component {
       //Extra small (xs) · Small (sm) · Medium (md) · Large (lg) · Extra large (xl) · Extra extra large (xxl)
       //fluid = "md" indicate the container is fluid and indicate the breakpoint is at medium screen
       <Container className = "header" fluid = "md">
+        <HomeNav/>
       {/* Intro section */}
         <Row className = "intro">
           {/* lg={true} indicates the breakpoint of the column, in this case break at screen large. */}
@@ -48,14 +50,14 @@ class LandingPage extends React.Component {
             <Image className = "headerimg" src= {HeaderImage} style = {{maxWidth: "23rem"}}/>
           </Col>
       </Row>
-      <Image className = "introArrow" src = {DownArrowImg}
+      <Image id ="how-it-work" className = "introArrow" src = {DownArrowImg}
         width = "40px" height = "30px"/>
 
     {/* How it works section */}
       <Row className = "howItWorks">
         <Col><strong>How it Works</strong>
         <Image className = "sectionIcons" src = {HowItWorkImg}
-        width = "40px" height = "px"/>
+        width = "40px" height = "40px"/>
         </Col>
       </Row>
       {/*<Row xs={1} md={1}  lg = {1}>  you specify column widths across 5 breakpoint sizes (xs, sm, md, lg, xl and xxl).
@@ -122,7 +124,7 @@ class LandingPage extends React.Component {
             <b>Pick Up</b></h5> 
             <Col>
               <p className ="howTexts">
-              <i><strong>Step 3. </strong></i>
+              <i  id = "environmentFacts"><strong>Step 3. </strong></i>
               Confirm location and collect your goods!
               </p>
             </Col>
@@ -130,9 +132,10 @@ class LandingPage extends React.Component {
       </Row>
 
  {/* Top Recycle Facts section */}
+ 
     <Row className = "recycleFacts justify-content-md-center">
       <Col>
-      <strong>Top Recycling Facts</strong>
+      <strong id = "environmentFacts">Top Recycling Facts</strong>
       <Image className = "sectionIcons " src = {FactImg}
         width = "40px" height = "35px"/> 
       </Col>
@@ -168,7 +171,7 @@ class LandingPage extends React.Component {
           When U.S. recycling levels reach 75% it will be the environmental
            and CO2 equivalent of removing 55 million cars from U.S. roads each year.
             </Col>
-          <Col xs = {2}lg = {2}><Image className = "factImgR" src = {PlanetImg}
+          <Col xs = {2}lg = {2}><Image id ="our-goal" className = "factImgR" src = {PlanetImg}
           width = "95px" height = "95px"/> </Col>
         </Row>
     </Row>
@@ -206,7 +209,7 @@ class LandingPage extends React.Component {
      </Row>
 
       {/* About us */}
-  <div className = "aboutUsSection"> 
+  <div className = "aboutUsSection" id = "about-us"> 
     <Row>
       <Col>
       <strong>About Us</strong>

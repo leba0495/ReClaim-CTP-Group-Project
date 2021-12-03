@@ -1,11 +1,12 @@
 import React from "react";
-import {Card, Image, Button, CardGroup, Container, Row, Col} from 'react-bootstrap';
+import {Image, Container, Row, Col} from 'react-bootstrap';
 import MarketImage from '../images/market.png';
 import '../styles/MarketPlacePage.css';
 import BinImage from '../images/bin-recyclable.png';
 import SearchBar from "../components/SearchBar";
 import Batch from '../components/Batch';
 import BatchDetails from "../components/BatchDetails";
+import MarketPlaceNav from "../components/MarketPlaceNav"
 import axios from 'axios';
 
 const POSTS = [
@@ -111,6 +112,7 @@ class MarketPlacePage extends React.Component {
         })
         return (
             <Container fluid className="main-market-container">
+                <MarketPlaceNav/>
                 <Row className="top-market-row">
                     <Col lg="1" >
                         <MarketDecoration />
