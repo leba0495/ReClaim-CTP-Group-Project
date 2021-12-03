@@ -69,7 +69,6 @@ class MarketPlacePage extends React.Component {
             currBatch: null,
             showComponent: null,
         }
-
     }
 
     // Loads when the component is rendered so using the fake posts I passed Batch components into the Market's batches state
@@ -110,8 +109,6 @@ class MarketPlacePage extends React.Component {
                 <Batch { ...batch } handleDetails={this.handleDetails} handleClaimStatus={this.updateClaimStatus} key={ii} ></Batch>)
             
         })
-        
-
         return (
             <Container fluid className="main-market-container">
                 <Row className="top-market-row">

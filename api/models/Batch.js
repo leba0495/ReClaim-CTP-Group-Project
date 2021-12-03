@@ -61,7 +61,6 @@ module.exports = (sequelize, DataTypes) => {
   Batch.associate = (models) => {
     //associations can be defined here
 
-
     models.Batch.belongsTo(models.User, {foreignKey: 'authorId'});
     models.Batch.belongsTo(models.User, {foreignKey: 'claimantId'});
   };

@@ -23,7 +23,6 @@ class Batch extends React.Component {
     }
 
     render(){
-
         return (
             <Card className={`g-0 shadow-sm m-3 ${this.props.isClaimed ? 'card-status' : '' }` }>
                 <Row>
@@ -37,7 +36,6 @@ class Batch extends React.Component {
                             <p>Description:</p>
                             <Card.Text> { this.props.description} </Card.Text>
                             <button className={`btn-style ${this.props.isClaimed ? 'btn-status' : '' }`} type="submit" onClick={this.handleClaim}> { this.props.isClaimed ? <span>Unclaim</span> : <span>Claim</span>}</button>
-
                             <button className="btn-style details-btn" onClick={ this.displayDetails }>Details</button>
                         </Card.Body>
                     </Col>
