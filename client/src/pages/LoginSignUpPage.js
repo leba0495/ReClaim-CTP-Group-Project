@@ -9,7 +9,7 @@ function LoginSignUpPage(props) {
     <Container fluid = "md">
         <HomeNav/>
         <Row className = "justify-content-center">
-            <Col className ="loginAndSignUp" xl = {3} lg = {3} md = {6} xs = {8}>
+            <Col className ="loginAndSignUp" xl = {4} lg = {4} md = {5} xs = {8}>
             {/* login tab*/}
             <Tabs defaultActiveKey="login" id="uncontrolled-tab-example" className="mb-3">
                 
