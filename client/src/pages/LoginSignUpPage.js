@@ -6,7 +6,7 @@ import '../styles/LoginSignUp.css'
 
 function LoginSignUpPage(props) {
   return (
-    <Container fluid = "md">
+    <Container className ="bg" style={{ backgroundImage: "url(/images/loginBG.png)" }} fluid = "md">
         <HomeNav/>
         <Row className = "justify-content-center">
             <Col className ="loginAndSignUp" xl = {4} lg = {4} md = {5} xs = {8}>
