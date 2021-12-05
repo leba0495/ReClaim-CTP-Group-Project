@@ -1,5 +1,5 @@
 import React from 'react';
-import {Container, Row, Col, Image, Button, Card, Tabs,Tab, Form} from 'react-bootstrap';
+import {Container, Row, Col, Button, Tabs,Tab, Form} from 'react-bootstrap';
 import Footer from '../components/Footer'
 import HomeNav from '../components/HomeNav'
 import '../styles/LoginSignUp.css'
@@ -14,7 +14,7 @@ function LoginSignUpPage(props) {
             <Tabs defaultActiveKey="login" id="uncontrolled-tab-example" className="mb-3">
                 
                 <Tab eventKey="login" title="Login">
-                  <Form>
+                  <Form className = "text-md-left">
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Email address</Form.Label>
                         <Form.Control type="email" placeholder="Enter email" />
@@ -36,7 +36,7 @@ function LoginSignUpPage(props) {
                 </Tab>
                 {/* sign up tab*/}
                 <Tab eventKey="sign-up" title="Sign up">
-                <Form>
+                <Form className = "text-md-left">
                     <Row className="mb-3">
                         <Form.Group as={Col} controlId="formGridEmail">
                         <Form.Label>Email</Form.Label>
