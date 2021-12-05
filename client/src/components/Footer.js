@@ -21,58 +21,45 @@ function Footer(props) {
             <p className="footer2Text"> Look deep into nature, and then you will understand everything better.    
              - Albert Einstein </p> 
           </Col>
-          <Col xs = {4}  className = "links">
-            <Col><a   href="/">CONTACT</a></Col>
-            <Col><a  href="/">OUR STORY</a></Col>
-            <Col><a   href="/">FIND US</a></Col>
-            <Col><a   href="/">FAQ</a></Col>
+          <Col className = "links text-md-right">
+          <ul>
+              <li className="list-unstyled">
+                <a href="#!">CONTACT</a>
+              </li>
+              <li className="list-unstyled">
+                <a href="#!">OUR STORY</a>
+              </li>
+              <li className="list-unstyled">
+                <a href="#!">FAQ</a>
+              </li>
+              <li className="list-unstyled">
+                <a href="#!">VOLUNTEER</a>
+              </li>
+            </ul>
           </Col>
-          <Col xs = {3} className = "links">
-            <Col ><a  href="/sign-up">SIGN UP</a></Col>
-            <Col><a  href="/">INFO</a></Col>
-            <Col><a  href="/">FACEBOOK</a></Col>
-            <Col><a   href="/">INSTAGRAM</a></Col>
+          <Col className = "links text-md-left">
+          <ul>
+              <li className="list-unstyled">
+                <a href="/sign-up">SIGN UP</a>
+              </li>
+              <li className="list-unstyled">
+                <a href="#!">FIND US</a>
+              </li>
+              <li className="list-unstyled">
+                <a href="#!">FACEBOOK</a>
+              </li>
+              <li className="list-unstyled">
+                <a href="#!">INSTAGRAM</a>
+              </li>
+            </ul>
           </Col>
-          <Col>
+          <Col xs ={3}md ={2}lg = {2}>
           <OverlayTrigger placement="top" delay={{ show: 250, hide: 400 }} 
           overlay ={renderTooltip}>      
               <Image src = {FooterImg} width = "80px" height = "80px"/>
           </OverlayTrigger>
           </Col>
       </Row>
-     {/* <Row>
-          <Col>
-          1 of 3
-          </Col>
-          <Col>
-          2 of 3
-          </Col>
-          <Col>
-          3 of 3
-          </Col>
-     </Row>
-     <Row>
-          <Col>
-          1 of 3
-          </Col>
-          <Col>
-          2 of 3
-          </Col>
-          <Col>
-          3 of 3
-          </Col>
-     </Row> */}
-        
-  {/* <footer >
-   <div>
-        <div className="footer-top space-between text-xxs">
-         
-        </div>
-        <div className="footer-bottom space-between text-xxs invert-order-desktop">
-          <div className="footer">FOOTER COMPONENT</div>
-        </div>
-      </div>
-  </footer> */}
   </Container>
   );
 }
