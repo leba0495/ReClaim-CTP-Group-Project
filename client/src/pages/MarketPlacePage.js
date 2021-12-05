@@ -94,15 +94,15 @@ class MarketPlacePage extends React.Component {
         const indexOfBatch = batches.findIndex(b => b.id === batchID);
     
         batches[indexOfBatch].isClaimed = !batches[indexOfBatch].isClaimed;
-        // this.setState({batches}); //the state will know that this is referring to the batches
-        console.log("updated??\n", batches[indexOfBatch]);
+
         // Update back end
         axios.put("/api/batches/"+batchID, batches[indexOfBatch])
             .then(res => {
                 console.log(res.data)
             })
-            .then(this.setState({batches}))
-            .catch(err => {console.log("Something is not right!")
+            .then(this.setState({batches})) 
+            .catch(err => {
+                console.log("Something is not right!")
                 console.log(err)
             })
     }
