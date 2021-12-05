@@ -1,9 +1,7 @@
 import React from 'react';
-import {Container, Row, Col, Image, Tooltip, OverlayTrigger, Button} from 'react-bootstrap';
+import {Container, Row, Col, Image, Tooltip, OverlayTrigger} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/footer.css'
-import FooterImg from '../images/icon.png';
-import FooterImg2 from '../images/recycling.png';
 
 function Footer(props) {
 
@@ -17,7 +15,7 @@ function Footer(props) {
     <Container className="footer">
       <Row>
           <Col xs = {1}>
-          <Image className ="footer2img element-to-hide" src = {FooterImg2} width = "80px" height = "80px"/>
+          <Image className ="footer2img element-to-hide" src = "images/recycling.png" width = "80px" height = "80px"/>
             <p className="footer2Text"> Look deep into nature, and then you will understand everything better.    
              - Albert Einstein </p> 
           </Col>
@@ -56,7 +54,7 @@ function Footer(props) {
           <Col xs ={3}md ={2}lg = {2}>
           <OverlayTrigger placement="top" delay={{ show: 250, hide: 400 }} 
           overlay ={renderTooltip}>      
-              <Image src = {FooterImg} width = "80px" height = "80px"/>
+              <Image src = "images/icon.png" width = "80px" height = "80px"/>
           </OverlayTrigger>
           </Col>
       </Row>

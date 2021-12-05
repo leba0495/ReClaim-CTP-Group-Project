@@ -1,8 +1,6 @@
 import React from "react";
 import {Image, Container, Row, Col} from 'react-bootstrap';
-import MarketImage from '../images/market.png';
 import '../styles/MarketPlacePage.css';
-import BinImage from '../images/bin-recyclable.png';
 import SearchBar from "../components/SearchBar";
 import Batch from '../components/Batch';
 import BatchDetails from "../components/BatchDetails";
@@ -15,7 +13,7 @@ const POSTS = [
     title: "Wine Bottles",
     location: "Bronx, NY",
     description: "I have a bin with 15+ wine bottles that could go to a nice home. They can be recycled and made into nice decorative bottles.",
-    image: BinImage,
+    image: "images/bin-recyclable.png",
     isClaimed: true,
     },
     {
@@ -23,7 +21,7 @@ const POSTS = [
     title: "Plastic Bottles",
     location: "Bronx, NY",
     description: "I have a bin with 15+ wine bottles that could go to a nice home. They can be recycled and made into nice decorative bottles.",
-    image: BinImage,
+    image: "images/bin-recyclable.png",
     isClaimed: false,
     },
     {
@@ -31,7 +29,7 @@ const POSTS = [
     title: "Some Cans",
     location: "Bronx, NY",
     description: "I have a bin with 15+ wine bottles that could go to a nice home. They can be recycled and made into nice decorative bottles.",
-    image: BinImage,
+    image: "images/bin-recyclable.png",
     isClaimed: true,
     },
     {
@@ -39,7 +37,7 @@ const POSTS = [
     title: "Wine Bottles",
     location: "Bronx, NY",
     description: "I have a bin with 15+ wine bottles that could go to a nice home. They can be recycled and made into nice decorative bottles.",
-    image: BinImage,
+    image: "images/bin-recyclable.png",
     isClaimed: false,
     },
     {
@@ -47,7 +45,7 @@ const POSTS = [
     title: "Wine Bottles",
     location: "Bronx, NY",
     description: "I have a bin with 15+ wine bottles that could go to a nice home. They can be recycled and made into nice decorative bottles.",
-    image: BinImage,
+    image: "images/bin-recyclable.png",
     isClaimed: false,
     },
 ];
@@ -56,7 +54,7 @@ function MarketDecoration(){
     return (
         <div className="market-decor">
             <h3>MarketFeed</h3>
-            <Image  src={MarketImage}/>
+            <Image  src="images/market.png"/>
         </div>
     );
 }
