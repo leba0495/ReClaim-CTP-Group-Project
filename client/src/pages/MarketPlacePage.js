@@ -5,6 +5,7 @@ import SearchBar from "../components/SearchBar";
 import Batch from '../components/Batch';
 import BatchDetails from "../components/BatchDetails";
 import MarketPlaceNav from "../components/MarketPlaceNav"
+import Footer from "../components/Footer"
 import axios from 'axios';
 
 const POSTS = [
@@ -112,7 +113,7 @@ class MarketPlacePage extends React.Component {
         
 
         return (
-            <Container fluid className="main-market-container">
+            <Container fluid ="md" className="main-market-container">
                 <MarketPlaceNav/>
                 <Row className="top-market-row">
                     <Col lg="1" >
@@ -130,6 +131,7 @@ class MarketPlacePage extends React.Component {
                         {this.state.showComponent ? <BatchDetails  { ...this.state.batches.find(b => b.objectId === this.state.currBatch )}></BatchDetails> : null}
                     </Col>
                 </Row>
+                <Row><Footer/></Row>
                 </Container>
         );
     }

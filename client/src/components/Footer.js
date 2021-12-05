@@ -38,7 +38,7 @@ function Footer(props) {
           <Col className = "links text-md-left">
           <ul>
               <li className="list-unstyled">
-                <a href="/sign-up">SIGN UP</a>
+                <a href="/log-in">SIGN UP</a>
               </li>
               <li className="list-unstyled">
                 <a href="#!">FIND US</a>
