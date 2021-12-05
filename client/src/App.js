@@ -40,7 +40,7 @@ function Navigation(props) {
     <Nav className = "ms-auto" >
     <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
         <NavDropdown.Item href="/">Home</NavDropdown.Item>
-        <NavDropdown.Item href="/market-place/api">Market Place</NavDropdown.Item>
+        <NavDropdown.Item href="/market-place/api/batches">Market Place</NavDropdown.Item>
         <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
         <NavDropdown.Divider />
         <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
@@ -70,7 +70,7 @@ class App extends React.Component {
                 <Route path="/about-us" component={AboutUsPage} />
                 <Route path="/log-in" component={LogInFormPage}/>
                 <Route path="/sign-up" component={SignUpPage} />
-                <Route path="/market-place/api" component={MarketPlacePage} />
+                <Route path="/market-place/api/batches" component={MarketPlacePage} />
                 <Route path="/" component={LandingPage} />
               </Switch>
             </div>

@@ -7,7 +7,7 @@ import SearchBar from "../components/SearchBar";
 import Batch from '../components/Batch';
 import BatchDetails from "../components/BatchDetails";
 import axios from 'axios';
-
+import Loading from '../components/Loading';
 const POSTS = [
     {
     objectID: 1,
@@ -64,7 +64,7 @@ class MarketPlacePage extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            batches: POSTS,
+            batches: [],
             loading: true,
             currBatch: null,
             showComponent: null,
@@ -74,10 +74,11 @@ class MarketPlacePage extends React.Component {
     // Loads when the component is rendered so using the fake posts I passed Batch components into the Market's batches state
     componentDidMount(){
         // load data from database
-        axios.get("/api/")
-        .then(response => {console.log(response.data);
-             this.setState({batches: response.data})});
-        // axios.get('api/')
+        axios.get("/api/batches")
+        .then(response => {
+             this.setState({batches: response.data, loading: false, })
+            });
+
     }
 
     // Arrow functions make it so you don't need the "bind" method 
@@ -92,15 +93,22 @@ class MarketPlacePage extends React.Component {
         const batches = this.state.batches;
         const indexOfBatch = batches.findIndex(b => b.id === batchID);
     
-        batches[indexOfBatch].isClaimed = !batches[indexOfBatch].isClaimed ;
-
-        this.setState({batches}); //the state will know that this is referring to the batches
-        console.log(batches[indexOfBatch]);
-        // Now the button doesn't update the text after clicking?
-
+        batches[indexOfBatch].isClaimed = !batches[indexOfBatch].isClaimed;
+        // this.setState({batches}); //the state will know that this is referring to the batches
+        console.log("updated??\n", batches[indexOfBatch]);
+        // Update back end
+        axios.put("/api/batches/"+batchID, batches[indexOfBatch])
+            .then(res => {
+                console.log(res.data)
+            })
+            .then(this.setState({batches}))
+            .catch(err => {console.log("Something is not right!")
+                console.log(err)
+            })
     }
 
     render(){
+        if(this.state.loading) return <Loading />;
         const batchRecord = this.state.batches.map((batch, ii) => {
             return ( 
                 // <Batch title={batch.title} location={batch.location} description={batch.description} image={batch.image} claimStatus={batch.isClaimed} key={ii} />
