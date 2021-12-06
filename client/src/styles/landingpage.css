@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 .header {
 
   background-color: #F7F7F7;
@@ -11,7 +15,8 @@
     padding-top: 50px;
     text-align: left;
     padding-bottom: 30px;
-    font-size: 20px;
+    font-size: 25px;
+    font-weight: bolder;
     letter-spacing: 0.01em;
 }
 
@@ -72,10 +77,12 @@ background-color: white;
   text-align: left;
   letter-spacing: 0.01em;
   background-color: #F7F7F7;
-  border-radius: 15px;
+  margin-right: 30px;
   border-color: black;
   border-style: groove;
-  margin-right: 30px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 25px;
+  font-style: normal;
 }
 
 .factTextsL{
@@ -83,19 +90,23 @@ background-color: white;
   text-align: left;
   letter-spacing: 0.01em;
   background-color: #F7F7F7;
-  border-radius: 15px;
+  margin-left: 75px;
   border-color: black;
   border-style: groove;
-  margin-left: 75px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 25px;
+  font-style: normal;
 }
 
 .factImgL {
  margin-right: 10px;
  margin-left: 8px;
+ margin-top: 15px;
 }
 
 .factImgR{
-  margin-top: 15px;
+  margin-top: 25px;
+  margin-left: 8px;
 }
 
 .goalSection {
@@ -158,5 +169,13 @@ background-color: white;
 @media (max-width: 450px) {
   .headerimg {
    display: none;
+  }
+  .factImgL {
+    width: 70px;
+    height: 70px;
+  }
+  .factImgR {
+    width: 70px;
+    height: 70px;
   }
 }

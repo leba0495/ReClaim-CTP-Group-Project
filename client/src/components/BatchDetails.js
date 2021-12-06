@@ -1,6 +1,5 @@
 import React from "react";
 import {Card, Row, Col} from 'react-bootstrap';
-import BinImage from '../images/bin-recyclable.png';
 import "../styles/Batch.css"
 
 function BatchDetails(props){

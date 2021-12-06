@@ -1,0 +1,23 @@
+
+
+#profile {
+    background: transparent;
+    border: transparent;
+    border-width: 50px;
+    margin-left: 15px; 
+}
+
+.marketNavBar {
+    opacity: 0.95;
+
+    
+}
+
+
+
+
+@media (max-width: 1000px) {
+    .profile {
+        margin-left: 0; 
+    }
+}
