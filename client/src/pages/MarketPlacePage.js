@@ -7,49 +7,7 @@ import BatchDetails from "../components/BatchDetails";
 import MarketPlaceNav from "../components/MarketPlaceNav"
 import Footer from "../components/Footer"
 import axios from 'axios';
-import Loading from '../components/Loading';
-const POSTS = [
-    {
-    objectID: 1,
-    title: "Wine Bottles",
-    location: "Bronx, NY",
-    description: "I have a bin with 15+ wine bottles that could go to a nice home. They can be recycled and made into nice decorative bottles.",
-    image: "images/bin-recyclable.png",
-    isClaimed: true,
-    },
-    {
-    objectID: 2,
-    title: "Plastic Bottles",
-    location: "Bronx, NY",
-    description: "I have a bin with 15+ wine bottles that could go to a nice home. They can be recycled and made into nice decorative bottles.",
-    image: "images/bin-recyclable.png",
-    isClaimed: false,
-    },
-    {
-    objectID: 3,
-    title: "Some Cans",
-    location: "Bronx, NY",
-    description: "I have a bin with 15+ wine bottles that could go to a nice home. They can be recycled and made into nice decorative bottles.",
-    image: "images/bin-recyclable.png",
-    isClaimed: true,
-    },
-    {
-    objectID: 4,
-    title: "Wine Bottles",
-    location: "Bronx, NY",
-    description: "I have a bin with 15+ wine bottles that could go to a nice home. They can be recycled and made into nice decorative bottles.",
-    image: "images/bin-recyclable.png",
-    isClaimed: false,
-    },
-    {
-    objectID: 5,
-    title: "Wine Bottles",
-    location: "Bronx, NY",
-    description: "I have a bin with 15+ wine bottles that could go to a nice home. They can be recycled and made into nice decorative bottles.",
-    image: "images/bin-recyclable.png",
-    isClaimed: false,
-    },
-];
+
 
 function MarketDecoration(){
     return (
@@ -65,7 +23,6 @@ class MarketPlacePage extends React.Component {
         super(props);
         this.state = {
             batches: [],
-            loading: true,
             currBatch: null,
             showComponent: null,
         }
@@ -76,7 +33,7 @@ class MarketPlacePage extends React.Component {
         // load data from database
         axios.get("/api/batches")
         .then(response => {
-             this.setState({batches: response.data, loading: false, })
+             this.setState({batches: response.data})
             });
 
     }
@@ -108,7 +65,6 @@ class MarketPlacePage extends React.Component {
     }
 
     render(){
-        if(this.state.loading) return <Loading />;
         const batchRecord = this.state.batches.map((batch, ii) => {
             return ( 
                 // <Batch title={batch.title} location={batch.location} description={batch.description} image={batch.image} claimStatus={batch.isClaimed} key={ii} />

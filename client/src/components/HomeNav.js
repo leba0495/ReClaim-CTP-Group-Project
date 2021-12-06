@@ -8,7 +8,7 @@ function HomeNav(props) {
       <Navbar className = "navBar" fixed ="top" collapseOnSelect expand="lg" bg="dark" variant="dark">
     <Container> 
     <Navbar.Brand href="/">
-          <Image src = "images/icon.png" width="30"
+          <Image src="images/icon.png" width="30"
             height= "30" className="d-inline-block align-top"/>
         ReClaim
     </Navbar.Brand>

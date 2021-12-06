@@ -28,7 +28,7 @@ function LoginSignUpPage(props) {
                         <Form.Control type="password" placeholder="Password" />
                     </Form.Group>
 
-                    <Button variant="primary" type="submit" href = "/market-place">
+                    <Button variant="primary" type="submit" href = "/market-place/api/batches">
                         Submit
                     </Button>
 
