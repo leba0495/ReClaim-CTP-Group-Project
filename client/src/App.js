@@ -27,7 +27,7 @@ class App extends React.Component {
                 {/* <Route path="/posts/:id" component={ShowPostPage} /> */}
                 <Route path="/log-in" component={LoginSignUpPage}/>
                 <Route path="/sign-up" component={SignUpPage} />
-                <Route path="/market-place/api/batches" component={MarketPlacePage} />
+                <Route path="/market-place" component={MarketPlacePage} />
                 <Route path="/" component={LandingPage} />
               </Switch>
             </div>
