@@ -24,7 +24,7 @@ class Batch extends React.Component {
 
     render(){
         return (
-            <Card className={`g-0 shadow-sm m-3 ${this.props.isClaimed ? 'card-status' : '' }` }>
+            <Card className={`g-0 shadow-sm m-3 whole-card ${this.props.isClaimed ? 'card-status' : '' }` }>
                 <Row>
                     <Col m="3">
                         <Card.Img className="card-img-top p-2" variant="left" src={this.props.image} />

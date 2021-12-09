@@ -11,7 +11,7 @@ import axios from 'axios';
 
 function MarketDecoration(){
     return (
-        <div className="market-decor">
+        <div className="market-decor pl-5">
             <h3>MarketFeed</h3>
             <Image  src="images/market.png"/>
         </div>
