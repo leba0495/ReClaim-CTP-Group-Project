@@ -1,3 +1,6 @@
+# ReClaim
+Complete README.md coming soon!
+<!---
 # Project Starter
 A starter repo for building CUNY Tech Prep projects with React, Express.js, and Sequelize.js
 
@@ -151,3 +154,4 @@ git push heroku main
 ├── package-lock.json
 └── package.json
 </pre>
+-->
