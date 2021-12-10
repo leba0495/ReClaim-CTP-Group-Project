@@ -1,0 +1,9 @@
+.add-batch-container {
+    padding: 20px;
+    margin: 100px auto 0;
+    width: 60%;
+    border: 2px solid ;
+    border-radius: 20px;
+    text-align: left;
+}
+

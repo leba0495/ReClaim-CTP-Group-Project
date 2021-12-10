@@ -1,11 +1,12 @@
 import React from "react";
 import {Image, Container, Row, Col} from 'react-bootstrap';
+import { Link } from "react-router-dom";
 import '../styles/MarketPlacePage.css';
 import SearchBar from "../components/SearchBar";
 import Batch from '../components/Batch';
 import BatchDetails from "../components/BatchDetails";
-import MarketPlaceNav from "../components/MarketPlaceNav"
-import Footer from "../components/Footer"
+import MarketPlaceNav from "../components/MarketPlaceNav";
+import Footer from "../components/Footer";
 import axios from 'axios';
 
 
@@ -82,6 +83,9 @@ class MarketPlacePage extends React.Component {
                     </Col>
                     <Col>
                         <SearchBar/>
+                        <Link to={"/add-batch"}> 
+                            <button className="btn-style add-btn">Add a Batch</button> 
+                        </Link>                       
                     </Col>
                 </Row>
                 <Row className="batch-row">

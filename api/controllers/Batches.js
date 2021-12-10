@@ -6,9 +6,9 @@ const { Batch } = db;
 // get all Batches
 router.get("/", (req, res) => {
     Batch.findAll({
-        order: [
-            ['id', 'ASC'],
-        ],
+        // order: [
+        //     ['id', 'ASC'],
+        // ],
     })
     .then(batch => res.json(batch));
 });
@@ -31,8 +31,7 @@ router.post('/', (req, res) => {
 // update a batch (claimed vs unclaim)
 router.put('/:id', (req, res) => {
     const { id }  = req.params;
-    console.log(req.body);
-    
+     
     Batch.findByPk(id)
         .then(batch => {
             if(!batch) {

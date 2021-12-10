@@ -38,6 +38,9 @@
     
 }
 
+.add-btn {
+    margin-left: 40px;
+}
 .search-btn:hover {
     position: relative;
     color: white;

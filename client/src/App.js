@@ -12,7 +12,7 @@ import LandingPage from './pages/LandingPage';
 import SignUpPage from './pages/SignUpPage';
 import MarketPlacePage from './pages/MarketPlacePage'
 import LoginSignUpPage from './pages/LoginSignUpPage'
-
+import AddBatch from "./components/AddBatch";
 import './styles/App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -28,6 +28,7 @@ class App extends React.Component {
                 <Route path="/log-in" component={LoginSignUpPage}/>
                 <Route path="/sign-up" component={SignUpPage} />
                 <Route path="/market-place" component={MarketPlacePage} />
+                <Route path="/add-batch" component={AddBatch} />
                 <Route path="/" component={LandingPage} />
               </Switch>
             </div>
