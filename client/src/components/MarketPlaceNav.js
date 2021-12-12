@@ -6,8 +6,8 @@ import '../styles/MarketNav.css'
 function MarketNav(props) {
     return (
       // Extra small (xs) · Small (sm) · Medium (md) · Large (lg) · Extra large (xl) · Extra extra large (xxl)
-    <Navbar className = "marketNavBar" fixed ="top" collapseOnSelect expand="lg" bg="dark" variant="dark">
-    <Container> 
+    <Navbar className = "marketNavBar" expnad="lg" bg="dark" variant="dark">
+    <Container > 
     <Navbar.Brand className = "reclaimIcon" href="/">
           <Image src="images/icon.png" width="30"
             height= "30" className="d-inline-block align-top"/>

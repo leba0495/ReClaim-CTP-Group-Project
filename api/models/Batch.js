@@ -35,9 +35,6 @@ module.exports = (sequelize, DataTypes) => {
     },
     locationNotes: {
         type: DataTypes.STRING,
-          validate: {
-            len: [3, 250],
-      },
     },
     isSorted: {
         type: DataTypes.BOOLEAN,

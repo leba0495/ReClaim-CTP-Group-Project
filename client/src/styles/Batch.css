@@ -16,7 +16,17 @@
     background: #0d6efd;
 }
 
+#tag-img{
+    width: 20px;
+    height: 20px;
+    margin: 2px;
+}
+
 /* Batch Details */
 .batch-details {
     width: 80%;
+}
+
+.notes-labels {
+    font-weight: bold;
 }

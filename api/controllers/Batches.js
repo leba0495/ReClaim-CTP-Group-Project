@@ -1,10 +1,11 @@
+const { request } = require('express');
 const express = require('express');
 const router = express.Router();
 const db = require('../models');
 const { Batch } = db;
 
 // get all Batches
-router.get("/", (req, res) => {
+router.get('/', (req, res) => {
     Batch.findAll({
         // order: [
         //     ['id', 'ASC'],
@@ -14,16 +15,27 @@ router.get("/", (req, res) => {
 });
 
 // create a batch 
-router.post('/', (req, res) => {
-    let { content } = req.body;
+router.post('/create-batch', (req, res) => {
+    let batch = {
+        image: req.body.image,
+        title: req.body.title,
+        description: req.body.description,
+        location: req.body.location,
+        address: req.body.address,
+        locationNotes: req.body.locationNotes,
+        isSorted: req.body.isSorted,
+        isClaimed: req.body.isClaimed,
+    };
     // get the author's id so you can create the association between the batch being created and the use that batched it
-    Batch.create({ content })
-        .then()
-        .then(batch => {
-            res.status(201).json(batch);
+    Batch.create(batch)
+        console.log(batch.toJSON())
+        .then(b => {
+            
+            res.status(201).json(b);
         })
         .catch(err => {
             res.status(400).json(err)
+            
         });
 });
 

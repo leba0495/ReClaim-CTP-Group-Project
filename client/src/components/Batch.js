@@ -1,7 +1,6 @@
 import React from 'react';
-import {Card, Row, Col, Container} from 'react-bootstrap';
+import {Card, Row, Col, Container, Image} from 'react-bootstrap';
 // import BinImage from '../images/bin-recyclable.png';
-import { Link } from 'react-router-dom';
 import "../styles/Batch.css"
 
 class Batch extends React.Component {
@@ -26,15 +25,14 @@ class Batch extends React.Component {
         return (
             <Card className={`g-0 shadow-sm m-3 whole-card ${this.props.isClaimed ? 'card-status' : '' }` }>
                 <Row>
-                    <Col m="3">
-                        <Card.Img className="card-img-top p-2" variant="left" src={this.props.image} />
+                    <Col m="3" className='p-11'>
+                        <Card.Img className=" card-img-top p-2" variant="left" src={this.props.image} />
                     </Col>
-                    <Col m="9">
+                    <Col m="9" >
                         <Card.Body>
-                            <Card.Title> {this.props.title } </Card.Title>
-                            <Card.Subtitle>{this.props.location}</Card.Subtitle>
-                            <p>Description:</p>
-                            <Card.Text> { this.props.description} </Card.Text>
+                            <Card.Title className='p-1'> <strong>{this.props.title }</strong> </Card.Title>
+                            <Card.Subtitle> <Image id="tag-img" src="images/locationTag.jpg" /> {this.props.location} </Card.Subtitle>
+                            <Card.Text className='p-1'> <strong>Description:</strong> { this.props.description} </Card.Text>
                             <button className={`btn-style ${this.props.isClaimed ? 'btn-status' : '' }`} type="submit" onClick={this.handleClaim}> { this.props.isClaimed ? <span>Unclaim</span> : <span>Claim</span>}</button>
                             <button className="btn-style details-btn" onClick={ this.displayDetails }>Details</button>
                         </Card.Body>
