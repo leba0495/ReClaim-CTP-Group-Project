@@ -1,6 +1,5 @@
 /* Top of container */
 
-
 .top-market-row {
     margin: 50px 20px;
 }
@@ -40,8 +39,9 @@
     
 }
 
-.add-btn {
+#add-btn {
     margin-left: 40px;
+    width: fit-content;
 }
 .search-btn:hover {
     position: relative;

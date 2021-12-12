@@ -33,7 +33,7 @@ class MarketPlacePage extends React.Component {
     // Loads when the component is rendered so using the fake posts I passed Batch components into the Market's batches state
     componentDidMount(){
         // load data from database
-        axios.get("/api/")
+        axios.get("/api/batches/")
         .then(response => {
              this.setState({batches: response.data})
             });
@@ -55,7 +55,7 @@ class MarketPlacePage extends React.Component {
         batches[indexOfBatch].isClaimed = !batches[indexOfBatch].isClaimed;
 
         // Update back end
-        axios.put("/api/"+batchID, batches[indexOfBatch])
+        axios.put("/api/batches"+batchID, batches[indexOfBatch])
             .then(res => {
                 console.log(res.data)
             })
@@ -85,7 +85,7 @@ class MarketPlacePage extends React.Component {
                     <Col>
                         <SearchBar/>
                         <Link to={"/add-batch"}> 
-                            <button className="btn-style add-btn">Add a Batch</button> 
+                            <button className="btn-style" id="add-btn" >Add a Batch</button> 
                         </Link>                       
                     </Col>
                 </Row>

@@ -1,5 +1,6 @@
 import React from "react";
 import MarketPlaceNav from "../components/MarketPlaceNav";
+import Footer from "../components/Footer";
 import {Form, Container, Button, Row, Col, FloatingLabel} from "react-bootstrap";
 import { Redirect } from "react-router-dom";
 import axios from 'axios';
@@ -32,22 +33,18 @@ class AddBatch extends React.Component {
             isSorted: false,
         }
 
-        axios.post('/api/create-batch', newBatch)
+        axios.post('/api/batches/', newBatch)
             .then((res) => {
                 console.log(res.data)
-            }).catch((error) => {
-                console.log(error)
-            });
-        
-            this.setState({
-                image: null,
-                title: "",
-                description: "",
-                location: "",
-                address: "",
-                locationNotes: "",
-                isSorted: false,
             })
+            .then(() => {
+                this.setState({success: true})
+            })
+            .catch((error) => {
+                console.log(error)
+            })
+        
+        
     }
 
     onChangeTitle = (e) => {
@@ -88,96 +85,97 @@ class AddBatch extends React.Component {
         );
         }
         return(
-            <Container fluid ="md" className="add-batch-container">
+            <div className="p-0 bg" style={{ backgroundImage: "url(/images/loginBG.png)" }}>
                 <MarketPlaceNav />
-                {errorMessage}
-                <Form className="add-batch-form">
-                    <Form.Group>
-                        <Form.Label>Upload your batch's pictures here</Form.Label>
-                        <Form.Control type="file" multiple ></Form.Control>
-                    </Form.Group>
-                    <Row className="mt-2">
-                    <Form.Group as={Col} controlId="formGridTitle">
-                    <Form.Label >Title</Form.Label>
-                    <Form.Control placeholder="Plastic Bottles" name="title"
-                    onChange={this.onChangeTitle}/>
-                    </Form.Group>
+                    {errorMessage}
+                    <Form className="add-batch-form">
+                        <Form.Group>
+                            <Form.Label>Upload your batch's pictures here</Form.Label>
+                            <Form.Control type="file" multiple ></Form.Control>
+                        </Form.Group>
+                        <Row className="mt-2">
+                        <Form.Group as={Col} controlId="formGridTitle">
+                        <Form.Label >Title</Form.Label>
+                        <Form.Control placeholder="Plastic Bottles" name="title"
+                        onChange={this.onChangeTitle}/>
+                        </Form.Group>
 
-                    <Form.Group as={Col} controlId="formGridLocation">
-                    <Form.Label>General Location</Form.Label>
-                    <Form.Control placeholder="Corner of West and 5th" name="location"
-                    onChange={this.onChangeLocation}/>
-                    </Form.Group>
-                </Row>
+                        <Form.Group as={Col} controlId="formGridLocation">
+                        <Form.Label>General Location</Form.Label>
+                        <Form.Control placeholder="Corner of West and 5th" name="location"
+                        onChange={this.onChangeLocation}/>
+                        </Form.Group>
+                    </Row>
 
-                <Form.Group className="mt-2" controlId="formGridAddress1">
-                    <Form.Label>Address</Form.Label>
-                    <Form.Control placeholder="1234 Main St, Bronx, NY 10460" name="address"
-                    onChange={this.onChangeAddress}/>
-                </Form.Group>
-
-                {/* <Row className="mt-2">
-                    <Form.Group as={Col} controlId="formGridCity">
-                    <Form.Label>City</Form.Label>
-                    <Form.Control placeholder="Bronx" 
-                    onChange={this.onChangeAddress}/>
+                    <Form.Group className="mt-2" controlId="formGridAddress1">
+                        <Form.Label>Address</Form.Label>
+                        <Form.Control placeholder="1234 Main St, Bronx, NY 10460" name="address"
+                        onChange={this.onChangeAddress}/>
                     </Form.Group>
 
-                    <Form.Group as={Col} controlId="formGridState">
-                    <Form.Label>State</Form.Label>
-                    <Form.Select defaultValue="Choose...">
-                        <option>Choose...</option>
-                        <option>New York</option>
-                    </Form.Select>
+                    {/* <Row className="mt-2">
+                        <Form.Group as={Col} controlId="formGridCity">
+                        <Form.Label>City</Form.Label>
+                        <Form.Control placeholder="Bronx" 
+                        onChange={this.onChangeAddress}/>
+                        </Form.Group>
+
+                        <Form.Group as={Col} controlId="formGridState">
+                        <Form.Label>State</Form.Label>
+                        <Form.Select defaultValue="Choose...">
+                            <option>Choose...</option>
+                            <option>New York</option>
+                        </Form.Select>
+                        </Form.Group>
+
+                        <Form.Group as={Col} controlId="formGridZip">
+                        <Form.Label>Zip</Form.Label>
+                        <Form.Control placeholder="10460"/>
+                        </Form.Group>
+                    </Row> */}
+
+                    <Row className="mt-3">
+                    <FloatingLabel lg={9} as={Col} controlId="floatingTextarea2" label="Describe what's in the batch.." >
+                        <Form.Control
+                        as="textarea"
+                        name="description"
+                        placeholder=""
+                        style={{ height: '100px'}}
+                        onChange={this.onChangeDescription}
+                        />
+                    </FloatingLabel>
+
+                    <Form.Group as={Col} className="" id="formGridCheckbox">
+                        <Form.Label> Are your goods separated?</Form.Label>
+                        <Form.Select defaultValue="No" onChange={(e) => this.setState({isSorted: e.target.value}) }>
+                        <option value={`${false}`}>No</option>
+                        <option value={`${true}`}>Yes</option>  
+                        </Form.Select>
                     </Form.Group>
 
-                    <Form.Group as={Col} controlId="formGridZip">
-                    <Form.Label>Zip</Form.Label>
-                    <Form.Control placeholder="10460"/>
-                    </Form.Group>
-                </Row> */}
+                    </ Row>
+                    <Row className="mt-3 g-0 p-0" >
+                        <Form.Label as={Col} lg={8} md={12}>If you've placed the batch in a hidden location. Leave some notes for the collector here.
+                        <Form.Control
+                        as="textarea"
+                        name="locationNotes"
+                        placeholder="Hints and notes here.."
+                        style={{ height: '120px'}}
+                        onChange={this.onChangeNotes}
+                        />
+                        </Form.Label>
+                    </Row>
 
-                <Row className="mt-3">
-                <FloatingLabel lg={9} as={Col} controlId="floatingTextarea2" label="Describe what's in the batch.." >
-                    <Form.Control
-                    as="textarea"
-                    name="description"
-                    placeholder=""
-                    style={{ height: '100px'}}
-                    onChange={this.onChangeDescription}
-                    />
-                </FloatingLabel>
+                    <Button variant="primary"
+                    className="btn-style m-3 "
+                    onClick={this.saveBatch}>
+                        Submit
+                    </Button>
+                    
+                    </Form>
 
-                <Form.Group as={Col} className="" id="formGridCheckbox">
-                    <Form.Label> Are your goods separated?</Form.Label>
-                    <Form.Select defaultValue="No" onChange={(e) => this.setState({isSorted: e.target.value}) }>
-                    <option value={`${false}`}>No</option>
-                    <option value={`${true}`}>Yes</option>  
-                    </Form.Select>
-                </Form.Group>
-
-                </ Row>
-                <Row className="mt-3">
-                <FloatingLabel  lg={11} as={Col} controlId="floatingTextarea2" label="If you've placed the batch in a hidden location. Leave some notes for the collector here." >
-                    <Form.Control
-                    as="textarea"
-                    name="locationNotes"
-                    placeholder=""
-                    style={{ height: '120px'}}
-                    onChange={this.onChangeNotes}
-                    />
-                </FloatingLabel>
-                </Row>
-
-                <Button variant="primary" 
-                className="btn-style m-3 "
-                onClick={this.saveBatch}>
-                    Submit
-                </Button>
-                
-                </Form>
-            
-            </Container>
+                <Row><Footer /></Row>
+            </div>
         );
     }
 }
