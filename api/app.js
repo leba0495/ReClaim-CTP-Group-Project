@@ -3,7 +3,6 @@ const morgan = require('morgan');
 const path = require('path');
 const db = require('./models');
 const app = express();
-const { sirvAuthentication } = require('./middlewares/sirvAuthentication');
 require('dotenv').config();
 const PORT = process.env.PORT;
 const multer = require('multer')
@@ -18,9 +17,6 @@ const multerMid = multer({
 
 // this lets us parse 'application/json' content in http requests
 app.use(express.json());
-
-// Call authentication to sirv and save token in env
-sirvAuthentication();
 
 // Google Cloud Storage
 app.disable('x-powered-by')
@@ -45,7 +41,7 @@ if(process.env.NODE_ENV==='production') {
 
 // update DB tables based on model updates. Does not handle renaming tables/columns
 // NOTE: toggling this to true drops all tables (including data)
-db.sequelize.sync({ force: true });
+db.sequelize.sync({ force: false });
 
 // start up the server
 if(PORT) {

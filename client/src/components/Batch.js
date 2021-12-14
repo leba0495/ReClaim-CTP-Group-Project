@@ -24,9 +24,9 @@ class Batch extends React.Component {
             <Card className={`g-0 shadow-sm m-3 whole-card ${this.props.isClaimed ? 'card-status' : '' }` }>
                 <Row>
                     <Col m="3" className='p-11'>
-                        <Card.Img className=" card-img-top p-2" variant="left" src={this.props.image} />
+                        <Card.Img className=" card-img-top p-2" id="card-img" variant="left" src={this.props.image} />
                     </Col>
-                    <Col m="9" >
+                    <Col >
                         <Card.Body>
                             <Card.Title className='p-1'> <strong>{this.props.title }</strong> </Card.Title>
                             <Card.Subtitle> <Image id="tag-img" src="images/locationTag.jpg" /> {this.props.location} </Card.Subtitle>

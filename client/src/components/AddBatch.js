@@ -69,7 +69,7 @@ class AddBatch extends React.Component {
         );
         }
         return(
-            <div className="p-0 bg" style={{ backgroundImage: "url(/images/loginBG.png)" }}>
+            <Container className="p-0 bg" fluid="md" style={{ backgroundImage: "url(/images/loginBG.png)" }}>
                 <MarketPlaceNav />
                     {errorMessage}
                     <Form className="add-batch-form" onSubmit={this.saveBatch}>
@@ -134,7 +134,7 @@ class AddBatch extends React.Component {
                     </Form>
 
                 <Row><Footer /></Row>
-            </div>
+            </Container>
         );
     }
 }

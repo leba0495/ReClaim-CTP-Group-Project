@@ -55,7 +55,7 @@ class MarketPlacePage extends React.Component {
         batches[indexOfBatch].isClaimed = !batches[indexOfBatch].isClaimed;
 
         // Update back end
-        axios.put("/api/batches"+batchID, batches[indexOfBatch])
+        axios.put("/api/batches/"+batchID, batches[indexOfBatch])
             .then(res => {
                 console.log(res.data)
             })
@@ -94,7 +94,7 @@ class MarketPlacePage extends React.Component {
                         { batchRecord }
                     </Col>
                     <Col className="details-col" >
-                        {this.state.showComponent ? <BatchDetails  { ...this.state.batches.find(b => b.id === this.state.currBatch )}></BatchDetails> : null}
+                        {this.state.showComponent ? <BatchDetails  { ...this.state.batches.find(b => b.id === this.state.currBatch )}></BatchDetails> : <Image src="images/icon.png" className="world-img"/>}
                     </Col>
                 </Row>
                 <Row><Footer/></Row>

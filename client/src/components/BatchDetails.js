@@ -5,7 +5,7 @@ import "../styles/Batch.css"
 function BatchDetails(props){
 
     return(
-        <Card className={`g-0 p-2 m-3 shadow-sm whole-card batch-details sticky-top  ${props.isClaimed ? 'card-status' : '' }`}> 
+        <Card className={`g-0 p-2 m-3 shadow-sm whole-card batch-details scroll sticky-top  ${props.isClaimed ? 'card-status' : '' }`}> 
             <Row>
                 <Col>
                     <Card.Img className="card-img-top p-2" style={{width: "60%"}} variant="top" src={props.image} />
@@ -17,16 +17,14 @@ function BatchDetails(props){
                     {props.description}
                     </Card.Text>
                     <button className={`btn-style ${props.isClaimed ? 'btn-status' : '' }`} > { props.isClaimed ? <span>Unclaim</span> : <span>Claim</span>}</button>
+                    <Card.Footer>
+                        <h4>INFORMATION FOR PICK-UP</h4>
+                        <h5>Location:</h5>
+                        <p>{props.address}</p>
+                        <h5>Instructions:</h5>
+                        <p>{props.locationNotes}</p>
+                    </Card.Footer>
                 </Card.Body>
-            </Row>
-            <br></br>
-            <Row>
-                <hr />
-                <h4>INFORMATION FOR PICK-UP</h4>
-                <h5>Location:</h5>
-                <p>{props.address}</p>
-                <h5>Instructions:</h5>
-                <p>{props.locationNotes}</p>
             </Row>
         </Card>
     );
