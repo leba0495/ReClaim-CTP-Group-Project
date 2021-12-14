@@ -1,0 +1,27 @@
+.loginAndSignUp {
+    margin-top: 180px;
+    padding-bottom: 195px;
+}
+
+.bg {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+
+.formStyle {
+border-color: black;
+
+}
+
+.tabStyle {
+background-color: #F7F7F7;
+padding-top: 50px;
+padding-bottom: 50px;
+padding-left: 50px;
+padding-right: 50px;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.45);
+border-radius: 50px;
+}

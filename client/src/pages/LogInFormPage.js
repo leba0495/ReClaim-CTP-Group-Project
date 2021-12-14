@@ -1,18 +1,7 @@
 import React from 'react';
 import '../styles/LogInPage.css'
+import HomeNav from '../components/HomeNav'
 
-// function LogInFormPage(props){
-//     // React State
-//     return (
-//         <div>
-//             <div> hello</div>
-//             <h1>Form goes here</h1>
-//             <h1>Form goes here</h1>
-//             <h1>Form goes here</h1>
-//         </div>
-//     );
-
-// }
 function Square() {
     return (
         <div >
@@ -29,6 +18,7 @@ class LogInFormPage extends React.Component {
     render() {
         return (
             <div className="login-container">
+            <HomeNav/>
                 <Square />
                 <div className="form-box">
                     <h2 className="logIn">Log in</h2>
@@ -63,7 +53,7 @@ class LogInFormPage extends React.Component {
                         </div>
                     </form>
                     <p className="texts">Don't have an account?</p>
-                    <a href="/" className="texts">Sign Up</a>
+                    <a href="./sign-up" className="texts">Sign Up</a>
                 </div>
             </div>
         );
