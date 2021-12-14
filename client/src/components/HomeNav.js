@@ -20,7 +20,7 @@ function HomeNav(props) {
         <Nav.Link href="#our-goal">Our Goal</Nav.Link>
         <Nav.Link href="#about-us">About Us</Nav.Link>
         {/* <Nav.Link href="/sign-up">Sign Up</Nav.Link> */}
-        <Button className = "logInButton" href="/log-in" variant="success">Log in</Button>
+        <Button className = "logInButton" href="/log-in" variant="success">Login</Button>
       </Nav>
     </Navbar.Collapse>
     </Container>

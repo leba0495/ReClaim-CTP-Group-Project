@@ -25,7 +25,7 @@ class LandingPage extends React.Component {
             With a platform so easy to use, 
             you might not even realize you’re helping to save the world. 
             <p>
-            <Button  className = "joinUsButton" href="/log-in" variant="success">Join us Today!</Button> 
+            <Button  className = "joinUsButton" href="/log-in" variant="success">Join us today!</Button> 
             </p>
           </Col>
           <Col xs ={4} md = {5}>
@@ -74,7 +74,7 @@ class LandingPage extends React.Component {
             <Col>
               <p className ="howTexts">
               <i><strong>Step 3. </strong></i>
-               Post the batch of recycable goods on the marketplace.
+               Post the batch of recyclable goods on the marketplace.
               </p>
             </Col>
           </Col>
