@@ -1,4 +1,5 @@
 /* Batch Style Conditions */
+
 .card-status {
     background-color: #d7fcde;
 }
@@ -15,7 +16,30 @@
     background: #0d6efd;
 }
 
+#tag-img{
+    width: 20px;
+    height: 20px;
+    margin: 2px;
+}
+
+#card-img {
+    height: 300px;
+    width: 300px;
+}
 /* Batch Details */
 .batch-details {
     width: 80%;
+}
+
+.notes-labels {
+    font-weight: bold;
+}
+
+.card-footer {
+    margin-top: 50px;
+}
+
+.scroll {
+    max-height: 700px;
+    overflow-y: auto;
 }

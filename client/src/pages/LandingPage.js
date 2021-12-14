@@ -20,9 +20,8 @@ class LandingPage extends React.Component {
       {/* Intro section */}
         <Row className = "intro">
           {/* lg={true} indicates the breakpoint of the column, in this case break at screen large. */}
-          <Col className = "introText" lg={true}>
+          <Col className = "introText g-0 p-5" lg={true}>
             ReClaim makes recycling easy. 
-            So easy that you forget about it. 
             With a platform so easy to use, 
             you might not even realize you’re helping to save the world. 
             <p>

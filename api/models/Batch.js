@@ -7,7 +7,7 @@ module.exports = (sequelize, DataTypes) => {
 
   Batch.init({
     image: {
-        type: DataTypes.JSON,
+        type: DataTypes.STRING,
     },
     title:{
       type: DataTypes.STRING,
@@ -35,9 +35,6 @@ module.exports = (sequelize, DataTypes) => {
     },
     locationNotes: {
         type: DataTypes.STRING,
-          validate: {
-            len: [3, 250],
-      },
     },
     isSorted: {
         type: DataTypes.BOOLEAN,
@@ -60,7 +57,6 @@ module.exports = (sequelize, DataTypes) => {
 
   Batch.associate = (models) => {
     //associations can be defined here
-
 
     models.Batch.belongsTo(models.User, {foreignKey: 'authorId'});
     models.Batch.belongsTo(models.User, {foreignKey: 'claimantId'});

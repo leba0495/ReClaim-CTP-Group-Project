@@ -5,10 +5,22 @@ const db = require('./models');
 const app = express();
 require('dotenv').config();
 const PORT = process.env.PORT;
+const multer = require('multer')
+
+const multerMid = multer({
+  storage: multer.memoryStorage(),
+  limits: {
+    fileSize: 5 * 1024 * 1024,
+  },
+})
 
 
 // this lets us parse 'application/json' content in http requests
 app.use(express.json());
+
+// Google Cloud Storage
+app.disable('x-powered-by')
+app.use(multerMid.single('image'))
 
 // add http request logging to help us debug and audit app use
 const logFormat = process.env.NODE_ENV==='production' ? 'combined' : 'dev';
@@ -29,7 +41,7 @@ if(process.env.NODE_ENV==='production') {
 
 // update DB tables based on model updates. Does not handle renaming tables/columns
 // NOTE: toggling this to true drops all tables (including data)
-db.sequelize.sync({ force: true });
+db.sequelize.sync({ force: false });
 
 // start up the server
 if(PORT) {

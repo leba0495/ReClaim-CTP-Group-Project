@@ -1,6 +1,7 @@
 /* Top of container */
+
 .top-market-row {
-    margin: 100px 20px;
+    margin: 50px 20px;
 }
 
 .search-input {
@@ -28,7 +29,7 @@
     color: white;
     white-space: nowrap;
     margin: 0 10px;
-    width: fit-content;
+    width: 80px;
     padding: 10px;
     height: 42px;
     background: #07B128;
@@ -38,20 +39,25 @@
     
 }
 
+#add-btn {
+    margin-left: 40px;
+    width: fit-content;
+}
 .search-btn:hover {
+    position: relative;
     color: white;
 }
 
-/* Batch rows */
-
-
-.details-col {
-    margin-top: 16px;
-}
-.scroll {
-    max-height: 650px;
-    overflow-y: auto;
+.whole-card {
+    background: #F5F5F5;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
 }
 
+.card-img-top {
+    border-radius: 20px;
+}
 
-
+.world-img {
+    opacity: .3;
+}

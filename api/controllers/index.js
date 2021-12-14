@@ -11,7 +11,7 @@ const batchesController = require('./Batches.js');
 // will be prefixes to all routes defined inside the controller
 // router.use('/posts', postsController);
 router.use('/application-configuration', appConfigController);
-router.use('/', batchesController);
+router.use('/batches', batchesController);
 
 
 module.exports = router;

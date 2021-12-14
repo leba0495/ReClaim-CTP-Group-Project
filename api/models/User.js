@@ -61,13 +61,12 @@ module.exports = (sequelize, DataTypes) => {
   // console.log(User === sequelize.models.User);
 
   User.associate = (models) => {
-
     //associations can be defined here
-    models.User.hasMany(models.Batch, {as: 'Author', foreignKey: 'authorId'});
-    models.User.hasMany(models.Batch, {as: 'Claimant', foreignKey: 'claimantId'});
-    //through AuthorBatch
 
+    //through AuthorBatch
+    models.User.hasMany(models.Batch, {as: 'Author', foreignKey: 'authorId'});
     //through ClaimantBatch
+    models.User.hasMany(models.Batch, {as: 'Claimant', foreignKey: 'claimantId'});
 
   };
 

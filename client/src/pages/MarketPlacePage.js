@@ -1,59 +1,18 @@
 import React from "react";
 import {Image, Container, Row, Col} from 'react-bootstrap';
+import { Link } from "react-router-dom";
 import '../styles/MarketPlacePage.css';
 import SearchBar from "../components/SearchBar";
 import Batch from '../components/Batch';
 import BatchDetails from "../components/BatchDetails";
-import MarketPlaceNav from "../components/MarketPlaceNav"
-import Footer from "../components/Footer"
+import MarketPlaceNav from "../components/MarketPlaceNav";
+import Footer from "../components/Footer";
 import axios from 'axios';
 
-const POSTS = [
-    {
-    objectID: 1,
-    title: "Wine Bottles",
-    location: "Bronx, NY",
-    description: "I have a bin with 15+ wine bottles that could go to a nice home. They can be recycled and made into nice decorative bottles.",
-    image: "images/bin-recyclable.png",
-    isClaimed: true,
-    },
-    {
-    objectID: 2,
-    title: "Plastic Bottles",
-    location: "Bronx, NY",
-    description: "I have a bin with 15+ wine bottles that could go to a nice home. They can be recycled and made into nice decorative bottles.",
-    image: "images/bin-recyclable.png",
-    isClaimed: false,
-    },
-    {
-    objectID: 3,
-    title: "Some Cans",
-    location: "Bronx, NY",
-    description: "I have a bin with 15+ wine bottles that could go to a nice home. They can be recycled and made into nice decorative bottles.",
-    image: "images/bin-recyclable.png",
-    isClaimed: true,
-    },
-    {
-    objectID: 4,
-    title: "Wine Bottles",
-    location: "Bronx, NY",
-    description: "I have a bin with 15+ wine bottles that could go to a nice home. They can be recycled and made into nice decorative bottles.",
-    image: "images/bin-recyclable.png",
-    isClaimed: false,
-    },
-    {
-    objectID: 5,
-    title: "Wine Bottles",
-    location: "Bronx, NY",
-    description: "I have a bin with 15+ wine bottles that could go to a nice home. They can be recycled and made into nice decorative bottles.",
-    image: "images/bin-recyclable.png",
-    isClaimed: false,
-    },
-];
 
 function MarketDecoration(){
     return (
-        <div className="market-decor">
+        <div className="market-decor pl-5">
             <h3>MarketFeed</h3>
             <Image  src="images/market.png"/>
         </div>
@@ -64,21 +23,21 @@ class MarketPlacePage extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            batches: POSTS,
-            loading: true,
+            batches: [],
             currBatch: null,
             showComponent: null,
+            newBatch: {},
         }
-
     }
 
     // Loads when the component is rendered so using the fake posts I passed Batch components into the Market's batches state
     componentDidMount(){
         // load data from database
-        axios.get("/api/")
-        .then(response => {console.log(response.data);
-             this.setState({batches: response.data})});
-        // axios.get('api/')
+        axios.get("/api/batches/")
+        .then(response => {
+             this.setState({batches: response.data})
+            });
+
     }
 
     // Arrow functions make it so you don't need the "bind" method 
@@ -91,14 +50,20 @@ class MarketPlacePage extends React.Component {
     updateClaimStatus = (batchID) => {
         // Update the status of the current batch
         const batches = this.state.batches;
-        const indexOfBatch = batches.findIndex(b => b.objectId === batchID);
+        const indexOfBatch = batches.findIndex(b => b.id === batchID);
     
-        batches[indexOfBatch].isClaimed = !batches[indexOfBatch].isClaimed ;
+        batches[indexOfBatch].isClaimed = !batches[indexOfBatch].isClaimed;
 
-        this.setState({batches}); //the state will know that this is referring to the batches
-        console.log(batches[indexOfBatch]);
-        // Now the button doesn't update the text after clicking?
-
+        // Update back end
+        axios.put("/api/batches/"+batchID, batches[indexOfBatch])
+            .then(res => {
+                console.log(res.data)
+            })
+            .then(this.setState({batches})) 
+            .catch(err => {
+                console.log("Something is not right!")
+                console.log(err)
+            })
     }
 
     render(){
@@ -110,10 +75,8 @@ class MarketPlacePage extends React.Component {
                 <Batch { ...batch } handleDetails={this.handleDetails} handleClaimStatus={this.updateClaimStatus} key={ii} ></Batch>)
             
         })
-        
-
         return (
-            <Container fluid ="md" className="main-market-container">
+            <Container fluid="md p-0" className="main-market-container">
                 <MarketPlaceNav/>
                 <Row className="top-market-row">
                     <Col lg="1" >
@@ -121,6 +84,9 @@ class MarketPlacePage extends React.Component {
                     </Col>
                     <Col>
                         <SearchBar/>
+                        <Link to={"/add-batch"}> 
+                            <button className="btn-style" id="add-btn" >Add a Batch</button> 
+                        </Link>                       
                     </Col>
                 </Row>
                 <Row className="batch-row">
@@ -128,7 +94,7 @@ class MarketPlacePage extends React.Component {
                         { batchRecord }
                     </Col>
                     <Col className="details-col" >
-                        {this.state.showComponent ? <BatchDetails  { ...this.state.batches.find(b => b.objectId === this.state.currBatch )}></BatchDetails> : null}
+                        {this.state.showComponent ? <BatchDetails  { ...this.state.batches.find(b => b.id === this.state.currBatch )}></BatchDetails> : <Image src="images/icon.png" className="world-img"/>}
                     </Col>
                 </Row>
                 <Row><Footer/></Row>
