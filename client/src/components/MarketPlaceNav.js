@@ -1,8 +1,6 @@
 import React from 'react';
-import {Navbar, Container, Nav, Image, Dropdown, DropdownButton} from 'react-bootstrap';
+import {Navbar, Container, Nav, Image, Dropdown} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Logo from '../images/icon.png'
-import User from '../images/user.png'
 import '../styles/MarketNav.css'
 
 function MarketNav(props) {
@@ -11,7 +9,7 @@ function MarketNav(props) {
     <Navbar className = "marketNavBar" fixed ="top" collapseOnSelect expand="lg" bg="dark" variant="dark">
     <Container> 
     <Navbar.Brand className = "reclaimIcon"href="/market-place">
-          <Image src = {Logo} width="30"
+          <Image src = "images/icon.png" width="30"
             height= "30" className="d-inline-block align-top"/>
         ReClaim
     </Navbar.Brand>
@@ -33,7 +31,7 @@ function MarketNav(props) {
       </Nav>
       <Dropdown align="end" >
       <Dropdown.Toggle id="profile">
-          <Image src = {User} width="42"
+          <Image src = "images/user.png" width="42"
             height= "42"/> </Dropdown.Toggle>
           <Dropdown.Menu>
           <Dropdown.ItemText>User_Name</Dropdown.ItemText>

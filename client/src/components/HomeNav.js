@@ -1,7 +1,6 @@
 import React from 'react';
 import {Navbar, Container, Nav, Button, Image} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Logo from '../images/icon.png'
 
 function HomeNav(props) {
     return (
@@ -9,7 +8,7 @@ function HomeNav(props) {
       <Navbar className = "navBar" fixed ="top" collapseOnSelect expand="lg" bg="dark" variant="dark">
     <Container> 
     <Navbar.Brand href="/">
-          <Image src = {Logo} width="30"
+          <Image src = "images/icon.png" width="30"
             height= "30" className="d-inline-block align-top"/>
         ReClaim
     </Navbar.Brand>
@@ -20,8 +19,8 @@ function HomeNav(props) {
         <Nav.Link href="#environmentFacts">Facts</Nav.Link>
         <Nav.Link href="#our-goal">Our Goal</Nav.Link>
         <Nav.Link href="#about-us">About Us</Nav.Link>
-        <Nav.Link href="/sign-up">Sign Up</Nav.Link>
-        <Button className = "logInButton" href="/market-place" variant="success">Log in</Button>
+        {/* <Nav.Link href="/sign-up">Sign Up</Nav.Link> */}
+        <Button className = "logInButton" href="/log-in" variant="success">Login</Button>
       </Nav>
     </Navbar.Collapse>
     </Container>

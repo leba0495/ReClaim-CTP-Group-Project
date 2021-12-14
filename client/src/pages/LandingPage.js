@@ -2,24 +2,7 @@ import React from 'react';
 import {Container, Row, Col, Image, Button, Badge} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/landingpage.css'
-import HeaderImage from '../images/headerimg.jpg'
-import HowItWorkImg from '../images/howitwork.png'
-import PackGoodImg from '../images/recycle-bag.png'
-import EnterDetailImg from '../images/paper.png'
-import PostBatchImg from '../images/care.png'
-import CheckImg from '../images/eye.png'
-import ClaimBatchImg from '../images/click.png'
-import PickUpImg from '../images/gps.png'
-import FactImg from '../images/fact.png'
-import DownArrowImg from '../images/down-arrow.png'
-import TrashImg from '../images/trash.png'
-import TvImg from '../images/watch-tv.png'
-import EarthImg from '../images/earth.png'
-import PlanetImg from '../images/planet.png'
-import EcoLight from '../images/eco-light.png'
-import Programmer1 from '../images/programmer.png'
-import Programmer2 from '../images/teacher.png'
-import Programmer3 from '../images/businessman.png'
+// import HeaderImage from '../images/headerimg.jpg'
 import Footer from '../components/Footer'
 import HomeNav from '../components/HomeNav'
 
@@ -43,20 +26,20 @@ class LandingPage extends React.Component {
             With a platform so easy to use, 
             you might not even realize you’re helping to save the world. 
             <p>
-            <Button  className = "joinUsButton" href="/sign-up" variant="success">Join us Today!</Button> 
+            <Button  className = "joinUsButton" href="/log-in" variant="success">Join us today!</Button> 
             </p>
           </Col>
           <Col xs ={4} md = {5}>
-            <Image className = "headerimg" src= {HeaderImage} style = {{maxWidth: "23rem"}}/>
+            <Image className = "headerimg" src= "images/headerimg.jpg" style = {{maxWidth: "23rem"}}/>
           </Col>
       </Row>
-      <Image id ="how-it-work" className = "introArrow" src = {DownArrowImg}
+      <Image id ="how-it-work" className = "introArrow" src = "images/down-arrow.png"
         width = "40px" height = "30px"/>
 
     {/* How it works section */}
       <Row className = "howItWorks">
         <Col><strong>How it Works</strong>
-        <Image className = "sectionIcons" src = {HowItWorkImg}
+        <Image className = "sectionIcons" src = "images/howitwork.png"
         width = "40px" height = "40px"/>
         </Col>
       </Row>
@@ -65,11 +48,11 @@ class LandingPage extends React.Component {
        //align-items-center */}
       <Row className="howItExplain justify-content-md-center">    
           <Col>
-            <Badge className = "badges"pill bg="info">
+            <Badge className = "badges" bg="info">
             <strong>Posting</strong>
             </Badge>
 
-            <h5><Image className = "howItWorkImgs" src = {PackGoodImg}width = "50px"  height = "50px"/>
+            <h5><Image className = "howItWorkImgs" src = "images/recycle-bag.png"  width = "50px"  height = "50px"/>
             <b>Pack Goods</b></h5> 
             <Col>
             <p className ="howTexts">
@@ -78,7 +61,7 @@ class LandingPage extends React.Component {
               </p>
             </Col>
 
-            <h5><Image className = "howItWorkImgs" src = {EnterDetailImg}width = "50px"  height = "50px"/>
+            <h5><Image className = "howItWorkImgs" src = "images/paper.png" width = "50px"  height = "50px"/>
             <b>Enter Details</b></h5> 
             <Col>
               <p className ="howTexts">
@@ -87,22 +70,22 @@ class LandingPage extends React.Component {
               </p>
             </Col>
 
-            <h5><Image className = "howItWorkImgs" src = {PostBatchImg}width = "50px"  height = "50px"/>
+            <h5><Image className = "howItWorkImgs" src = "images/care.png"  width = "50px"  height = "50px"/>
             <b>Post Batch</b></h5> 
             <Col>
               <p className ="howTexts">
               <i><strong>Step 3. </strong></i>
-               Post the batch of recycable goods on the marketplace.
+               Post the batch of recyclable goods on the marketplace.
               </p>
             </Col>
           </Col>
 
           <Col>
-            <Badge className = "badges" pill bg="warning">
+            <Badge className = "badges" bg="warning">
             <strong>Collecting</strong>
             </Badge>
 
-            <h5><Image className = "howItWorkImgs" src = {CheckImg}width = "50px"  height = "50px"/>
+            <h5><Image className = "howItWorkImgs" src = "images/eye.png"  width = "50px"  height = "50px"/>
             <b>Availability</b></h5> 
             <Col>
               <p className ="howTexts">
@@ -111,7 +94,7 @@ class LandingPage extends React.Component {
               </p>
             </Col>
 
-            <h5><Image className = "howItWorkImgs" src = {ClaimBatchImg}width = "50px"  height = "50px"/>
+            <h5><Image className = "howItWorkImgs" src = "images/click.png" width = "50px"  height = "50px"/>
             <b>Claim Batch</b></h5> 
             <Col>
               <p className ="howTexts">
@@ -120,7 +103,7 @@ class LandingPage extends React.Component {
              </p>
             </Col>
 
-            <h5><Image className = "howItWorkImgs" src = {PickUpImg}width = "50px"  height = "50px"/>
+            <h5><Image className = "howItWorkImgs" src = "images/gps.png"width = "50px"  height = "50px"/>
             <b>Pick Up</b></h5> 
             <Col>
               <p className ="howTexts">
@@ -136,13 +119,13 @@ class LandingPage extends React.Component {
     <Row className = "recycleFacts justify-content-md-center">
       <Col>
       <strong id = "environmentFacts">Top Recycling Facts</strong>
-      <Image className = "sectionIcons " src = {FactImg}
+      <Image className = "sectionIcons " src = "images/fact.png"
         width = "40px" height = "35px"/> 
       </Col>
 
         <Row>
-          <Col xs = {3}lg = {3}><Image className = "factImgL" src = {TrashImg}
-        width = "95px" height = "95px"/> </Col>
+          <Col xs = {3}lg = {3}><Image className = "factImgL" src = "images/trash.png"
+        width = "90px" height = "95px"/> </Col>
           <Col xs ={8} lg = {6} className = "factTextsR">
             The world generates at least 3.5 million tons of plastic and other solid waste a day,
              10 times the amount a century ago, 
@@ -154,15 +137,15 @@ class LandingPage extends React.Component {
           <Col xs ={7} lg = {8}  className = "factTextsL">
           It’s estimated that recycling a single aluminum can will save enough energy to power a TV for up to three hours.
             </Col>
-            <Col xs = {2}lg = {2}><Image className = "factImgR" src = {TvImg}
+            <Col xs = {2}lg = {2}><Image className = "factImgR" src = "images/watch-tv.png"
             width = "95px" height = "95px"/> </Col>
         </Row>
 
          <Row>
-            <Col xs = {3}lg = {3}><Image className = "factImgL" src = {EarthImg}
-          width = "95px" height = "95px"/> </Col>
+            <Col xs = {3}lg = {3}><Image className = "factImgL" src = "images/earth.png"
+          width = "90px" height = "95px"/> </Col>
             <Col xs ={8}  lg = {6} className = "factTextsR">
-            The Environmental Protection Agency (EPA) estimates that about 75% of the waste stream generated by people in the U.S. is recyclable. Unfortunately, only about 30% of the waste stream is actually recycled.
+             The Environmental Protection Agency (EPA) estimates that about 75% of the waste stream generated by people in the U.S. is recyclable. Unfortunately, only about 30% of the waste stream is actually recycled.
             </Col>
           </Row>
 
@@ -171,7 +154,7 @@ class LandingPage extends React.Component {
           When U.S. recycling levels reach 75% it will be the environmental
            and CO2 equivalent of removing 55 million cars from U.S. roads each year.
             </Col>
-          <Col xs = {2}lg = {2}><Image id ="our-goal" className = "factImgR" src = {PlanetImg}
+          <Col xs = {2}lg = {2}><Image id ="our-goal" className = "factImgR" src = "images/planet.png"
           width = "95px" height = "95px"/> </Col>
         </Row>
     </Row>
@@ -180,7 +163,7 @@ class LandingPage extends React.Component {
 
     <Row className = "goalSection">
     <Col><strong>Our Goal</strong>
-        <Image className = "sectionIcons" src = {EcoLight}
+        <Image className = "sectionIcons" src = "images/eco-light.png"
         width = "40px" height = "px"/>
         </Col>
     </Row>
@@ -217,15 +200,15 @@ class LandingPage extends React.Component {
     </Row>
     <Row className = "aboutUsImg justify-content-md-center">
       <Col xs = {4} lg = {3}>
-      <Image src = {Programmer1}
+      <Image src = "images/programmer.png"
           width = "95px" height = "95px"/>
       </Col>
       <Col xs = {4} lg = {3}>
-      <Image src = {Programmer2}
+      <Image src = "images/teacher.png"
           width = "95px" height = "95px"/>
       </Col>
       <Col xs = {4}  lg = {3}>
-      <Image src = {Programmer3}
+      <Image src = "images/businessman.png"
           width = "95px" height = "95px"/>
       </Col>
     </Row> 
