@@ -3,6 +3,7 @@ const express = require('express');
 const router = express.Router();
 const db = require('../models');
 const { Batch } = db;
+const { uploadImage } = require('../middlewares/helper');
 
 
 router.get('/', (req, res) => {
@@ -15,9 +16,14 @@ router.get('/', (req, res) => {
 });
 
 // create a batch 
-router.post('/', (req, res) => {
+router.post('/', async (req, res) => {
+
+    // To Google Cloud
+    const myFile = req.file
+    const imageUrl = await uploadImage(myFile)
+
     let batch = {
-        image: req.body.image,
+        image: imageUrl,
         title: req.body.title,
         description: req.body.description,
         location: req.body.location,

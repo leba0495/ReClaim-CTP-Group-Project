@@ -8,8 +8,6 @@ class Batch extends React.Component {
         super(props);
         this.state = {
         };
-        // This binding is necessary to make `this` work in the callback
-        // this.displayDetails = this.displayDetails.bind(this);
     }
 
     displayDetails = () => {

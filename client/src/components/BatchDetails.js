@@ -25,7 +25,7 @@ function BatchDetails(props){
                 <h4>INFORMATION FOR PICK-UP</h4>
                 <h5>Location:</h5>
                 <p>{props.address}</p>
-                <h5>Location:</h5>
+                <h5>Instructions:</h5>
                 <p>{props.locationNotes}</p>
             </Row>
         </Card>

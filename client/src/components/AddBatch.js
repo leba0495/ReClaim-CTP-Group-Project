@@ -10,72 +10,56 @@ class AddBatch extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            image: null,
+            image: {},
             title: "",
             description: "",
             location: "",
             address: "",
             locationNotes: "",
             isSorted: false,
-            success: false,
             error: false,
         }
     }
-    // Form submitting logic, prevent default page refresh
+    
     saveBatch = (event) => {
-        let newBatch = {
-            image: "",
-            title: this.state.title,
-            description: this.state.description,
-            location: this.state.location,
-            address: this.state.address,
-            locationNotes: this.state.locationNotes,
-            isSorted: false,
-        }
+        // Form submitting logic, prevent default page refresh (loses eveything plus state)
+        event.preventDefault()
+        const data = new FormData();
 
-        axios.post('/api/batches/', newBatch)
+        data.append('image', this.state.image);
+        data.append('title', this.state.title);
+        data.append('description', this.state.description);
+        data.append('location', this.state.location);
+        data.append('address', this.state.address);
+        data.append('locationNotes', this.state.locationNotes);
+        data.append('isSorted', this.state.isSorted);
+
+        axios.post('/api/batches/', data)
             .then((res) => {
                 console.log(res.data)
-            })
-            .then(() => {
-                this.setState({success: true})
+                this.props.history.push("/market-place")
             })
             .catch((error) => {
                 console.log(error)
+                this.setState({error: true})
             })
-        
+    }
+
+    handleChange = (e) => {
+        let name = e.target.name;
+        this.setState({
+            [name]: e.target.value 
+        })
         
     }
 
-    onChangeTitle = (e) => {
+    handleImageUpload = (e) => {
         this.setState({
-            title: e.target.value
-        });
+            image: e.target.files[0],
+        })
     }
-    onChangeLocation = (e) => {
-        this.setState({
-            location: e.target.value
-        });
-    }
-    onChangeDescription = (e) => {
-        this.setState({
-            description: e.target.value
-        });
-    }
-    onChangeAddress = (e) => {
-        this.setState({
-            address: e.target.value
-        });
-    }
-    onChangeNotes = (e) => {
-        this.setState({
-            locationNotes: e.target.value
-        });
-    }
-
+    
     render(){
-        if(this.state.success) return <Redirect to="/market-place" />;
-
         let errorMessage = null;
         if(this.state.error) {
             errorMessage = (
@@ -88,51 +72,30 @@ class AddBatch extends React.Component {
             <div className="p-0 bg" style={{ backgroundImage: "url(/images/loginBG.png)" }}>
                 <MarketPlaceNav />
                     {errorMessage}
-                    <Form className="add-batch-form">
+                    <Form className="add-batch-form" onSubmit={this.saveBatch}>
                         <Form.Group>
                             <Form.Label>Upload your batch's pictures here</Form.Label>
-                            <Form.Control type="file" multiple ></Form.Control>
+                            <Form.Control type="file" multiple onChange={this.handleImageUpload}></Form.Control>
                         </Form.Group>
                         <Row className="mt-2">
                         <Form.Group as={Col} controlId="formGridTitle">
                         <Form.Label >Title</Form.Label>
                         <Form.Control placeholder="Plastic Bottles" name="title"
-                        onChange={this.onChangeTitle}/>
+                        onChange={this.handleChange}/>
                         </Form.Group>
 
                         <Form.Group as={Col} controlId="formGridLocation">
                         <Form.Label>General Location</Form.Label>
                         <Form.Control placeholder="Corner of West and 5th" name="location"
-                        onChange={this.onChangeLocation}/>
+                        onChange={this.handleChange}/>
                         </Form.Group>
                     </Row>
 
                     <Form.Group className="mt-2" controlId="formGridAddress1">
                         <Form.Label>Address</Form.Label>
                         <Form.Control placeholder="1234 Main St, Bronx, NY 10460" name="address"
-                        onChange={this.onChangeAddress}/>
+                        onChange={this.handleChange}/>
                     </Form.Group>
-
-                    {/* <Row className="mt-2">
-                        <Form.Group as={Col} controlId="formGridCity">
-                        <Form.Label>City</Form.Label>
-                        <Form.Control placeholder="Bronx" 
-                        onChange={this.onChangeAddress}/>
-                        </Form.Group>
-
-                        <Form.Group as={Col} controlId="formGridState">
-                        <Form.Label>State</Form.Label>
-                        <Form.Select defaultValue="Choose...">
-                            <option>Choose...</option>
-                            <option>New York</option>
-                        </Form.Select>
-                        </Form.Group>
-
-                        <Form.Group as={Col} controlId="formGridZip">
-                        <Form.Label>Zip</Form.Label>
-                        <Form.Control placeholder="10460"/>
-                        </Form.Group>
-                    </Row> */}
 
                     <Row className="mt-3">
                     <FloatingLabel lg={9} as={Col} controlId="floatingTextarea2" label="Describe what's in the batch.." >
@@ -141,13 +104,13 @@ class AddBatch extends React.Component {
                         name="description"
                         placeholder=""
                         style={{ height: '100px'}}
-                        onChange={this.onChangeDescription}
+                        onChange={this.handleChange}
                         />
                     </FloatingLabel>
 
                     <Form.Group as={Col} className="" id="formGridCheckbox">
-                        <Form.Label> Are your goods separated?</Form.Label>
-                        <Form.Select defaultValue="No" onChange={(e) => this.setState({isSorted: e.target.value}) }>
+                        <Form.Label > Are your goods separated?</Form.Label>
+                        <Form.Select defaultValue="No" name="isSorted" onChange={this.handleChange}>
                         <option value={`${false}`}>No</option>
                         <option value={`${true}`}>Yes</option>  
                         </Form.Select>
@@ -155,23 +118,19 @@ class AddBatch extends React.Component {
 
                     </ Row>
                     <Row className="mt-3 g-0 p-0" >
-                        <Form.Label as={Col} lg={8} md={12}>If you've placed the batch in a hidden location. Leave some notes for the collector here.
+                        <Form.Label as={Col} lg={8} md={12}>If you've placed the batch in a hidden location. Leave some instructions for the collector here.
                         <Form.Control
                         as="textarea"
                         name="locationNotes"
                         placeholder="Hints and notes here.."
                         style={{ height: '120px'}}
-                        onChange={this.onChangeNotes}
+                        onChange={this.handleChange}
                         />
                         </Form.Label>
                     </Row>
 
-                    <Button variant="primary"
-                    className="btn-style m-3 "
-                    onClick={this.saveBatch}>
-                        Submit
-                    </Button>
-                    
+                    <Button variant="primary" type="submit"
+                    className="btn-style m-3 "> Submit </Button>
                     </Form>
 
                 <Row><Footer /></Row>
