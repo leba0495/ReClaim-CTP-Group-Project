@@ -1,4 +1,8 @@
-# React client
+# ReClaim Client
+
+coming soon!
+<!-- 
+## React client
 
 The code in this directory was initialized with [create-react-app](https://create-react-app.dev/) and uses [react-router](https://reactrouter.com/web/guides/quick-start) and [Bootstrap 4.x](https://getbootstrap.com/docs/4.3/getting-started/introduction/).
 
@@ -29,3 +33,4 @@ fetch('/api/users/42', { ... })
 ```
 
 > Note: you should **NOT** hardcode the domain `http://localhost/` in your API calls. If you were to do this, the calls will fail once the app is deployed.
+-->

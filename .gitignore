@@ -15,4 +15,4 @@ yarn-error.log*
 
 # keys and config
 api/config/keys.json
-api/config/config.json
+api/config/config

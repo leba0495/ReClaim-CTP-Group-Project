@@ -1,5 +1,5 @@
 import React from "react";
-import {Card, Row, Col, Image, Badge} from 'react-bootstrap';
+import {Card, Row, Col, Image} from 'react-bootstrap';
 import "../styles/Batch.css"
 
 function BatchDetails(props){
@@ -13,7 +13,6 @@ function BatchDetails(props){
                 <Card.Body>
                     <Card.Title> <strong>{props.title }</strong> </Card.Title>
                     <Card.Subtitle> <Image id="tag-img" src="images/locationTag.jpg" /> {props.location}</Card.Subtitle>
-                    <Badge pill bg="info" >{props.isSorted ? <span>Sorted</span> : <span>Not Sorted</span>}</Badge>
                     <Card.Text className="p-2"> <strong>Description: </strong>
                     {props.description}
                     </Card.Text>
