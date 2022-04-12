@@ -2,7 +2,6 @@ import React from "react";
 import MarketPlaceNav from "../components/MarketPlaceNav";
 import Footer from "../components/Footer";
 import {Form, Container, Button, Row, Col, FloatingLabel} from "react-bootstrap";
-import { Redirect } from "react-router-dom";
 import axios from 'axios';
 import "../styles/AddBatch.css";
 
