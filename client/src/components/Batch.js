@@ -1,5 +1,5 @@
 import React from 'react';
-import {Card, Row, Col, Container, Image} from 'react-bootstrap';
+import {Card, Row, Col, Image} from 'react-bootstrap';
 // import BinImage from '../images/bin-recyclable.png';
 import "../styles/Batch.css"
 
