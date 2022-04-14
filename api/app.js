@@ -4,7 +4,7 @@ const path = require('path');
 const db = require('./models');
 const app = express();
 require('dotenv').config();
-const PORT = process.env.PORT;
+// const PORT = process.env.PORT;
 const multer = require('multer')
 
 const multerMid = multer({
@@ -44,9 +44,9 @@ if(process.env.NODE_ENV==='production') {
 db.sequelize.sync({ force: false });
 
 // start up the server
-if(PORT) {
-  app.listen(PORT, () => console.log(`Listening on ${PORT}`));
-} else {
-  console.log(process.env.PORT)
-  console.log("===== ERROR ====\nCREATE A .env FILE!\n===== /ERROR ====")
-}
+// if(PORT) {
+//   app.listen(PORT, () => console.log(`Listening on ${PORT}`));
+// } else {
+//   console.log(process.env.PORT)
+//   console.log("===== ERROR ====\nCREATE A .env FILE!\n===== /ERROR ====")
+// }
