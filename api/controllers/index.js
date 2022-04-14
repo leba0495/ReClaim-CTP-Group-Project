@@ -10,7 +10,7 @@ const batchesController = require('./Batches.js');
 // Mount each controller under a specific route. These
 // will be prefixes to all routes defined inside the controller
 // router.use('/posts', postsController);
-router.use('/application-configuration', appConfigController);
+// router.use('/application-configuration', appConfigController);
 router.use('/batches', batchesController);
 
 
