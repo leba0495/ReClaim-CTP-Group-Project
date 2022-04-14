@@ -4,7 +4,7 @@ const router = express.Router();
 
 // Load each controller
 // const postsController = require('./posts.js');
-const appConfigController = require('./appConfig.js');
+// const appConfigController = require('./appConfig.js');
 const batchesController = require('./Batches.js');
 
 // Mount each controller under a specific route. These
