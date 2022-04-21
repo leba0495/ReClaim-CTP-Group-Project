@@ -14,5 +14,3 @@ yarn-error.log*
 .vscode
 
 # keys and config
-api/config/keys.json
-api/config/config
