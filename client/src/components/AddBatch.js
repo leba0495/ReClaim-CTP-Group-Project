@@ -32,14 +32,11 @@ class AddBatch extends React.Component {
         data.append('address', this.state.address);
         data.append('locationNotes', this.state.locationNotes);
         data.append('isSorted', this.state.isSorted);
-
         axios.post('/api/batches/', data)
             .then((res) => {
-                console.log(res.data)
                 this.props.history.push("/market-place")
             })
             .catch((error) => {
-                console.log(error)
                 this.setState({error: true})
             })
     }
