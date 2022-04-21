@@ -4,7 +4,6 @@ import Footer from "../components/Footer";
 import {Form, Container, Button, Row, Col, FloatingLabel} from "react-bootstrap";
 import axios from 'axios';
 import "../styles/AddBatch.css";
-import DefaultImage from '../../public/images/default.png';
 
 class AddBatch extends React.Component {
     constructor(props){
@@ -51,10 +50,8 @@ class AddBatch extends React.Component {
     }
 
     handleImageUpload = (e) => {
-        let batchImage = (e.target.file.length > 0) ? e.target.files[0] : DefaultImage;
-
         this.setState({
-            image: batchImage,
+            image: e.target.files[0],
         })
     }
     
@@ -74,7 +71,11 @@ class AddBatch extends React.Component {
                     <Form className="add-batch-form" onSubmit={this.saveBatch}>
                         <Form.Group>
                             <Form.Label>Upload your batch's pictures here</Form.Label>
-                            <Form.Control type="file" multiple onChange={this.handleImageUpload}></Form.Control>
+                            <Form.Control 
+                            type="file" 
+                            required 
+                            onChange={this.handleImageUpload} />
+                            <Form.Control.Feedback type="invalid">Picture file is required</Form.Control.Feedback>
                         </Form.Group>
                         <Row className="mt-2">
                         <Form.Group as={Col} controlId="formGridTitle">
@@ -86,8 +87,8 @@ class AddBatch extends React.Component {
                         placeholder="Plastic Bottles" 
                         name="title"
                         onChange={this.handleChange}/>
+                        <Form.Control.Feedback type="invalid">Please provide a title.</Form.Control.Feedback>
                         </Form.Group>
-
                         <Form.Group as={Col} controlId="formGridLocation">
                         <Form.Label>General Location</Form.Label>
                         <Form.Control
@@ -97,6 +98,7 @@ class AddBatch extends React.Component {
                         placeholder="Corner of West and 5th" 
                         name="location"
                         onChange={this.handleChange}/>
+                        <Form.Control.Feedback type="invalid">Please provide a location name.</Form.Control.Feedback>
                         </Form.Group>
                     </Row>
 
@@ -105,10 +107,11 @@ class AddBatch extends React.Component {
                         <Form.Control
                         required
                         type = "text"
-                        minLength="4" 
+                        minLength="10" 
                         placeholder="1234 Main St, Bronx, NY 10460" 
                         name="address"
                         onChange={this.handleChange}/>
+                        <Form.Control.Feedback type="invalid">Address must be at least 10 characters.</Form.Control.Feedback>
                     </Form.Group>
 
                     <Row className="mt-3">
@@ -121,6 +124,7 @@ class AddBatch extends React.Component {
                         style={{ height: '100px'}}
                         onChange={this.handleChange}
                         />
+                        <Form.Control.Feedback type="invalid">Please provide a description.</Form.Control.Feedback>
                     </FloatingLabel>
 
                     <Form.Group as={Col} className="" id="formGridCheckbox">
