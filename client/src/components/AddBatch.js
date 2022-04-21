@@ -4,6 +4,7 @@ import Footer from "../components/Footer";
 import {Form, Container, Button, Row, Col, FloatingLabel} from "react-bootstrap";
 import axios from 'axios';
 import "../styles/AddBatch.css";
+import DefaultImage from '../../public/images/default.png';
 
 class AddBatch extends React.Component {
     constructor(props){
@@ -50,8 +51,10 @@ class AddBatch extends React.Component {
     }
 
     handleImageUpload = (e) => {
+        let batchImage = (e.target.file.length > 0) ? e.target.files[0] : DefaultImage;
+
         this.setState({
-            image: e.target.files[0],
+            image: batchImage,
         })
     }
     
@@ -76,26 +79,42 @@ class AddBatch extends React.Component {
                         <Row className="mt-2">
                         <Form.Group as={Col} controlId="formGridTitle">
                         <Form.Label >Title</Form.Label>
-                        <Form.Control placeholder="Plastic Bottles" name="title"
+                        <Form.Control 
+                        required
+                        type = "text"
+                        minLength="4"
+                        placeholder="Plastic Bottles" 
+                        name="title"
                         onChange={this.handleChange}/>
                         </Form.Group>
 
                         <Form.Group as={Col} controlId="formGridLocation">
                         <Form.Label>General Location</Form.Label>
-                        <Form.Control placeholder="Corner of West and 5th" name="location"
+                        <Form.Control
+                        required
+                        type = "text"
+                        minLength="4"
+                        placeholder="Corner of West and 5th" 
+                        name="location"
                         onChange={this.handleChange}/>
                         </Form.Group>
                     </Row>
 
                     <Form.Group className="mt-2" controlId="formGridAddress1">
                         <Form.Label>Address</Form.Label>
-                        <Form.Control placeholder="1234 Main St, Bronx, NY 10460" name="address"
+                        <Form.Control
+                        required
+                        type = "text"
+                        minLength="4" 
+                        placeholder="1234 Main St, Bronx, NY 10460" 
+                        name="address"
                         onChange={this.handleChange}/>
                     </Form.Group>
 
                     <Row className="mt-3">
                     <FloatingLabel lg={9} as={Col} controlId="floatingTextarea2" label="Describe what's in the batch.." >
                         <Form.Control
+                        required
                         as="textarea"
                         name="description"
                         placeholder=""
