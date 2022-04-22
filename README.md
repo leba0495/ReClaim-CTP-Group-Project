@@ -27,11 +27,11 @@ This app provides its users with a marketplace and gives them the ability to eas
 
 **Required Must-have Stories**
 
-* Landing Page containing About Us, How it works, Environment Facts
-* User can Login/ Sign Up and Logout
-* User can post, edit, and delete a batch
-* User can view details of batch and claim it
-* User can view their profile and edit their information
+- [x] Landing Page containing About Us, How it works, Environment Facts
+- [ ] User can Login/ Sign Up and Logout
+- [x] User can post, edit, and delete a batch
+- [x] User can view details of batch and claim it
+- [x] User can view their profile and edit their information
 
 **Optional Nice-to-have Stories**
 
@@ -52,7 +52,6 @@ This app provides its users with a marketplace and gives them the ability to eas
 <div>
 <img src="https://i.imgur.com/e0xBlpJ.png" height=300 style="margin-right: 60px">
 <img src="https://i.imgur.com/pbMlw3F.png" height=300>
-<img src="https://i.imgur.com/kYqHDZY.png" height=250>
  </div>
 
 ### Demo
@@ -63,7 +62,41 @@ This app provides its users with a marketplace and gives them the ability to eas
 
 ![ezgif com-gif-maker](https://user-images.githubusercontent.com/61469904/147397501-ef7eaa88-0bbf-425a-a372-f887a92fdbac.gif)
 
+## Schema 
+### Models
+#### User
 
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | userId      | Int   | unique id for the user post (default field) |
+   | userFirstName| String| user’s first name |
+   | userLastName| String| user's last name |
+   | userPassword| String| user's password |
+   | userNumber| String   |user's phone number|
+   |userEmail|String| user's email|
+   |userStreetAdd|String|user's street address|
+   |userCity|String|user's city|
+   |userZipCode|Int|user's zip code|
+   | createdAt     | DateTime | date when user creates account (default field) |
+   | updatedAt     | DateTime | date when user updates account (default field) |
+   
+#### Batch
+
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | objectId      | Int   | unique id for the user post (default field) |
+   | author        | Pointer to User| creater of the batch |
+   | activeClaimant| Pointer to User| The user that is currently claiming the batch |
+   | image | URL String| image added to the batch by the author|
+   | title | String | descriptive title of the batch's content|
+   | description | String  |Description of the batch's contents |
+   | batchLocation|String | General location of where the batch is|
+   |address| String | exact address of the batch |
+   |isSorted | Boolean | label of whether the goods in the batch are sorted (plastics, metals, etc.) |
+   | isClaimed | Boolean | active status of the batch |
+   | completedAt| DataTime | data when the batch was collected |
+   | createdAt     | DateTime | date when post is created (default field) |
+   | updatedAt     | DateTime | date when post is last updated (default field) |
 <!---
 # Project Starter
 A starter repo for building CUNY Tech Prep projects with React, Express.js, and Sequelize.js
