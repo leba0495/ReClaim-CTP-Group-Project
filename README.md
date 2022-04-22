@@ -1,7 +1,22 @@
 # ReClaim
-A tool that helps users easily collect recyclables and re-use them for new projects or purposes.
-
+A tool that helps users easily collect recyclables and re-use them for new projects or purposes. <br>
 Live Demo: [reclaim](https://reclaim-project.herokuapp.com/)
+
+#### Collaborators
+<b>Luis Brito</b>
+<a href="https://www.linkedin.com/in/luis-brito-arias/">
+  <img align="left" alt="Luis's LinkedIn" width="22px" src="https://raw.githubusercontent.com/peterthehan/peterthehan/master/assets/linkedin.svg" />
+</a>
+<br>
+<b>Kessler Lock</b>
+<a href="https://www.linkedin.com/in/kesslerlock/">
+  <img align="left" alt="Kessler's LinkedIn" width="22px" src="https://raw.githubusercontent.com/peterthehan/peterthehan/master/assets/linkedin.svg" />
+</a>
+<br>
+<b>Daniel Li</b>
+<a href="https://www.linkedin.com/in/daniel-li-50583ab6/">
+  <img align="left" alt="Daniel's LinkedIn" width="22px" src="https://raw.githubusercontent.com/peterthehan/peterthehan/master/assets/linkedin.svg" />
+</a>
 ## Table of Contents
 1. [Overview](#Overview)
 1. [Product Spec](#Product-Spec)
