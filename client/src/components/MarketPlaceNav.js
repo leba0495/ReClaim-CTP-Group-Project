@@ -5,7 +5,6 @@ import '../styles/MarketNav.css'
 
 function MarketNav(props) {
     return (
-      // Extra small (xs) · Small (sm) · Medium (md) · Large (lg) · Extra large (xl) · Extra extra large (xxl)
     <Navbar className = "marketNavBar" expnad="lg" bg="dark" variant="dark">
     <Container > 
     <Navbar.Brand className = "reclaimIcon" href="/">
@@ -37,8 +36,6 @@ function MarketNav(props) {
           <Dropdown.ItemText>User_Name</Dropdown.ItemText>
           <Dropdown.Divider />
             <Dropdown.Item href="/log-in">Log in form</Dropdown.Item>
-            <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-            <Dropdown.Item href="/">Log out</Dropdown.Item>
           </Dropdown.Menu>
       </Dropdown>
     </Navbar.Collapse>

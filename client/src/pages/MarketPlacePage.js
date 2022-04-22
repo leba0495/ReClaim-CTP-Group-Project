@@ -73,11 +73,10 @@ class MarketPlacePage extends React.Component {
 
                 // Shorter than previous ways of passing props, using the deconstructor or spread operator (...)
                 <Batch { ...batch } handleDetails={this.handleDetails} handleClaimStatus={this.updateClaimStatus} key={ii} ></Batch>)
-            
         })
         return (
             <Container fluid="md p-0" className="main-market-container">
-                <MarketPlaceNav/>
+                <MarketPlaceNav />
                 <Row className="top-market-row">
                     <Col lg="1" >
                         <MarketDecoration />

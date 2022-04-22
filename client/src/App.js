@@ -21,7 +21,6 @@ class App extends React.Component {
           <div className="container-fluid text-center">
             <div className="row justify-content-center">
               <Switch>
-                {/* <Route path="/posts/:id" component={ShowPostPage} /> */}
                 <Route path="/log-in" component={LoginSignUpPage}/>
                 <Route path="/sign-up" component={SignUpPage} />
                 <Route path="/market-place" component={MarketPlacePage} />

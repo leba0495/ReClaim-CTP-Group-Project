@@ -1,13 +1,11 @@
 .loginAndSignUp {
-    margin-top: 180px;
-    padding-bottom: 195px;
+    padding-bottom: 150px;
 }
 
 .bg {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
 }
 
 
@@ -24,4 +22,15 @@ padding-left: 50px;
 padding-right: 50px;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.45);
 border-radius: 50px;
+}
+
+.alert-banner {
+    margin: 80px auto;
+    font-size: large;
+    font-weight: 500;
+    width: 300px;
+    padding: 15px;
+    border: 1px solid red;
+    border-radius: 20px;
+    background-color: rgb(211, 217, 219);
 }

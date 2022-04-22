@@ -8,9 +8,13 @@ function LoginSignUpPage(props) {
   return (
     <Container className ="bg" style={{ backgroundImage: "url(/images/loginBG.png)" }} fluid = "md">
         <HomeNav/>
+        <Row className="alert-banner">
+            <Col>
+            Log in/ Sign Up is not active, just click submit to proceed to marketplace.
+            </Col>
+        </Row>
         <Row className = "justify-content-center">
             <Col className ="loginAndSignUp" xl = {4} lg = {4} md = {5} xs = {8}>
-            {/* login tab*/}
             <Tabs defaultActiveKey="login" id="uncontrolled-tab-example" className="mb-3">
                 
                 <Tab eventKey="login" title="Login">
@@ -34,7 +38,6 @@ function LoginSignUpPage(props) {
 
                    </Form>
                 </Tab>
-                {/* sign up tab*/}
                 <Tab eventKey="sign-up" title="Sign up">
                 <Form className = "text-md-left tabStyle">
                     <Row className="mb-3">
