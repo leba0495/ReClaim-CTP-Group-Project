@@ -1,6 +1,6 @@
 # ReClaim
 A tool that helps users easily collect recyclables and re-use them for new projects or purposes. <br>
-Live Demo: [reclaim](https://reclaim-project.herokuapp.com/)
+<b>Live Demo:</b> [reclaim](https://reclaim-project.herokuapp.com/)
 
 #### Collaborators
 <b>Luis Brito</b>
